@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/serranxxx/taskify.git/static/css/main.1598b474.css",
+    "main.js": "/serranxxx/taskify.git/static/js/main.ae06133d.js",
+    "static/media/task-image-3.svg": "/serranxxx/taskify.git/static/media/task-image-3.07a29b08e234befa760e.svg",
+    "static/media/task-image-5.svg": "/serranxxx/taskify.git/static/media/task-image-5.ae1a090a1ce4b7cb972c.svg",
+    "static/media/projects-background.svg": "/serranxxx/taskify.git/static/media/projects-background.78b371d21ff3344468ca.svg",
+    "static/media/task-image-9.svg": "/serranxxx/taskify.git/static/media/task-image-9.89249b8b8530f9d56a58.svg",
+    "static/media/task-image-6.svg": "/serranxxx/taskify.git/static/media/task-image-6.44e43c2031de66b1c8a0.svg",
+    "static/media/tasks-background.svg": "/serranxxx/taskify.git/static/media/tasks-background.0158a0a38c80777cf9e5.svg",
+    "static/media/task-image-12.svg": "/serranxxx/taskify.git/static/media/task-image-12.7bd3257ff67662d513b8.svg",
+    "static/media/task-image-10.svg": "/serranxxx/taskify.git/static/media/task-image-10.4e29836fda9a17aff0ae.svg",
+    "static/media/task-image-2.svg": "/serranxxx/taskify.git/static/media/task-image-2.37bc5676b2b439a73cac.svg",
+    "static/media/task-image-7.svg": "/serranxxx/taskify.git/static/media/task-image-7.d24e592e72d327d3aedc.svg",
+    "static/media/task-image-11.svg": "/serranxxx/taskify.git/static/media/task-image-11.eb7f04001fd17e538e88.svg",
+    "static/media/avatar-6.svg": "/serranxxx/taskify.git/static/media/avatar-6.da30f07091918351c9f5.svg",
+    "static/media/avatar-1.svg": "/serranxxx/taskify.git/static/media/avatar-1.f5de550259e213dd2ca1.svg",
+    "static/media/task-image-4.svg": "/serranxxx/taskify.git/static/media/task-image-4.642bd34a201116170d5c.svg",
+    "static/media/task-image-8.svg": "/serranxxx/taskify.git/static/media/task-image-8.07d4894bc2b58b986c5d.svg",
+    "static/media/avatar-2.svg": "/serranxxx/taskify.git/static/media/avatar-2.588c0b5ca893f8ebcfc3.svg",
+    "static/media/avatar-4.svg": "/serranxxx/taskify.git/static/media/avatar-4.79104bb79caf4ae22d94.svg",
+    "static/media/avatar-8.svg": "/serranxxx/taskify.git/static/media/avatar-8.cf97b382b27fcd83a7f1.svg",
+    "static/media/task-image-1.svg": "/serranxxx/taskify.git/static/media/task-image-1.d75467a03cf6f053e081.svg",
+    "static/media/avatar-9.svg": "/serranxxx/taskify.git/static/media/avatar-9.ab9db84c2f69feb1e3c4.svg",
+    "static/media/avatar-5.svg": "/serranxxx/taskify.git/static/media/avatar-5.12db3d9af2fd7a14fa45.svg",
+    "static/media/avatar-3.svg": "/serranxxx/taskify.git/static/media/avatar-3.9bbee55468ce628cd053.svg",
+    "static/media/avatar-7.svg": "/serranxxx/taskify.git/static/media/avatar-7.7420aceda7a1dc10e93a.svg",
+    "static/media/Ellipsis-1s-243px.svg": "/serranxxx/taskify.git/static/media/Ellipsis-1s-243px.d6d0d4fe6c5b1557c7e9793c61d2a755.svg",
+    "index.html": "/serranxxx/taskify.git/index.html",
+    "static/media/delete.svg": "/serranxxx/taskify.git/static/media/delete.4c1994955120bfb504d9.svg",
+    "main.1598b474.css.map": "/serranxxx/taskify.git/static/css/main.1598b474.css.map",
+    "main.ae06133d.js.map": "/serranxxx/taskify.git/static/js/main.ae06133d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1598b474.css",
+    "static/js/main.ae06133d.js"
+  ]
+}
