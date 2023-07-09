@@ -45,7 +45,7 @@ export const LoginPage = () => {
     const handleLogin = (user) => {
 
         selectAvavatar(user)
-        navigate('/layout', {
+        navigate('/taskify/layout', {
             replace: true
         })
     }

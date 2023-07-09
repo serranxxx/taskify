@@ -18,10 +18,10 @@ export const AppRouter = () => {
 
   return (
     <Routes>
-      <Route path="login" element={<LoginPage />} />
-      <Route path="/" element={<LoginPage />} />
+      <Route path="/taskify/login" element={<LoginPage />} />
+      <Route path="/taskify" element={<LoginPage />} />
 
-      <Route path='layout' element={<PrincipalLayout />} />
+      <Route path='/taskify/layout' element={<PrincipalLayout />} />
     </Routes>
   )
 }

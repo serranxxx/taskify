@@ -67,7 +67,7 @@ export const HeaderApp = () => {
 
     const Logout = (event) => {
         event.stopPropagation();
-        navigate('/login', {
+        navigate('/taskify/login', {
             replace: true
         })
     }
