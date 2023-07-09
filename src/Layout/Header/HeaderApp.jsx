@@ -90,7 +90,7 @@ export const HeaderApp = () => {
 
     const swicthTheme = () => {
         setTheme(!theme)
-        window.location.reload()
+        // window.location.reload()
     }
 
 

@@ -11,9 +11,8 @@ export const AppRouter = () => {
     const changeBody = () => {
       document.body.style.backgroundColor = `${theme ? '#e4efe1' : '#333437'}`;
     }
-
     changeBody()
-  }, [])
+  }, [theme])
 
 
   return (
