@@ -1,5 +1,5 @@
 /* Ajuste para pantallas grandes */
-@media screen and (min-width: 150px) {
+@media screen and (min-width: 450px) {
 
     .wrap-app {
         width:auto
@@ -36,7 +36,7 @@
     }
 
     .project-title {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .project-description {
@@ -47,16 +47,25 @@
     .input-task-name {
         font-size: 0.8em;
     }
+
+    .blocks {
+        height: 18vh;
+        aspect-ratio: 1/1;
+    }
+
+    .block-shadow {
+        display: none;
+    }
 }
 
 
 @media screen and (max-height: 700px) {
     .wrap-app {
-        width:auto
+        width:60vh
     }
 
     .wrap-app_ {
-        width:75vh;
+        width:60vh;
     }
 
     .Taskify {
@@ -88,7 +97,7 @@
     }
 
     .project-title {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .project-description {
@@ -98,6 +107,16 @@
 
     .input-task-name {
         font-size: 1.5em;
+    }
+
+    .blocks {
+        height: 20vh;
+        aspect-ratio: 1/1;
+    }
+
+
+    .block-shadow {
+        display: none;
     }
 
 }
@@ -148,6 +167,15 @@
 
     .input-task-name {
         font-size: 2em;
+    }
+
+    .blocks {
+        height: 18vh;
+        aspect-ratio: 1/1;
+    }
+
+    .block-shadow {
+        display: flex;
     }
 
 }

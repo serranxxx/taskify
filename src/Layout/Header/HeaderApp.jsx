@@ -74,7 +74,9 @@ export const HeaderApp = () => {
 
     const customTasks = (percent) => (
 
-        <span style={{ fontWeight: 500, color: '#f1faee' }}>
+        <span
+            className='charts-title'
+            style={{ fontWeight: 500, color: '#f1faee' }}>
             {`${percent}%`}
         </span>
     )
@@ -104,7 +106,8 @@ export const HeaderApp = () => {
             < div
                 style={{
                     position: 'relative', alignItems: 'center', justifyContent: 'center', height: '18vh',
-                    borderRadius: '2vh', backgroundColor: `${theme ? '#a8dadc' : 'transparent'}`,
+                    borderRadius: '2vh', 
+                    // backgroundColor: `${theme ? '#a8dadc' : 'transparent'}`,
                     transition: 'all 0.45s ease-in-out', border: `2px solid ${theme ? '#e4efe1' : '#333437'}`,
                     display: 'flex', flexDirection: 'row'
                 }}
@@ -116,15 +119,15 @@ export const HeaderApp = () => {
                         width: '100%', height: '100%', display: `${avatarDisappear ? 'flex' : 'none'}`, alignItems: 'center',
                         justifyContent: 'center', marginTop: '-2vh', marginRight: '1vh'
                     }}>
-                    <h2 
-                    className='Taskify'
-                    style={{
-                        fontFamily: 'Segoe UI', 
-                        color: `${theme ? '#e4efe1' : '#8cb8ba'}`, 
-                        position: 'absolute',
-                        fontWeight: 700, display: `${avatarDisappear ? '' : 'none'}`,
-                        letterSpacing: '-1.5vh'
-                    }}>
+                    <h2
+                        className='Taskify'
+                        style={{
+                            fontFamily: 'Segoe UI',
+                            color: `${theme ? '#a8dadc' : '#8cb8ba'}`,
+                            position: 'absolute',
+                            fontWeight: 700, display: `${avatarDisappear ? '' : 'none'}`,
+                            letterSpacing: '-1.5vh'
+                        }}>
                         Taskify</h2>
 
                 </div>
@@ -154,10 +157,11 @@ export const HeaderApp = () => {
             >
                 <div
                     // ${!showAvatar ? '' : `avatar-${avatar}`}
-                    className={`${!toggle ? 'avatar-turn' : `menu-turn avatar-${avatar}`}`}
+                    className={`${!toggle ? 'blocks avatar-turn' : `blocks menu-turn avatar-${avatar}`}`}
                     onClick={ToggleFunction}
                     style={{
-                        height: '18vh', aspectRatio: '1/1', borderRadius: '3vh', backgroundColor: '#a8dadc', cursor: 'pointer', transition: 'all 0.35s ease-in-out',
+                        // height: '18vh', 
+                         borderRadius: '3vh', backgroundColor: '#a8dadc', cursor: 'pointer', transition: 'all 0.35s ease-in-out',
                         display: `${menuDisappear ? 'flex' : 'none'}`, alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
                     }}>
 
@@ -224,32 +228,35 @@ export const HeaderApp = () => {
                 </div>
 
                 <div
-                    className={'tasks-background element'}
+                    className={'tasks-background element block-shadow'}
                     style={{
-                        height: '18vh', aspectRatio: '4/3', borderRadius: '3vh', backgroundColor: `${theme?'#f0c145':'#27282c'}`,
-                        transition: 'all 0.25s ease-in-out', marginLeft: '3vh', marginRight: '3vh',
-                        display: `${tasksDisappear ? 'flex' : 'none'}`, alignItems: 'center',
+                        height: '18vh', 
+                        aspectRatio: '4/3', borderRadius: '3vh', backgroundColor: `${theme ? '#f0c145' : '#27282c'}`,
+                        transition: 'all 0.25s ease-in-out', marginLeft: '3vh', marginRight: '3vh', alignItems: 'center',
                         justifyContent: 'center', flexDirection: 'column', cursor: 'default'
                     }}>
 
-                    <div style={{
-                        display: `${projectsDisappear ? 'flex' : 'none'}`, alignItems: 'center', height: '8vh', width: '100%', borderBottomLeftRadius: '3vh', borderBottomRightRadius: '3vh',
-                        justifyContent: 'center', flexDirection: 'column', backgroundColor: `#f0c145${theme?'50':'90'}`, marginTop: '10vh'
+                    <div 
+                    className='block-shadow'
+                    style={{
+                         alignItems: 'center', height: '8vh', width: '100%', borderBottomLeftRadius: '3vh', borderBottomRightRadius: '3vh',
+                        justifyContent: 'center', flexDirection: 'column', backgroundColor: `#f0c145${theme ? '50' : '90'}`, marginTop: '10vh'
                     }}>
 
                         <p
+                            className='charts-title'
                             style={{
                                 fontFamily: 'Segoe UI', fontWeight: 500, textAlign: 'center',
-                                color: `${theme?'#f1faee':'#f1faee'}`, fontSize: '1em', marginBottom: '0vh', marginTop: '0vh'
+                                color: `${theme ? '#f1faee' : '#f1faee'}`, marginBottom: '0vh', marginTop: '0vh'
                             }}>Tasks completed</p>
 
                         <Progress
                             style={{ width: '80%', }}
                             percent={parseInt(taskFinished * 100 / (taskTotal))}
                             format={customTasks}
-                            strokeColor={`${theme?'#f1faee':'#f0c145'}`}
+                            strokeColor={`${theme ? '#f1faee' : '#f0c145'}`}
                             strokeWidth={6}
-                            trailColor={`${theme?'#f4d07d':'#27282c'}`}
+                            trailColor={`${theme ? '#f4d07d' : '#27282c'}`}
                         />
 
                     </div>
@@ -257,32 +264,34 @@ export const HeaderApp = () => {
                 </div>
 
                 <div
-                    className={'projects-background element'}
+                    className={'projects-background element block-shadow'}
                     style={{
-                        height: '18vh', aspectRatio: '4/3', borderRadius: '3vh', backgroundColor: `${theme?'#ed9cab':'#27282c'}`,
-                        transition: 'all 0.25s ease-in-out',
-                        display: `${projectsDisappear ? 'flex' : 'none'}`, alignItems: 'center',
+                        height: '18vh', 
+                        aspectRatio: '4/3', borderRadius: '3vh', backgroundColor: `${theme ? '#ed9cab' : '#27282c'}`,
+                        transition: 'all 0.25s ease-in-out',alignItems: 'center',
                         justifyContent: 'center', flexDirection: 'column', cursor: 'default'
                     }}>
 
-                    <div style={{
-                        display: `${projectsDisappear ? 'flex' : 'none'}`, alignItems: 'center', height: '8vh', width: '100%', borderBottomLeftRadius: '3vh', borderBottomRightRadius: '3vh',
-                        justifyContent: 'center', flexDirection: 'column', backgroundColor: `#ed9cab${theme?'50':'90'}`, marginTop: '10vh',
+                    <div 
+                    className='block-shadow'
+                    style={{
+                        alignItems: 'center', height: '8vh', width: '100%', borderBottomLeftRadius: '3vh', borderBottomRightRadius: '3vh',
+                        justifyContent: 'center', flexDirection: 'column', backgroundColor: `#ed9cab${theme ? '50' : '90'}`, marginTop: '10vh',
                     }}>
 
-                        <p
+                        <p className='charts-title'
                             style={{
                                 fontFamily: 'Segoe UI', fontWeight: 500, textAlign: 'center',
-                                color: `${theme?'#f1faee':'#f1faee'}`, fontSize: '1em', marginBottom: '0vh', marginTop: '0vh'
+                                color: `${theme ? '#f1faee' : '#f1faee'}`, marginBottom: '0vh', marginTop: '0vh'
                             }}>Projects completed</p>
 
                         <Progress
                             style={{ width: '80%', }}
                             percent={parseInt(subtasksFinished * 100 / (subtasksTotal))}
                             format={customTasks}
-                            strokeColor={`${theme?'#f1faee':'#ed9cab'}`}
+                            strokeColor={`${theme ? '#f1faee' : '#ed9cab'}`}
                             strokeWidth={6}
-                            trailColor={`${theme?'#e8b1bc':'#27282c'}`}
+                            trailColor={`${theme ? '#e8b1bc' : '#27282c'}`}
                         />
 
                     </div>
