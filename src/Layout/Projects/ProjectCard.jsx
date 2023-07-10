@@ -138,8 +138,8 @@ export const ProjectCard = (props) => {
                         <p
                             className='project-title'
                             style={{
-                                textAlign: 'left', width: '85%', fontFamily: 'Berlin Sans FB', color: `${theme ? '#1d3557' : `${colorSelector(user.color)}`}`,
-                                fontWeight: 400,
+                                textAlign: 'left', width: '85%', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : `${colorSelector(user.color)}`}`,
+                                fontWeight: 600,
                                 // fontSize: '2.5em',
                                 marginTop: '2vh', wordWrap: 'break-word',
                                 lineHeight: '0.8em'

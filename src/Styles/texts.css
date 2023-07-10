@@ -1,5 +1,13 @@
 /* Ajuste para pantallas grandes */
 @media screen and (min-width: 150px) {
+
+    .wrap-app {
+        width:auto
+    }
+
+    .wrap-app_ {
+        width:65vh;
+    }
     .Taskify {
         font-size: 14em;
     }
@@ -43,6 +51,14 @@
 
 
 @media screen and (max-height: 700px) {
+    .wrap-app {
+        width:auto
+    }
+
+    .wrap-app_ {
+        width:75vh;
+    }
+
     .Taskify {
         font-size: 8em;
         color: pink
@@ -87,6 +103,12 @@
 }
 
 @media screen and (min-height: 701px) and (max-height: 920px) {
+    .wrap-app {
+        width:85vh;
+    }
+    .wrap-app_ {
+        width:85vh;
+    }
     .Taskify {
         font-size: 12em;
         color: yellow

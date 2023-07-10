@@ -219,8 +219,8 @@ export const Tasks = () => {
                 }}>
                 <p className='My-something'
                     style={{
-                        marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: `${theme ? '#1d3557' : '#a8dadc'}`,
-                        fontWeight: 400, fontSize: '1.5em', cursor: 'default'
+                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : '#a8dadc'}`,
+                        fontWeight: 600,  cursor: 'default'
                     }}>
                     My tasks</p>
                 <Button
@@ -229,9 +229,9 @@ export const Tasks = () => {
                     style={{
                         height: '4vh', aspectRatio: '5/1', borderRadius: '1vh',
                         marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme ? '#f7fcf5' : '#8cb8ba'}`,
-                        marginLeft: '2vh', fontFamily: 'Berlin Sans FB',
+                        marginLeft: '2vh', fontFamily: 'Segoe UI',
                         color: `${theme ? '#1d3557' : '#333437'}`,
-                        fontWeight: 400, border: '0px solid #000',
+                        fontWeight: 500, border: '0px solid #000',
                         // fontSize: '1.2em', 
                     }}>
                     + Add new task
@@ -405,7 +405,7 @@ export const Tasks = () => {
                                         <p
                                             className='input-task-name'
                                             style={{
-                                                fontFamily: 'Berlin Sans FB', color: `${currentBackground}`,
+                                                fontFamily: 'Segoe UI', color: `${currentBackground}`,
                                                 // fontSize: '2em',
                                                 marginBottom: '0vh', marginTop: '-1vh', lineHeight: '0.9em'
                                             }}>{currentTitle}</p>

@@ -119,10 +119,10 @@ export const HeaderApp = () => {
                     <h2 
                     className='Taskify'
                     style={{
-                        fontFamily: 'Berlin Sans FB', 
+                        fontFamily: 'Segoe UI', 
                         color: `${theme ? '#e4efe1' : '#8cb8ba'}`, 
                         position: 'absolute',
-                        fontWeight: 500, display: `${avatarDisappear ? '' : 'none'}`,
+                        fontWeight: 700, display: `${avatarDisappear ? '' : 'none'}`,
                         letterSpacing: '-1.5vh'
                     }}>
                         Taskify</h2>
@@ -216,7 +216,7 @@ export const HeaderApp = () => {
                                 borderRadius: '2vh', border: '0px solid #000',
                                 display: 'flex', justifyContent: 'center', alignItems: 'center',
                             }}>
-                            <p style={{ fontFamily: 'Berlin Sans FB', fontSize: '1.3em', fontWeight: 500 }}>Logout</p>
+                            <p style={{ fontFamily: 'Segoe UI', fontSize: '1.1em', fontWeight: 700 }}>Logout</p>
                         </Button>
 
                     </div>
@@ -239,8 +239,8 @@ export const HeaderApp = () => {
 
                         <p
                             style={{
-                                fontFamily: 'Berlin Sans FB', fontWeight: 400, textAlign: 'center',
-                                color: `${theme?'#f1faee':'#f1faee'}`, fontSize: '1.5em', marginBottom: '0vh', marginTop: '0vh'
+                                fontFamily: 'Segoe UI', fontWeight: 500, textAlign: 'center',
+                                color: `${theme?'#f1faee':'#f1faee'}`, fontSize: '1em', marginBottom: '0vh', marginTop: '0vh'
                             }}>Tasks completed</p>
 
                         <Progress
@@ -272,8 +272,8 @@ export const HeaderApp = () => {
 
                         <p
                             style={{
-                                fontFamily: 'Berlin Sans FB', fontWeight: 400, textAlign: 'center',
-                                color: `${theme?'#f1faee':'#f1faee'}`, fontSize: '1.4em', marginBottom: '0vh', marginTop: '0vh'
+                                fontFamily: 'Segoe UI', fontWeight: 500, textAlign: 'center',
+                                color: `${theme?'#f1faee':'#f1faee'}`, fontSize: '1em', marginBottom: '0vh', marginTop: '0vh'
                             }}>Projects completed</p>
 
                         <Progress

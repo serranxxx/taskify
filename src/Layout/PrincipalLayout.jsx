@@ -13,8 +13,9 @@ export const PrincipalLayout = () => {
     <>
 
       <div
+
         style={{
-          flexDirection: 'column', flexWrap: 'wrap', backgroundColor: `${theme? '#e4efe1': '#333437'}`,
+          flexDirection: 'column', flexWrap: 'wrap', backgroundColor: `${theme ? '#e4efe1' : '#333437'}`,
           display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
 
@@ -29,8 +30,9 @@ export const PrincipalLayout = () => {
           }} >
 
             <div
+              className='wrap-app_'
               style={{
-                height: '20vh', width: `85vh`,  backgroundColor: `${theme? '#e4efe1': '#333437'}`,
+                height: '20vh', backgroundColor: `${theme ? '#e4efe1' : '#333437'}`,
                 marginTop: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center'
               }}>
 
@@ -40,8 +42,9 @@ export const PrincipalLayout = () => {
 
 
             <div
+              className='wrap-app_'
               style={{
-                height: '20vh', width: `85vh`, backgroundColor: `${theme? '#e4efe1': '#333437'}`, transition: 'all 0.30s ease-in-out',
+                height: '20vh',  backgroundColor: `${theme ? '#e4efe1' : '#333437'}`, transition: 'all 0.30s ease-in-out',
                 marginTop: '1vh', marginLeft: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
               }}>
 
@@ -56,8 +59,9 @@ export const PrincipalLayout = () => {
             alignItems: 'flex-start', justifyContent: 'center'
           }} >
             <div
+              className='wrap-app'
               style={{
-                height: '', width: '85vh', backgroundColor: `${theme? '#e4efe1': '#333437'}`,
+                height: '',  backgroundColor: `${theme ? '#e4efe1' : '#333437'}`,
                 marginTop: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
                 flexDirection: 'row', flexWrap: 'wrap', marginBottom: '1vh'
               }}>
@@ -67,8 +71,9 @@ export const PrincipalLayout = () => {
             </div>
 
             <div
+              className='wrap-app'
               style={{
-                height: '', width: '85vh', backgroundColor: `${theme? '#e4efe1': '#333437'}`,
+                height: '',  backgroundColor: `${theme ? '#e4efe1' : '#333437'}`,
                 marginTop: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                 flexDirection: 'column', flexWrap: 'wrap'
               }}>
@@ -85,7 +90,7 @@ export const PrincipalLayout = () => {
 
       </div >
       <Footer style={{
-        marginTop: '2vh', backgroundColor: `${theme? '#e4efe1': '#333437'}`
+        marginTop: '2vh', backgroundColor: `${theme ? '#e4efe1' : '#333437'}`
       }}></Footer>
     </>
   )

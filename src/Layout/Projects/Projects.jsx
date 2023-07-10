@@ -434,8 +434,8 @@ export const Projects = () => {
                 }}>
                 <p className='My-something'
                     style={{
-                        marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: `${theme? '#1d3557': '#a8dadc'}`,
-                        fontWeight: 400, fontSize: '1.5em', cursor: 'default'
+                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme? '#1d3557': '#a8dadc'}`,
+                        fontWeight: 600,  cursor: 'default'
                     }}>
                     My projects</p>
                 <Button
@@ -444,8 +444,8 @@ export const Projects = () => {
                     style={{
                         height: '4vh', aspectRatio: '6/1', borderRadius: '1vh',
                         marginRight: '2vh', lineHeight: '0em',  backgroundColor: `${theme? '#f7fcf5': '#8cb8ba'}`,
-                        marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: `${theme? '#1d3557': '#333437'}`,
-                        fontWeight: 400, border:'0px solid #000'
+                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme? '#1d3557': '#333437'}`,
+                        fontWeight: 500, border:'0px solid #000'
                         // fontSize: '1.2em'
                     }}>
                     + Create new project
@@ -754,7 +754,7 @@ export const Projects = () => {
                             }}>
                                 <p
                                     style={{
-                                        fontFamily: 'Berlin Sans FB',
+                                        fontFamily: 'Segoe UI',
                                         color: `${currentBackground}`,
 
                                         // color:'#a8dadb',
@@ -806,7 +806,7 @@ export const Projects = () => {
                             }}>
                             <p
                                 style={{
-                                    marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: `${theme? '#1d3557': '#e3e3e3'}`,
+                                    marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme? '#1d3557': '#e3e3e3'}`,
                                     fontWeight: 400, fontSize: '1.2em',
                                 }}>
                                 Sub-tasks</p>
@@ -815,7 +815,7 @@ export const Projects = () => {
                                 style={{
                                     height: '3vh', aspectRatio: '6/1', borderRadius: '1vh',
                                     marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme? '#f7fcf5': `${currentBackground}`}`,
-                                    marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: '#1d3557',
+                                    marginLeft: '2vh', fontFamily: 'Segoe UI', color: '#1d3557',
                                     fontWeight: 400, fontSize: '1em', border: '0px solid #000'
                                 }}>
                                 + Add sub-task

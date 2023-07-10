@@ -57,9 +57,9 @@ export const HeaderQuote = () => {
                     ? <p
                         className='Quote'
                         style={{
-                            fontFamily: 'Berlin Sans FB', 
+                            fontFamily: 'Segoe UI', 
                             color: `${theme ? '#1d3557' : '#e3e3e3'}`,
-                            fontWeight: 400,
+                            fontWeight: 500,
                             // fontSize: '1.7em', 
                             textAlign: 'center'
                         }}>{`${quote_} — ${author_}`}</p>

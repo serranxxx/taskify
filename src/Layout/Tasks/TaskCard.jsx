@@ -70,8 +70,8 @@ export const TaskCard = (props) => {
                     <p
                         className='card-title'
                         style={{
-                            textAlign: 'left', width: '85%', fontFamily: 'Berlin Sans FB', color: `${theme ? '#1d3557' : `${colorSelector(user.color)}`}`,
-                            fontWeight: 400,
+                            textAlign: 'left', width: '85%', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : `${colorSelector(user.color)}`}`,
+                            fontWeight: 500, lineHeight: '0.9em',
                             // fontSize: '1.5em', 
                             marginTop: '0.5vh', wordWrap: 'break-word'
                         }}>{user.name}</p>
