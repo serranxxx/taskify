@@ -269,9 +269,10 @@ export const Tasks = () => {
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
                 }}>
                     <div
+                    className='block-shadow'
                         style={{
                             height: '50%', width: '99%', backgroundColor: '#a8dadb',
-                            borderRadius: '1vh', display: 'flex', flexDirection: 'row',
+                            borderRadius: '1vh',  flexDirection: 'row',
                             alignItems: 'center', justifyContent: 'center'
 
                         }}>
@@ -363,12 +364,12 @@ export const Tasks = () => {
             >
                 <div
                     style={{
-                        height: '25vh', width: '70vh',
+                        height: '25vh', width: 'auto',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
                     }}>
 
                     <div
-                        className={`task-image-${currentImage}`}
+                        className={`task-image-${currentImage} block-shadow`}
                         style={{
                             height: '24vh', aspectRatio: '1/1', backgroundColor: `${currentBackground}`,
                             borderRadius: '2vh',
@@ -406,7 +407,7 @@ export const Tasks = () => {
                                             className='input-task-name'
                                             style={{
                                                 fontFamily: 'Segoe UI', color: `${currentBackground}`,
-                                                // fontSize: '2em',
+                                                fontWeight: 600, fontSize:'auto',
                                                 marginBottom: '0vh', marginTop: '-1vh', lineHeight: '0.9em'
                                             }}>{currentTitle}</p>
                                         <hr style={{ border: `1.5px solid ${currentBackground}`, width: '34vh' }} />
@@ -414,8 +415,8 @@ export const Tasks = () => {
                                     : <Input placeholder={`${currentTitle}`}
                                     className='input-task-name'    
                                     style={{
-                                            width: '35vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
-                                            height: '4vh', marginLeft: '-3vh',
+                                            width: '35vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 400,
+                                            height: '4vh', marginLeft: '-3vh', fontSize:'auto',
                                             color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                         }}>
 
@@ -435,7 +436,7 @@ export const Tasks = () => {
                                 !edit
                                     ? <p style={{
                                         width: '36vh', height: '8vh', wordWrap: 'break-word', marginTop: '0vh',
-                                        color: '#AAA'
+                                        color: '#AAA', fontSize:'auto', lineHeight: '0.9em'
                                     }}
                                     >{currentDescription}</p>
                                     : <Input.TextArea

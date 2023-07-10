@@ -56,6 +56,11 @@
     .block-shadow {
         display: none;
     }
+
+
+    .add-project-modal {
+        height: auto;
+    }
 }
 
 
@@ -119,6 +124,13 @@
         display: none;
     }
 
+    
+
+    .add-project-modal {
+        height: auto;
+    }
+    
+
 }
 
 @media screen and (min-height: 701px) and (max-height: 920px) {
@@ -178,4 +190,9 @@
         display: flex;
     }
 
+
+    .add-project-modal {
+        height: 45vh;
+    }
+    
 }

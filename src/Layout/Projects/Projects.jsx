@@ -475,16 +475,18 @@ export const Projects = () => {
                 maskStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
                 footer={<></>}
             >
-                <div
+                <div 
+                className='add-project-modal'
                     style={{
-                        height: '45vh', width: '70vh',
+                         width: '70vh', flexWrap:'wrap',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'column'
                     }}>
 
                     <div
+                    className='block-shadow'
                         style={{
                             height: '30%', width: '100%', backgroundColor: '#a8dadb',
-                            borderRadius: '1vh', display: 'flex', flexDirection: 'row',
+                            borderRadius: '1vh',  flexDirection: 'row',
                             alignItems: 'center', justifyContent: 'center'
 
                         }}>
@@ -521,10 +523,12 @@ export const Projects = () => {
                             onFinish={CreateNewProject}
                             style={{ width: '50%', height: '100%', }}>
 
-                            <Col style={{
+                            <Col 
+                            className='project-f'
+                            style={{
                                 width: '100%', height: '100%',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                flexDirection: 'column', marginTop: '1vh',
+                                display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',
+                                flexDirection: 'column', marginTop: '3vh',
                             }}>
                                 <Form.Item
                                     name="name"
@@ -550,7 +554,7 @@ export const Projects = () => {
                                             overflow: 'auto', overflowY: 'auto', overflowX: 'hidden',
                                             color:`${theme? '': '#e3e3e3'}`, border: `${theme?'':'0px solid #000'}`
                                         }}
-                                        autoSize={{ minRows: 6, maxRows: 10 }}  // Ajusta automáticamente la altura según el contenido
+                                        autoSize={{ minRows: 1, maxRows: 6 }}  // Ajusta automáticamente la altura según el contenido
                                         wrap="soft"  // Permite el wrap automático del texto
                                     />
 
@@ -628,7 +632,7 @@ export const Projects = () => {
                         style={{
                             borderRadius: '1vh', backgroundColor: `${theme? '#f7fcf5': '#333437'}`, fontWeight: 500,
                             width: '68vh', border: '1.8px solid #a8dadb', color: '#a8dadb',
-                            marginBottom: '-1vh'
+                            marginBottom: '-1vh', 
 
                         }}>+ Create new project</Button>
 
