@@ -476,9 +476,9 @@ export const Projects = () => {
                 footer={<></>}
             >
                 <div
-                    className='add-project-modal'
+                    className='add-project-modal current-project'
                     style={{
-                        width: 'auto', flexWrap: 'wrap',
+                        flexWrap: 'wrap',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'column'
                     }}>
 
@@ -562,15 +562,10 @@ export const Projects = () => {
 
                                 </Form.Item>
 
-                                <Button type='primary' className='add-task-button-2 project-inputs'
-                                onClick={handleForms}
-                                style={{
-                                    borderRadius: '1vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
-                                    border: '1.8px solid #a8dadb', color: '#a8dadb', width: 'auto',
-                                }}>+ Create project</Button>
+                                
                             </Col>
 
-                            
+
 
                         </Form>
 
@@ -579,7 +574,8 @@ export const Projects = () => {
                             name="myForm_3"
                             form={form2}
                             onFinish={AgregateSubtasks}
-                            style={{ width: '50%', height: '100%', marginLeft: '1vh' }}>
+                            className='project-form'
+                            style={{ width: '50%', height: '100%',  }}>
 
                             <Col style={{
                                 width: '100%', height: '100%',
@@ -591,7 +587,7 @@ export const Projects = () => {
                                     style={{
                                         borderRadius: '0.5vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
                                         border: '1px solid #a8dadb', color: '#a8dadb',
-                                        marginTop: '0vh'
+                                        
                                     }}>+ Add sub-task</Button>
 
                                 <div className='scrollable-div'
@@ -631,6 +627,13 @@ export const Projects = () => {
                                     }
 
                                 </div>
+
+                                <Button type='primary' className='add-task-button-2 project-inputs'
+                                    onClick={handleForms}
+                                    style={{
+                                        borderRadius: '1vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                        border: '1.8px solid #a8dadb', color: '#a8dadb', width: 'auto', marginBottom:'2vh'
+                                    }}>+ Create project</Button>
 
                             </Col>
 
@@ -714,8 +717,9 @@ export const Projects = () => {
                 footer={<></>}
             >
                 <div
+                    className='current-project'
                     style={{
-                        height: '60vh', width: '70vh',
+                        height: '60vh',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'column'
                     }}>
 
@@ -767,7 +771,7 @@ export const Projects = () => {
                                         fontSize: '2em',
                                         lineHeight: '0.9em',
                                         textAlign: 'left',
-                                        fontWeight:600
+                                        fontWeight: 600
                                     }}>{currentName}</p>
                             </div>
 
@@ -775,13 +779,13 @@ export const Projects = () => {
                                 width: '90%', height: '10%',
                                 display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
                             }}>
-                                <hr 
-                                className='block-shadow'
-                                style={{
-                                    border: `1.8px solid ${currentBackground}`,
-                                    // border: `1.8px solid #a8dadb`, 
-                                    width: '100%',
-                                }} />
+                                <hr
+                                    className='block-shadow'
+                                    style={{
+                                        border: `1.8px solid ${currentBackground}`,
+                                        // border: `1.8px solid #a8dadb`, 
+                                        width: '100%',
+                                    }} />
 
                             </div>
 
@@ -823,7 +827,7 @@ export const Projects = () => {
                             <Button
                                 onClick={() => setSubtaskName(true)}
                                 style={{
-                                    borderRadius: '1vh', height:'3vh',
+                                    borderRadius: '1vh', height: '3vh',
                                     marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme ? '#f7fcf5' : `${currentBackground}`}`,
                                     marginLeft: '2vh', fontFamily: 'Segoe UI', color: '#1d3557',
                                     fontWeight: 400, fontSize: '1em', border: '0px solid #000'
@@ -869,18 +873,18 @@ export const Projects = () => {
                                                         // disabled={`${elemento.finished? true: false}`}
                                                         onClick={() => FinishedSubtask(elemento.key)}
                                                         style={{
-                                                            height:'4vh', marginLeft: '1vh', border: '0px solid #000', color: `${elemento.finished ? 'transparent' : theme ? '#f7fcf5' : '#333437'}`,
+                                                            height: '4vh', marginLeft: '1vh', border: '0px solid #000', color: `${elemento.finished ? 'transparent' : theme ? '#f7fcf5' : '#333437'}`,
                                                             backgroundColor: `${elemento.finished ? 'transparent' : currentBackground}`,
                                                             lineHeight: '0em', fontWeight: 500, cursor: `${elemento.finished ? 'auto' : 'pointer'}`
                                                         }}>Finish</Button>
                                                     <Button
                                                         onClick={() => DeleteSubTask(elemento.key)}
                                                         className='trash-button'
-                                                        icon={<FaTrashAlt style={{ color: `${theme ? '#f7fcf5' : '#333437'}`,}} />}
+                                                        icon={<FaTrashAlt style={{ color: `${theme ? '#f7fcf5' : '#333437'}`, }} />}
                                                         style={{
-                                                            height:'4vh', marginLeft: '1vh', marginRight: '1vh',
+                                                            height: '4vh', marginLeft: '1vh', marginRight: '1vh',
                                                             backgroundColor: `${elemento.finished ? '#6edfc7' : currentBackground}`, border: '0px solid #000',
-                                                        }}/>
+                                                        }} />
                                                 </>
                                         }
 

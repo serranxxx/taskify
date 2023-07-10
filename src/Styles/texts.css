@@ -1,87 +1,5 @@
-/* Ajuste para pantallas grandes */
-@media screen and (min-width: 450px) {
 
-    .wrap-app {
-        width:auto
-    }
-
-    .wrap-app_ {
-        width:65vh;
-    }
-    .Taskify {
-        font-size: 14em;
-    }
-
-    .Quote {
-        font-size: 1.7em;
-    }
-
-    .add-something {
-        font-size: 0.5em;
-        color: red
-    }
-
-    .My-something {
-        font-size: 0.5em;
-        color: red
-    }
-
-    .card-title {
-        font-size: 0.5em;
-    }
-
-    .card-description {
-        font-size: 0.5em;
-        display: none;
-    }
-
-    .project-title {
-        font-size: 1em;
-    }
-
-    .project-description {
-        font-size: 0.7em;
-        display: none;
-    }
-
-    .input-task-name {
-        font-size: 0.8em;
-    }
-
-    .blocks {
-        height: 18vh;
-        aspect-ratio: 1/1;
-    }
-
-    .block-shadow {
-        display: none;
-    }
-
-
-    .add-project-modal {
-        height: auto;
-    }
-
-    .block {
-        display: none;
-    }
-    
-    .project-inputs {
-        width: 20vh;
-    }
-    .add-sub-task {
-        height: 7vh;
-    }
-
-    .trash-button {
-        margin-bottom:'2vh'
-    }
-    
-    
-}
-
-
-@media screen and (max-height: 700px) {
+@media screen and (max-width: 750px) {
     .wrap-app {
         width:60vh
     }
@@ -97,6 +15,7 @@
 
     .Quote {
         font-size: 1.2em;
+        
     }
 
     .add-something {
@@ -161,12 +80,118 @@
     .trash-button {
         margin-bottom:'1vh'
     }
+
+    .current-project {
+        width: 40vh;
+    }
+
+    .project-form {
+        margin-left: 1vh;
+        margin-top: 0vh;
+    }
+    
     
     
 
 }
 
-@media screen and (min-height: 701px) and (max-height: 920px) {
+@media screen and (max-height: 700px) {
+    .wrap-app {
+        width:60vh
+    }
+
+    .wrap-app_ {
+        width:60vh;
+    }
+
+    .Taskify {
+        font-size: 8em;
+        color: pink
+    }
+
+    .Quote {
+        font-size: 1.2em;
+        
+    }
+
+    .add-something {
+        font-size: 0.8em;
+        color: blue;
+    }
+
+    .My-something {
+        font-size: 1em;
+        color: red
+    }
+
+    .card-title {
+        font-size: 1.1em;
+    }
+
+    .card-description {
+        font-size: 0.7em;
+        display: none;
+    }
+
+    .project-title {
+        font-size: 1.5em;
+    }
+
+    .project-description {
+        font-size: 0.9em;
+        display: none;
+    }
+
+    .input-task-name {
+        font-size: 1.5em;
+    }
+
+    .blocks {
+        height: 20vh;
+        aspect-ratio: 1/1;
+    }
+
+
+    .block-shadow {
+        display: none;
+    }
+
+
+    .add-project-modal {
+        height: auto;
+    }
+
+    .block {
+        display: none;
+    }
+
+    .project-inputs {
+        width: 27vh;
+    }
+
+    .add-sub-task {
+        height: 7vh;
+    }
+
+    .trash-button {
+        margin-bottom:'1vh'
+    }
+
+    .current-project {
+        width: 40vh;
+    }
+
+    .project-form {
+        margin-left: 1vh;
+        margin-top: 0vh;
+    }
+    
+    
+    
+
+}
+
+@media screen and (min-height: 701px) and (min-width: 751px) {
     .wrap-app {
         width:85vh;
     }
@@ -242,6 +267,15 @@
 
     .trash-button {
         margin-bottom:'0vh'
+    }
+
+    .current-project {
+        width: 70vh;
+    }
+
+    .project-form {
+        margin-left: 0vh;
+        margin-top: 3vh;
     }
     
 }
