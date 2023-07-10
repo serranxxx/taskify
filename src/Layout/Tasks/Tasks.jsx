@@ -283,7 +283,7 @@ export const Tasks = () => {
                                 height: '100%', aspectRatio: '3/2',
                             }} />
 
-                        <div className={`image-${12}`}
+                        {/* <div className={`image-${12}`}
                             style={{
                                 height: '100%', aspectRatio: '3/2',
                             }} />
@@ -291,7 +291,7 @@ export const Tasks = () => {
                         <div className={`image-${4}`}
                             style={{
                                 height: '100%', aspectRatio: '3/2',
-                            }} />
+                            }} /> */}
 
 
                     </div>
@@ -369,8 +369,9 @@ export const Tasks = () => {
                 footer={<></>}
             >
                 <div
+                    className='current-task'
                     style={{
-                        height: '25vh', width: 'auto',
+                        height: '25vh', 
                         display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
                     }}>
 

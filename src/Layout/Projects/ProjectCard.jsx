@@ -88,10 +88,10 @@ export const ProjectCard = (props) => {
 
                 <div
                     key={user.key}
-                    className='element'
+                    className='element login-card'
                     onClick={() => handleClick(user.name, user.description, user.image, user.color, user.finished, user.key, user.total, user.completed)}
                     style={{
-                        height: '20vh', width: '100%', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
+                        width: '100%', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
                         borderRadius: '1.5vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         flexDirection: 'row', marginTop: '3vh', marginRight: '3vh', marginLeft: '1vh',
                         transition: 'all 0.35s ease-in-out', cursor: 'pointer'

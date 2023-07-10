@@ -70,7 +70,7 @@
     }
 
     .project-inputs {
-        width: 27vh;
+        width: 25vh;
     }
 
     .add-sub-task {
@@ -85,10 +85,23 @@
         width: 40vh;
     }
 
+    .new-project {
+        width: 30vh;
+    }
+
     .project-form {
         margin-left: 1vh;
         margin-top: 0vh;
     }
+
+    .current-task{
+        width: 40vh;
+    }
+
+    .login-card {
+        height: 15vh;
+    }
+    
     
     
     
@@ -116,7 +129,6 @@
 
     .add-something {
         font-size: 0.8em;
-        color: blue;
     }
 
     .My-something {
@@ -166,7 +178,7 @@
     }
 
     .project-inputs {
-        width: 27vh;
+        width: 25vh;
     }
 
     .add-sub-task {
@@ -181,9 +193,21 @@
         width: 40vh;
     }
 
+    .new-project {
+        width: 30vh;
+    }
+
     .project-form {
         margin-left: 1vh;
         margin-top: 0vh;
+    }
+
+    .current-task{
+        width: 40vh;
+    }
+
+    .login-card {
+        height: 15vh;
     }
     
     
@@ -261,6 +285,14 @@
         width: 30vh;
     }
 
+    .new-project {
+        width: 70vh;
+    }
+
+    .new-task {
+        width: 35vh;
+    }
+
     .add-sub-task {
         height: 5vh;
     }
@@ -276,6 +308,14 @@
     .project-form {
         margin-left: 0vh;
         margin-top: 3vh;
+    }
+
+    .current-task{
+        width: auto;
+    }
+
+    .login-card {
+        height: 20vh;
     }
     
 }

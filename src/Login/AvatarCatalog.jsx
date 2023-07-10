@@ -9,9 +9,8 @@ export const AvatarCatalog = (props) => {
                 <Button
 
                     onClick={() => props.finish(dato)}
-                    className={`avatar-${dato} button-catalog`}
+                    className={`avatar-${dato} button-catalog login-card`}
                     style={{
-                        height: '20vh',
                         aspectRatio: '1/1',
                         cursor: 'pointer',
                         marginLeft: '4%',

@@ -18,10 +18,9 @@ export const ProfileButton = (props) => {
                 <Button
                     key={user}
                     disabled={!eneableButton}
-                    className={`avatar-${user} button`} onClick={() => props.onLogin(user)}
+                    className={`avatar-${user} button login-card`} onClick={() => props.onLogin(user)}
                     // onMouseEnter={() => setDeleteButton(true)} onMouseLeave={() => setDeleteButton(false)}
                     style={{
-                        height: '30vh',
                         aspectRatio: '1/1',
                         cursor: 'pointer',
                         marginLeft: '2%', marginTop:'2%',

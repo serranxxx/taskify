@@ -476,7 +476,7 @@ export const Projects = () => {
                 footer={<></>}
             >
                 <div
-                    className='add-project-modal current-project'
+                    className='add-project-modal new-project'
                     style={{
                         flexWrap: 'wrap',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'column'
@@ -632,7 +632,8 @@ export const Projects = () => {
                                     onClick={handleForms}
                                     style={{
                                         borderRadius: '1vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
-                                        border: '1.8px solid #a8dadb', color: '#a8dadb', width: 'auto', marginBottom:'2vh'
+                                        border: '1.8px solid #a8dadb', color: '#a8dadb', width: 'auto', marginBottom:'2vh',
+                                        marginTop:'1vh'
                                     }}>+ Create project</Button>
 
                             </Col>
@@ -858,8 +859,11 @@ export const Projects = () => {
 
                                             borderRadius: '1vh', marginRight: '1vh',
                                         }} />
-                                        <p style={{
+                                        <p 
+                                        className='add-something'
+                                        style={{
                                             fontWeight: 400, color: `${theme ? '#1d3557' : '#e3e3e3'}`, marginLeft: '1vh',
+                                            lineHeight: '0.9em',
                                             width: '65%', height: '4vh', textDecoration: `${elemento.finished ? 'line-through' : ''}`
                                         }} key={elemento.key}>
                                             {elemento.name}
@@ -870,6 +874,7 @@ export const Projects = () => {
                                                 :
                                                 <>
                                                     <Button
+                                                    className='add-something'
                                                         // disabled={`${elemento.finished? true: false}`}
                                                         onClick={() => FinishedSubtask(elemento.key)}
                                                         style={{
