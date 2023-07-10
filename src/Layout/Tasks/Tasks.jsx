@@ -265,9 +265,9 @@ export const Tasks = () => {
                 footer={<></>}
             >
                 <div 
-                className='add-project-modal'
+                className='add-project-modal project-inputs'
                 style={{
-                    width: '50vh', marginTop: '0vh', marginBottom: '-2vh',
+                     marginTop: '0vh', marginBottom: '-2vh',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
                 }}>
                     <div
@@ -313,8 +313,9 @@ export const Tasks = () => {
                                 }]}
                             >
                                 <Input placeholder="Type task name"
+                                className='project-inputs'
                                     style={{
-                                        width: '50vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                         backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
                                         fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                     }} />
 
@@ -326,8 +327,9 @@ export const Tasks = () => {
                             >
                                 <Input.TextArea
                                     placeholder="Type task description"
+                                    className='project-inputs'
                                     style={{
-                                        width: '50vh', height: '18vh', resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`,
+                                        height: '18vh', resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`,
                                         overflow: 'auto', overflowY: 'auto', overflowX: 'hidden', color: `${theme ? '' : '#e3e3e3'}`,
                                         border: `${theme ? '' : '0px solid #000'}`
                                     }}
@@ -337,11 +339,13 @@ export const Tasks = () => {
 
                             </Form.Item>
 
-                            <Form.Item style={{ width: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <Button htmlType="submit" className='add-task-button-2'
+                            <Form.Item 
+                            className='project-inputs'
+                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Button htmlType="submit" className='add-task-button-2 project-inputs'
                                     style={{
                                         borderRadius: '1vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
-                                        width: '50vh', border: '1.8px solid #a8dadb', color: '#a8dadb'
+                                        border: '1.8px solid #a8dadb', color: '#a8dadb'
                                     }}>+ Add task</Button>
                             </Form.Item>
 

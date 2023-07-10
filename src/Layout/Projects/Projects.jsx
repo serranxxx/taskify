@@ -379,30 +379,30 @@ export const Projects = () => {
         let total = 0;
 
         for (let i = 0; i < data.length; i++) {
-          const obj = data[i];
-          if (obj.hasOwnProperty('subtasks')) {
-            total += obj.subtasks.length;
-          }
+            const obj = data[i];
+            if (obj.hasOwnProperty('subtasks')) {
+                total += obj.subtasks.length;
+            }
         }
 
         setTotalSubtasks(total)
         let completed = 0;
 
         for (let i = 0; i < data.length; i++) {
-          const obj = data[i];
-          if (obj.hasOwnProperty('subtasks')) {
-            const subtasks = obj.subtasks;
-            for (let j = 0; j < subtasks.length; j++) {
-              if (subtasks[j].finished === true) {
-                completed++;
-              }
+            const obj = data[i];
+            if (obj.hasOwnProperty('subtasks')) {
+                const subtasks = obj.subtasks;
+                for (let j = 0; j < subtasks.length; j++) {
+                    if (subtasks[j].finished === true) {
+                        completed++;
+                    }
+                }
             }
-          }
         }
         setFinishedSubtasks(completed)
         console.log(total)
         console.log(completed)
-    
+
     }, [data])
 
     const CurrentCompleted = () => {
@@ -428,24 +428,24 @@ export const Projects = () => {
         <>
             <div
                 style={{
-                    width: '95%', height: '7vh', borderRadius: '2vh', backgroundColor: `${theme? '#a8dadc': '#27282c'}`,
+                    width: '95%', height: '7vh', borderRadius: '2vh', backgroundColor: `${theme ? '#a8dadc' : '#27282c'}`,
                     display: 'flex', alignItems: 'center', marginTop: '3vh', flexDirection: 'row',
                     justifyContent: 'space-between'
                 }}>
                 <p className='My-something'
                     style={{
-                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme? '#1d3557': '#a8dadc'}`,
-                        fontWeight: 600,  cursor: 'default'
+                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : '#a8dadc'}`,
+                        fontWeight: 600, cursor: 'default'
                     }}>
                     My projects</p>
                 <Button
-                className='add-something'
+                    className='add-something'
                     onClick={() => setNewProjectVisible(true)}
                     style={{
                         height: '4vh', aspectRatio: '6/1', borderRadius: '1vh',
-                        marginRight: '2vh', lineHeight: '0em',  backgroundColor: `${theme? '#f7fcf5': '#8cb8ba'}`,
-                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme? '#1d3557': '#333437'}`,
-                        fontWeight: 500, border:'0px solid #000'
+                        marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme ? '#f7fcf5' : '#8cb8ba'}`,
+                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : '#333437'}`,
+                        fontWeight: 500, border: '0px solid #000'
                         // fontSize: '1.2em'
                     }}>
                     + Create new project
@@ -453,12 +453,12 @@ export const Projects = () => {
             </div>
 
             <div
-                className={`${theme? 'scrollable-div': 'scrollable-div-dark'}`}
+                className={`${theme ? 'scrollable-div' : 'scrollable-div-dark'}`}
                 style={{
                     width: '95%', marginTop: '1vh', display: 'flex', alignItems: 'left', justifyContent: 'flex-start',
                     flexDirection: 'row', flexWrap: 'wrap', marginBottom: '2vh'
                 }}>
-                    
+
 
                 <ProjectCard data={projects} OnCurrentProject={OnCurrentProject} />
 
@@ -469,24 +469,24 @@ export const Projects = () => {
                 visible={newProjectVisible}
                 onOk={handleOk}
                 onCancel={handleCancel}
-                className={`${theme? 'task-content': 'task-content-dark'}`}
+                className={`${theme ? 'task-content' : 'task-content-dark'}`}
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}
 
                 maskStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
                 footer={<></>}
             >
-                <div 
-                className='add-project-modal'
+                <div
+                    className='add-project-modal'
                     style={{
-                         width: 'auto', flexWrap:'wrap',
+                        width: 'auto', flexWrap: 'wrap',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'column'
                     }}>
 
                     <div
-                    className='block-shadow'
+                        className='block-shadow'
                         style={{
                             height: '30%', width: '100%', backgroundColor: '#a8dadb',
-                            borderRadius: '1vh',  flexDirection: 'row',
+                            borderRadius: '1vh', flexDirection: 'row',
                             alignItems: 'center', justifyContent: 'center'
 
                         }}>
@@ -512,7 +512,7 @@ export const Projects = () => {
 
 
                     <Row style={{
-                        width: '100%', display: 'flex', flexDirection: 'row', marginTop:'-1vh',
+                        width: '100%', display: 'flex', flexDirection: 'row', marginTop: '-1vh',
                         alignItems: 'center', justifyContent: 'center', height: '65%'
                     }}>
 
@@ -521,24 +521,25 @@ export const Projects = () => {
                             name="myForm_3"
                             form={form}
                             onFinish={CreateNewProject}
-                            style={{ width: '50%', height: '100%', }}>
+                            style={{ width: '50%', height: '100%', marginLeft: '-1v' }}>
 
-                            <Col 
-                            className='project-f'
-                            style={{
-                                width: '100%', height: '100%',
-                                display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',
-                                flexDirection: 'column', marginTop: '3vh',
-                            }}>
+                            <Col
+                                className='project-f'
+                                style={{
+                                    width: '100%', height: '100%',
+                                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                                    flexDirection: 'column', marginTop: '3vh',
+                                }}>
                                 <Form.Item
                                     name="name"
                                     style={{ marginTop: '0vh' }}
 
                                 >
                                     <Input placeholder="Type project name"
+                                        className='project-inputs'
                                         style={{
-                                            width: '33vh', backgroundColor: `${theme? '#f7fcf5': '#333437'}`, fontWeight: 500,
-                                            fontWeight: '1em', color:`${theme? '': '#e3e3e3'}`, border: `${theme?'':'0px solid #000'}`
+                                            backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                            fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                         }} />
 
                                 </Form.Item>
@@ -549,17 +550,27 @@ export const Projects = () => {
                                 >
                                     <Input.TextArea
                                         placeholder="Type task description"
+                                        className='project-inputs'
                                         style={{
-                                            width: '33vh', resize: 'none', backgroundColor: `${theme? '#f7fcf5': '#333437'}`,
+                                            resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`,
                                             overflow: 'auto', overflowY: 'auto', overflowX: 'hidden',
-                                            color:`${theme? '': '#e3e3e3'}`, border: `${theme?'':'0px solid #000'}`
+                                            color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                         }}
                                         autoSize={{ minRows: 3, maxRows: 6 }}  // Ajusta automáticamente la altura según el contenido
                                         wrap="soft"  // Permite el wrap automático del texto
                                     />
 
                                 </Form.Item>
+
+                                <Button type='primary' className='add-task-button-2 project-inputs'
+                                onClick={handleForms}
+                                style={{
+                                    borderRadius: '1vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                    border: '1.8px solid #a8dadb', color: '#a8dadb', width: 'auto',
+                                }}>+ Create project</Button>
                             </Col>
+
+                            
 
                         </Form>
 
@@ -568,18 +579,18 @@ export const Projects = () => {
                             name="myForm_3"
                             form={form2}
                             onFinish={AgregateSubtasks}
-                            style={{ width: '50%', height: '100%', }}>
+                            style={{ width: '50%', height: '100%', marginLeft: '1vh' }}>
 
                             <Col style={{
                                 width: '100%', height: '100%',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                                 flexDirection: 'column'
                             }}>
-                                <Button type='primary' className='add-task-button-2'
+                                <Button type='primary' className='add-task-button-2 project-inputs'
                                     onClick={AddSubTask}
                                     style={{
-                                        borderRadius: '0.5vh', backgroundColor: `${theme? '#f7fcf5': '#333437'}`, fontWeight: 500,
-                                        width: '33vh', border: '1px solid #a8dadb', color: '#a8dadb',
+                                        borderRadius: '0.5vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                        border: '1px solid #a8dadb', color: '#a8dadb',
                                         marginTop: '0vh'
                                     }}>+ Add sub-task</Button>
 
@@ -593,7 +604,7 @@ export const Projects = () => {
                                         subTasks.map((task) => (
                                             <Row style={{
                                                 display: 'flex', alignItems: 'flex-start', justifyContent: 'left',
-                                                marginTop: '0.5vh',
+                                                marginTop: '0.5vh', marginRight: '0vh'
                                             }}>
                                                 <Form.Item
                                                     key={task}
@@ -605,11 +616,11 @@ export const Projects = () => {
 
                                                 >
                                                     <Input placeholder="Type sub-task name"
-
+                                                        className='project-inputs_'
                                                         style={{
-                                                            width: '32vh', backgroundColor: `${theme? '#f7fcf5': '#333437'}`, fontWeight: 400,
+                                                            backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 400,
                                                             fontSize: '1em', height: '4vh', marginLeft: '0vh',
-                                                            color:`${theme? '': '#e3e3e3'}`, border: `${theme?'':'0px solid #000'}`
+                                                            color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                                         }} />
                                                 </Form.Item>
 
@@ -627,15 +638,6 @@ export const Projects = () => {
                     </Row>
 
 
-                    <Button type='primary' className='add-task-button-2'
-                        onClick={handleForms}
-                        style={{
-                            borderRadius: '1vh', backgroundColor: `${theme? '#f7fcf5': '#333437'}`, fontWeight: 500,
-                            width: '68vh', border: '1.8px solid #a8dadb', color: '#a8dadb',
-                            marginBottom: '0vh', marginTop:'-1vh'
-
-                        }}>+ Create new project</Button>
-
 
                 </div>
 
@@ -644,7 +646,7 @@ export const Projects = () => {
             <Modal visible={subtaskName}
                 onOk={handleOk}
                 onCancel={handleCancel}
-                className={`${theme? 'task-content': 'task-content-dark'}`}
+                className={`${theme ? 'task-content' : 'task-content-dark'}`}
                 style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%',
                     marginTop: '15vh'
@@ -679,8 +681,8 @@ export const Projects = () => {
                             >
                                 <Input placeholder="Type sub-task name"
                                     style={{
-                                        width: '48.5vh', backgroundColor: `${theme? '#f7fcf5': '#333437'}`, fontWeight: 500,
-                                        fontWeight: '1em', color:`${theme? '': '#e3e3e3'}`, border: `${theme?'':'0px solid #000'}`
+                                        width: '48.5vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                        fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                     }} />
 
                             </Form.Item>
@@ -689,7 +691,7 @@ export const Projects = () => {
                                 <Button
                                     type='primary' htmlType="submit"
                                     style={{
-                                        backgroundColor: `${currentBackground}`, fontWeight: 500, color: `${theme? '#f7fcf4':'#333437'}`,
+                                        backgroundColor: `${currentBackground}`, fontWeight: 500, color: `${theme ? '#f7fcf4' : '#333437'}`,
                                         marginLeft: '1vh'
                                     }}>Add</Button>
                             </Form.Item>
@@ -705,7 +707,7 @@ export const Projects = () => {
                 onOk={handleOk}
                 onCancel={handleCancel}
                 // className='task-content'
-                className={`${theme? 'task-content': 'task-content-dark'}`}
+                className={`${theme ? 'task-content' : 'task-content-dark'}`}
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}
 
                 maskStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
@@ -719,15 +721,15 @@ export const Projects = () => {
 
                     <Row style={{
                         height: '40%', width: '100%',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         flexDirection: 'row',
                     }}>
-                        <div className={`image-${currentImage}`}
+                        <div className={`image-${currentImage} block-shadow`}
                             style={{
                                 height: '80%', width: '30%',
                                 backgroundColor: `${currentBackground}`,
 
-                                borderRadius: '1vh', display: 'flex', flexDirection: 'row',
+                                borderRadius: '1vh', flexDirection: 'row',
                                 alignItems: 'flex-end', justifyContent: 'center',
                                 // border:'2px solid #a8dadb'
 
@@ -765,6 +767,7 @@ export const Projects = () => {
                                         fontSize: '2em',
                                         lineHeight: '0.9em',
                                         textAlign: 'left',
+                                        fontWeight:600
                                     }}>{currentName}</p>
                             </div>
 
@@ -772,7 +775,9 @@ export const Projects = () => {
                                 width: '90%', height: '10%',
                                 display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
                             }}>
-                                <hr style={{
+                                <hr 
+                                className='block-shadow'
+                                style={{
                                     border: `1.8px solid ${currentBackground}`,
                                     // border: `1.8px solid #a8dadb`, 
                                     width: '100%',
@@ -800,25 +805,26 @@ export const Projects = () => {
                         flexDirection: 'column',
                     }}>
                         <div
+                            className='add-sub-task'
                             style={{
-                                width: '95%', height: '5vh', borderRadius: '1vh',
+                                width: '95%', borderRadius: '1vh',
                                 backgroundColor: `${currentBackground}80`,
                                 // boxShadow:'0px 10px 20px #00000020',
                                 // backgroundColor:'#a8dadb',
                                 display: 'flex', alignItems: 'center', marginTop: '0vh', flexDirection: 'row',
                                 justifyContent: 'space-between'
                             }}>
-                            <p
+                            <p className='block-shadow'
                                 style={{
-                                    marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme? '#1d3557': '#e3e3e3'}`,
+                                    marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : '#e3e3e3'}`,
                                     fontWeight: 400, fontSize: '1.2em',
                                 }}>
                                 Sub-tasks</p>
                             <Button
                                 onClick={() => setSubtaskName(true)}
                                 style={{
-                                    height: '3vh', aspectRatio: '6/1', borderRadius: '1vh',
-                                    marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme? '#f7fcf5': `${currentBackground}`}`,
+                                    borderRadius: '1vh', height:'3vh',
+                                    marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme ? '#f7fcf5' : `${currentBackground}`}`,
                                     marginLeft: '2vh', fontFamily: 'Segoe UI', color: '#1d3557',
                                     fontWeight: 400, fontSize: '1em', border: '0px solid #000'
                                 }}>
@@ -849,8 +855,8 @@ export const Projects = () => {
                                             borderRadius: '1vh', marginRight: '1vh',
                                         }} />
                                         <p style={{
-                                            fontWeight: 500, color: `${theme?'#1d3557':'#e3e3e3'}`, marginLeft: '1vh',
-                                            width: '65%', height: '4vh', lineHeight: '2em', textDecoration: `${elemento.finished ? 'line-through' : ''}`
+                                            fontWeight: 400, color: `${theme ? '#1d3557' : '#e3e3e3'}`, marginLeft: '1vh',
+                                            width: '65%', height: '4vh', textDecoration: `${elemento.finished ? 'line-through' : ''}`
                                         }} key={elemento.key}>
                                             {elemento.name}
                                         </p>
@@ -863,16 +869,18 @@ export const Projects = () => {
                                                         // disabled={`${elemento.finished? true: false}`}
                                                         onClick={() => FinishedSubtask(elemento.key)}
                                                         style={{
-                                                            width: '10vh', marginLeft: '1vh', border: '0px solid #000', color: `${elemento.finished ? 'transparent' : theme? '#f7fcf5': '#333437'}`,
+                                                            height:'4vh', marginLeft: '1vh', border: '0px solid #000', color: `${elemento.finished ? 'transparent' : theme ? '#f7fcf5' : '#333437'}`,
                                                             backgroundColor: `${elemento.finished ? 'transparent' : currentBackground}`,
                                                             lineHeight: '0em', fontWeight: 500, cursor: `${elemento.finished ? 'auto' : 'pointer'}`
                                                         }}>Finish</Button>
                                                     <Button
                                                         onClick={() => DeleteSubTask(elemento.key)}
+                                                        className='trash-button'
+                                                        icon={<FaTrashAlt style={{ color: `${theme ? '#f7fcf5' : '#333437'}`,}} />}
                                                         style={{
-                                                            width: '4vh', marginLeft: '1vh', marginRight: '1vh',
+                                                            height:'4vh', marginLeft: '1vh', marginRight: '1vh',
                                                             backgroundColor: `${elemento.finished ? '#6edfc7' : currentBackground}`, border: '0px solid #000',
-                                                        }}><FaTrashAlt style={{ color: `${theme? '#f7fcf5': '#333437'}`, marginLeft: '-1vh' }} /></Button>
+                                                        }}/>
                                                 </>
                                         }
 
@@ -895,7 +903,7 @@ export const Projects = () => {
                             // disabled={edit}
                             className='element'
                             style={{
-                                backgroundColor: `${theme? '#f7fcf5': '#333437'}`, border: `1px solid ${currentBackground}`,
+                                backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, border: `1px solid ${currentBackground}`,
                                 color: `${currentBackground}`, fontWeight: 500, transition: 'all 0.25s ease-in-out',
                                 // display: `${edit ? 'none' : ''}`
                             }}
@@ -907,7 +915,7 @@ export const Projects = () => {
                             type='primary'
                             style={{
                                 marginLeft: '2vh', fontWeight: 500, backgroundColor: `${currentBackground}`,
-                                transition: 'all 0.25s ease-in-out', color:`${theme?'':'#333437'}`,
+                                transition: 'all 0.25s ease-in-out', color: `${theme ? '' : '#333437'}`,
                                 display: `${currentStatus ? 'none' : ''}`
                             }}>Finish project</Button>
                     </Row>

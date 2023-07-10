@@ -65,6 +65,19 @@
     .block {
         display: none;
     }
+    
+    .project-inputs {
+        width: 20vh;
+    }
+    .add-sub-task {
+        height: 7vh;
+    }
+
+    .trash-button {
+        margin-bottom:'2vh'
+    }
+    
+    
 }
 
 
@@ -136,6 +149,19 @@
     .block {
         display: none;
     }
+
+    .project-inputs {
+        width: 27vh;
+    }
+
+    .add-sub-task {
+        height: 7vh;
+    }
+
+    .trash-button {
+        margin-bottom:'1vh'
+    }
+    
     
 
 }
@@ -204,6 +230,18 @@
 
     .block {
         display: none;
+    }
+
+    .project-inputs {
+        width: 30vh;
+    }
+
+    .add-sub-task {
+        height: 5vh;
+    }
+
+    .trash-button {
+        margin-bottom:'0vh'
     }
     
 }
