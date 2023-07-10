@@ -98,7 +98,7 @@ export const LoginPage = () => {
                 fontFamily: 'Berlin Sans FB', fontWeight: 'normal', marginTop: '2%'
             }}>
                 <p style={{ fontSize: '120%', color: `${theme ? '#1d3447' : '#f1faee'}`, wordWrap: 'break-word' }}
-                >Do you want another avatar
+                >Do you want another avatar?
                     <a style={{ color: `${theme ? '#a8dadc' : '#f0c145'}`, cursor: 'pointer' }} onClick={showDrawer}
                     > Add avatar</a></p>
             </div>

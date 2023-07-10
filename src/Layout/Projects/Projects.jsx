@@ -432,19 +432,21 @@ export const Projects = () => {
                     display: 'flex', alignItems: 'center', marginTop: '3vh', flexDirection: 'row',
                     justifyContent: 'space-between'
                 }}>
-                <p
+                <p className='My-something'
                     style={{
                         marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: `${theme? '#1d3557': '#a8dadc'}`,
                         fontWeight: 400, fontSize: '1.5em', cursor: 'default'
                     }}>
                     My projects</p>
                 <Button
+                className='add-something'
                     onClick={() => setNewProjectVisible(true)}
                     style={{
                         height: '4vh', aspectRatio: '6/1', borderRadius: '1vh',
                         marginRight: '2vh', lineHeight: '0em',  backgroundColor: `${theme? '#f7fcf5': '#8cb8ba'}`,
                         marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: `${theme? '#1d3557': '#333437'}`,
-                        fontWeight: 400, fontSize: '1.2em', border:'0px solid #000'
+                        fontWeight: 400, border:'0px solid #000'
+                        // fontSize: '1.2em'
                     }}>
                     + Create new project
                 </Button>

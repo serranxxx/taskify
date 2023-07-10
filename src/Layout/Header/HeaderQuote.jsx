@@ -45,17 +45,24 @@ export const HeaderQuote = () => {
     }, [quote_])
 
     return (
-        <div style={{
-            height: '70%', width: '80%', cursor:'default',
+        <div 
+        className='div-quote'
+        style={{
+            height: '70%', width: '80%', cursor: 'default',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
 
         }}>
             {
                 finishResponse
-                    ? <p style={{
-                        fontFamily: 'Berlin Sans FB', color: `${theme? '#1d3557': '#e3e3e3'}`,
-                        fontWeight: 400, fontSize: '1.7em', textAlign: 'center'
-                    }}>{`${quote_} — ${author_}`}</p>
+                    ? <p
+                        className='Quote'
+                        style={{
+                            fontFamily: 'Berlin Sans FB', 
+                            color: `${theme ? '#1d3557' : '#e3e3e3'}`,
+                            fontWeight: 400,
+                            // fontSize: '1.7em', 
+                            textAlign: 'center'
+                        }}>{`${quote_} — ${author_}`}</p>
                     : <img src={rainbow} style={{ height: '40vh', width: '50vh' }} />
             }
 

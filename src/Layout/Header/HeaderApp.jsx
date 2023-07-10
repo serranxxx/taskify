@@ -116,9 +116,13 @@ export const HeaderApp = () => {
                         width: '100%', height: '100%', display: `${avatarDisappear ? 'flex' : 'none'}`, alignItems: 'center',
                         justifyContent: 'center', marginTop: '-2vh', marginRight: '1vh'
                     }}>
-                    <h2 style={{
-                        fontFamily: 'Berlin Sans FB', color: `${theme ? '#e4efe1' : '#8cb8ba'}`, lineHeight: '0em', position: 'absolute',
-                        fontWeight: 500, fontSize: '14em', display: `${avatarDisappear ? '' : 'none'}`,
+                    <h2 
+                    className='Taskify'
+                    style={{
+                        fontFamily: 'Berlin Sans FB', 
+                        color: `${theme ? '#e4efe1' : '#8cb8ba'}`, 
+                        position: 'absolute',
+                        fontWeight: 500, display: `${avatarDisappear ? '' : 'none'}`,
                         letterSpacing: '-1.5vh'
                     }}>
                         Taskify</h2>

@@ -6,7 +6,7 @@ import { AiTwotoneEdit, AiFillSave } from "react-icons/ai";
 
 export const Tasks = () => {
 
-    
+
     const { setTasks, tasks, taskFinished, setFinishedTask, setTotalTask, theme } = useContext(appContext_)
     const [form] = Form.useForm();
     const [form_2,] = Form.useForm();
@@ -204,7 +204,7 @@ export const Tasks = () => {
         if (LocalTasks) {
             setData(LocalTasks)
         }
-        
+
     }, [])
 
 
@@ -213,23 +213,26 @@ export const Tasks = () => {
         <>
             <div
                 style={{
-                    width: '95%', height: '7vh', borderRadius: '2vh', backgroundColor: `${theme? '#a8dadc': '#27282c'}`,
+                    width: '95%', height: '7vh', borderRadius: '2vh', backgroundColor: `${theme ? '#a8dadc' : '#27282c'}`,
                     display: 'flex', alignItems: 'center', marginTop: '3vh', flexDirection: 'row',
                     justifyContent: 'space-between',
                 }}>
-                <p
+                <p className='My-something'
                     style={{
                         marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: `${theme ? '#1d3557' : '#a8dadc'}`,
                         fontWeight: 400, fontSize: '1.5em', cursor: 'default'
                     }}>
                     My tasks</p>
                 <Button
+                    className='add-something'
                     onClick={() => setVisible(true)}
                     style={{
                         height: '4vh', aspectRatio: '5/1', borderRadius: '1vh',
                         marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme ? '#f7fcf5' : '#8cb8ba'}`,
-                        marginLeft: '2vh', fontFamily: 'Berlin Sans FB', color: `${theme ? '#1d3557' : '#333437'}`,
-                        fontWeight: 400, fontSize: '1.2em', border: '0px solid #000'
+                        marginLeft: '2vh', fontFamily: 'Berlin Sans FB',
+                        color: `${theme ? '#1d3557' : '#333437'}`,
+                        fontWeight: 400, border: '0px solid #000',
+                        // fontSize: '1.2em', 
                     }}>
                     + Add new task
                 </Button>
@@ -243,12 +246,12 @@ export const Tasks = () => {
                     width: '95%', marginTop: '1vh', display: 'flex', alignItems: 'left', justifyContent: 'flex-start',
                     flexDirection: 'row', flexWrap: 'wrap',
                 }}>
-                
+
                 {
                     tasks ? <TaskCard data={tasks} OnCurrentTask={OnCurrentTask} />
-                    : <p>sad</p>
+                        : <p>sad</p>
                 }
-                
+
 
             </div>
 
@@ -400,16 +403,19 @@ export const Tasks = () => {
                                         justifyContent: 'center', flexDirection: 'column'
                                     }}>
                                         <p
+                                            className='input-task-name'
                                             style={{
                                                 fontFamily: 'Berlin Sans FB', color: `${currentBackground}`,
-                                                fontSize: '2em', marginBottom: '0vh', marginTop: '-1vh', lineHeight: '0.9em'
+                                                // fontSize: '2em',
+                                                marginBottom: '0vh', marginTop: '-1vh', lineHeight: '0.9em'
                                             }}>{currentTitle}</p>
                                         <hr style={{ border: `1.5px solid ${currentBackground}`, width: '34vh' }} />
                                     </div>
                                     : <Input placeholder={`${currentTitle}`}
-                                        style={{
+                                    className='input-task-name'    
+                                    style={{
                                             width: '35vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
-                                            fontWeight: '1em', height: '4vh', marginLeft: '-3vh',
+                                            height: '4vh', marginLeft: '-3vh',
                                             color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                         }}>
 

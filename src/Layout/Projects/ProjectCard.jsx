@@ -70,10 +70,10 @@ export const ProjectCard = (props) => {
 
     const customTasks = (percent) => (
 
-        <span style={{ fontWeight: 500, color: `${theme? '#f1faee' :'#f7fcf5'}`}}>
-          {`${percent}%`}
+        <span style={{ fontWeight: 500, color: `${theme ? '#f1faee' : '#f7fcf5'}` }}>
+            {`${percent}%`}
         </span>
-      )
+    )
 
     const handleClick = (projectName, projectDescription, projectImage, projectBackground, projectStatus, projectKey, total, completed) => {
         const background = colorSelector(projectBackground)
@@ -91,29 +91,29 @@ export const ProjectCard = (props) => {
                     className='element'
                     onClick={() => handleClick(user.name, user.description, user.image, user.color, user.finished, user.key, user.total, user.completed)}
                     style={{
-                        height: '20vh', width: '100%', backgroundColor:`${theme?  '#f7fcf5': '#27282c'}`,
+                        height: '20vh', width: '100%', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
                         borderRadius: '1.5vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         flexDirection: 'row', marginTop: '3vh', marginRight: '3vh', marginLeft: '1vh',
                         transition: 'all 0.35s ease-in-out', cursor: 'pointer'
                     }}>
 
                     <div
-                        
+
                         style={{
                             height: '90%', aspectRatio: '3/2', backgroundColor: `${colorSelector(user.color)}`,
-                            borderRadius: '1vh', marginLeft: '1vh', display:'flex', alignItems:'center',justifyContent:'center',
-                            flexDirection:'column', 
+                            borderRadius: '1vh', marginLeft: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            flexDirection: 'column',
                         }} >
 
                         <div className={`image-${user.image ? user.image : (Math.floor(Math.random() * 12) + 1)}`}
-                        style={{
-                            height: '85%', width:'100%',
-                        }}>
+                            style={{
+                                height: '85%', width: '100%',
+                            }}>
 
                         </div>
 
                         <div style={{
-                            display: 'flex', alignItems: 'center', height: '20%', width: '100%', 
+                            display: 'flex', alignItems: 'center', height: '20%', width: '100%',
                             justifyContent: 'center', flexDirection: 'column',
                         }}>
 
@@ -121,7 +121,7 @@ export const ProjectCard = (props) => {
                                 style={{ width: '90%', }}
                                 percent={parseInt(user.completed * 100 / (user.total))}
                                 format={customTasks}
-                                strokeColor={`${theme? '#f1faee': '#f7fcf5'}`}
+                                strokeColor={`${theme ? '#f1faee' : '#f7fcf5'}`}
                                 strokeWidth={6}
                                 trailColor={colorLightSelector(user.color)}
                             />
@@ -136,16 +136,22 @@ export const ProjectCard = (props) => {
                         display: 'flex', alignItems: 'center', flexDirection: 'column'
                     }}>
                         <p
+                            className='project-title'
                             style={{
-                                textAlign: 'left', width: '85%', fontFamily: 'Berlin Sans FB', color: `${theme? '#1d3557': `${colorSelector(user.color)}`}`,
-                                fontWeight: 400, fontSize: '2.5em', marginTop: '2vh', wordWrap: 'break-word',
+                                textAlign: 'left', width: '85%', fontFamily: 'Berlin Sans FB', color: `${theme ? '#1d3557' : `${colorSelector(user.color)}`}`,
+                                fontWeight: 400,
+                                // fontSize: '2.5em',
+                                marginTop: '2vh', wordWrap: 'break-word',
                                 lineHeight: '0.8em'
                             }}>{user.name}</p>
 
                         <p
+                            className='project-description'
                             style={{
-                                textAlign: 'left', width: '85%',  color: `${theme? '#a6b8c9': '#f7fcf5'}`,
-                                fontWeight: 'lighter', fontSize: '1.1em', marginTop: '-3vh', wordWrap: 'break-word'
+                                textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f7fcf5'}`,
+                                fontWeight: 'lighter',
+                                // fontSize: '1.1em', 
+                                marginTop: '-3vh', wordWrap: 'break-word'
                             }}>{user.description}</p>
                     </Col>
 

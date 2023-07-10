@@ -58,8 +58,8 @@ export const PrincipalLayout = () => {
             <div
               style={{
                 height: '', width: '85vh', backgroundColor: `${theme? '#e4efe1': '#333437'}`,
-                marginTop: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                flexDirection: 'column', flexWrap: 'wrap', marginBottom: '1vh'
+                marginTop: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                flexDirection: 'row', flexWrap: 'wrap', marginBottom: '1vh'
               }}>
 
               <Tasks />
