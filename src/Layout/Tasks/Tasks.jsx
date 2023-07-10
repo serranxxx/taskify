@@ -264,8 +264,10 @@ export const Tasks = () => {
                 maskStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
                 footer={<></>}
             >
-                <div style={{
-                    height: '40vh', width: '50vh', marginTop: '0vh', marginBottom: '-2vh',
+                <div 
+                className='add-project-modal'
+                style={{
+                    width: '50vh', marginTop: '0vh', marginBottom: '-2vh',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
                 }}>
                     <div

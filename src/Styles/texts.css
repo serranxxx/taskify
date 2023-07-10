@@ -61,6 +61,10 @@
     .add-project-modal {
         height: auto;
     }
+
+    .block {
+        display: none;
+    }
 }
 
 
@@ -124,10 +128,13 @@
         display: none;
     }
 
-    
 
     .add-project-modal {
         height: auto;
+    }
+
+    .block {
+        display: none;
     }
     
 
@@ -193,6 +200,10 @@
 
     .add-project-modal {
         height: 45vh;
+    }
+
+    .block {
+        display: none;
     }
     
 }

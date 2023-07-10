@@ -228,7 +228,7 @@ export const HeaderApp = () => {
                 </div>
 
                 <div
-                    className={'tasks-background element block-shadow'}
+                    className={`tasks-background element ${projectsDisappear? 'block-shadow':'block' }`}
                     style={{
                         height: '18vh', 
                         aspectRatio: '4/3', borderRadius: '3vh', backgroundColor: `${theme ? '#f0c145' : '#27282c'}`,
@@ -264,7 +264,7 @@ export const HeaderApp = () => {
                 </div>
 
                 <div
-                    className={'projects-background element block-shadow'}
+                    className={`projects-background element ${projectsDisappear? 'block-shadow':'block' }`}
                     style={{
                         height: '18vh', 
                         aspectRatio: '4/3', borderRadius: '3vh', backgroundColor: `${theme ? '#ed9cab' : '#27282c'}`,

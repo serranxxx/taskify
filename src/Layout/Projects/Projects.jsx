@@ -478,7 +478,7 @@ export const Projects = () => {
                 <div 
                 className='add-project-modal'
                     style={{
-                         width: '70vh', flexWrap:'wrap',
+                         width: 'auto', flexWrap:'wrap',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'column'
                     }}>
 
@@ -554,7 +554,7 @@ export const Projects = () => {
                                             overflow: 'auto', overflowY: 'auto', overflowX: 'hidden',
                                             color:`${theme? '': '#e3e3e3'}`, border: `${theme?'':'0px solid #000'}`
                                         }}
-                                        autoSize={{ minRows: 1, maxRows: 6 }}  // Ajusta automáticamente la altura según el contenido
+                                        autoSize={{ minRows: 3, maxRows: 6 }}  // Ajusta automáticamente la altura según el contenido
                                         wrap="soft"  // Permite el wrap automático del texto
                                     />
 
@@ -580,7 +580,7 @@ export const Projects = () => {
                                     style={{
                                         borderRadius: '0.5vh', backgroundColor: `${theme? '#f7fcf5': '#333437'}`, fontWeight: 500,
                                         width: '33vh', border: '1px solid #a8dadb', color: '#a8dadb',
-                                        marginTop: '-1vh'
+                                        marginTop: '0vh'
                                     }}>+ Add sub-task</Button>
 
                                 <div className='scrollable-div'
@@ -632,7 +632,7 @@ export const Projects = () => {
                         style={{
                             borderRadius: '1vh', backgroundColor: `${theme? '#f7fcf5': '#333437'}`, fontWeight: 500,
                             width: '68vh', border: '1.8px solid #a8dadb', color: '#a8dadb',
-                            marginBottom: '-1vh', 
+                            marginBottom: '0vh', marginTop:'-1vh'
 
                         }}>+ Create new project</Button>
 
