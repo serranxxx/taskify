@@ -149,7 +149,7 @@ export const HeaderApp = () => {
 
             < div
                 style={{
-                    position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                     transition: 'all 0.45s ease-in-out',
                 }
                 }

@@ -101,6 +101,10 @@
     .login-card {
         height: 15vh;
     }
+
+    .description-login{
+        font-size: 0.7em;
+    }
     
     
     
@@ -210,6 +214,9 @@
         height: 15vh;
     }
     
+    .description-login{
+        font-size: 0.7em;
+    }
     
     
 
@@ -316,6 +323,10 @@
 
     .login-card {
         height: 20vh;
+    }
+
+    .description-login{
+        font-size: 1em;
     }
     
 }

@@ -100,9 +100,9 @@ export const LoginPage = () => {
                 display: 'flex', alignItems: 'flex-start', justifyContent: 'center', height: '30%',
                 fontFamily: 'Segoe UI', fontWeight: 'normal', marginTop: '2%', fontWeight:600
             }}>
-                <p className='My-something ' style={{  color: `${theme ? '#1d3447' : '#f1faee'}`, wordWrap: 'break-word' }}
+                <p className='description-login' style={{  color: `${theme ? '#1d3447' : '#f1faee'}`, wordWrap: 'break-word' }}
                 >Do you want another avatar?
-                    <a className='My-something ' style={{ color: `${theme ? '#a8dadc' : '#f0c145'}`, cursor: 'pointer' }} onClick={showDrawer}
+                    <a className='description-login' style={{ color: `${theme ? '#a8dadc' : '#f0c145'}`, cursor: 'pointer' }} onClick={showDrawer}
                     > Add avatar</a></p>
             </div>
 
