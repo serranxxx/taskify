@@ -227,14 +227,17 @@ export const Tasks = () => {
                     className='add-something'
                     onClick={() => setVisible(true)}
                     style={{
-                        height: '4vh', aspectRatio: '5/1', borderRadius: '1vh',
+                        height: '4vh', 
+                        // aspectRatio: '5/1', 
+                        borderRadius: '1vh',
                         marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme ? '#f7fcf5' : '#8cb8ba'}`,
                         marginLeft: '2vh', fontFamily: 'Segoe UI',
                         color: `${theme ? '#1d3557' : '#333437'}`,
                         fontWeight: 500, border: '0px solid #000',
+                        width:'auto'
                         // fontSize: '1.2em', 
                     }}>
-                    + Add new task
+                    + Task
                 </Button>
 
 

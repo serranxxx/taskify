@@ -442,13 +442,15 @@ export const Projects = () => {
                     className='add-something'
                     onClick={() => setNewProjectVisible(true)}
                     style={{
-                        height: '4vh', aspectRatio: '6/1', borderRadius: '1vh',
+                        height: '4vh', width: 'auto',
+                        // aspectRatio: '6/1', 
+                        borderRadius: '1vh',
                         marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme ? '#f7fcf5' : '#8cb8ba'}`,
                         marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : '#333437'}`,
                         fontWeight: 500, border: '0px solid #000'
                         // fontSize: '1.2em'
                     }}>
-                    + Create new project
+                    + Project
                 </Button>
             </div>
 
