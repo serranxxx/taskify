@@ -26,8 +26,8 @@ const init = () => {
     let Tasks = JSON.parse(localStorage.getItem('tasks'))
     if (!Tasks) {
         Tasks = [{
-            name: 'Prepare Presentation',
-            description: 'Create a visually engaging presentation for the upcoming conference.',
+            name: 'Example task',
+            description: 'Description',
             color: 3,
             image: 3,
             finished: false,
@@ -38,8 +38,8 @@ const init = () => {
     let Projects = JSON.parse(localStorage.getItem('projects'))
     if (!Projects) {
         Projects = [{
-            name: 'Customer Feedback Analysis',
-            description: 'Analyze customer feedback data to identify patterns and trends.',
+            name: 'Example project',
+            description: 'Description',
             color: 6,
             image: 6,
             finished: false,
@@ -48,19 +48,19 @@ const init = () => {
             completed: 0,
             subtasks: [
                 {
-                    name: 'Collect Customer Surveys',
+                    name: 'Sub task 1',
                     color: 5,
                     finished: false,
                     key: "1111"
                 },
                 {
-                    name: 'Analyze Survey Responses',
+                    name: 'Sub task 2',
                     color: 3,
                     finished: false,
                     key: "2222"
                 },
                 {
-                    name: 'Conduct Sentiment Analysis',
+                    name: 'Sub task 3',
                     color: 8,
                     finished: false,
                     key: "3333"

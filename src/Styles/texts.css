@@ -112,7 +112,7 @@
 
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (min-width: 751px) and (max-width: 1200px) {
     .wrap-app {
         width:60vh
     }
@@ -141,21 +141,21 @@
     }
 
     .card-title {
-        font-size: 1.1em;
+        font-size: 1.5em;
     }
 
     .card-description {
         font-size: 0.7em;
-        display: none;
+        /* display: none; */
     }
 
     .project-title {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .project-description {
         font-size: 0.9em;
-        display: none;
+        /* display: none; */
     }
 
     .input-task-name {
@@ -222,7 +222,9 @@
 
 }
 
-@media screen and (min-height: 701px) and (min-width: 751px) {
+@media screen and (max-height: 200px) {}
+
+@media screen and (min-height: 201px) and (min-width: 1201px) {
     .wrap-app {
         width:85vh;
     }

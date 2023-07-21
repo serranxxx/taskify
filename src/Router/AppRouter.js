@@ -19,7 +19,6 @@ export const AppRouter = () => {
     <Routes>
       <Route path="/taskify/login" element={<LoginPage />} />
       <Route path="/taskify" element={<LoginPage />} />
-
       <Route path='/taskify/layout' element={<PrincipalLayout />} />
     </Routes>
   )
