@@ -38,7 +38,7 @@
     }
 
     .project-title {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .project-description {
@@ -114,7 +114,7 @@
 
 @media screen and (max-height: 200px) {}
 
-@media screen and (min-height: 201px) and (max-height: 650px) {
+@media screen and (min-height: 201px) and (max-height: 550px) {
     .wrap-app {
         width:60vh
     }
@@ -124,12 +124,12 @@
     }
 
     .Taskify {
-        font-size: 7em;
+        font-size: 18vh;
         color: pink
     }
 
     .Quote {
-        font-size: 1.2em;
+        font-size: 2.5vh;
         
     }
 
@@ -143,20 +143,21 @@
     }
 
     .card-title {
-        font-size: 1.5em;
+        font-size: 2vh;
     }
 
     .card-description {
-        font-size: 0.7em;
+        font-size: 1.4vh;
         /* display: none; */
     }
 
     .project-title {
-        font-size: 2em;
+        font-size: 2.7vh;
     }
 
     .project-description {
-        font-size: 0.9em;
+        font-size: 1.7vh;
+        /* margin-top: 1vh; */
         /* display: none; */
     }
 
@@ -334,7 +335,7 @@
 
 }
 
-@media screen and (min-height: 651px) and (min-width: 1201px) {
+@media screen and (min-height: 551px) and (min-width: 1201px) {
     .wrap-app {
         width:85vh;
     }
@@ -342,12 +343,12 @@
         width:85vh;
     }
     .Taskify {
-        font-size: 12em;
+        font-size: 22vh;
         color: yellow
     }
 
     .Quote {
-        font-size: 1.5em;
+        font-size: 2.5vh;
     }
 
     .add-something {
@@ -361,20 +362,20 @@
     }
 
     .card-title {
-        font-size: 1.5em;
+        font-size: 2.5vh;
     }
 
     .card-description {
-        font-size: 0.9em;
+        font-size: 1.5vh;
         display: flex;
     }
 
     .project-title {
-        font-size: 2.2em;
+        font-size: 4vh;
     }
 
     .project-description {
-        font-size: 1.1em;
+        font-size: 1.8vh;
         display: flex;
     }
 
