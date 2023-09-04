@@ -54,7 +54,7 @@ export const TaskCard = (props) => {
                     className='element'
                     onClick={() => handleClick(user.name, user.description, user.image, user.color, user.finished, user.key)}
                     style={{
-                        height: '25vh', width: '22vh', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
+                        height: 'auto', width: '20vh', backgroundColor: `${theme ? '#f1faee' : '#27282c'}`,
                         borderRadius: '1.5vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         flexDirection: 'column', marginTop: '3vh', marginRight: '3vh', marginLeft: '1vh',
                         transition: 'all 0.35s ease-in-out', cursor: 'pointer'
@@ -63,26 +63,26 @@ export const TaskCard = (props) => {
                     <div
                         className={`image-${user.image ? user.image : (Math.floor(Math.random() * 12) + 1)}`}
                         style={{
-                            height: '15vh', width: '20vh', backgroundColor: `${colorSelector(user.color)}`,
+                            height: '10vh', width: '18vh', backgroundColor: `${colorSelector(user.color)}`,
                             borderRadius: '1vh', marginTop: '1vh'
                         }} />
 
                     <p
-                        className='card-title'
+                        // className='card-title'
                         style={{
-                            textAlign: 'left', width: '85%', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : `${colorSelector(user.color)}`}`,
+                            textAlign: 'left', width: '85%', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : '#f1faee80'}`,
                             fontWeight: 500, lineHeight: '0.9em',
                             // fontSize: '1.5em', 
-                            marginTop: '0.5vh', wordWrap: 'break-word'
+                            marginTop: '1vh', wordWrap: 'break-word'
                         }}>{user.name}</p>
 
                     <p
-                        className='card-description'
+                        // className='card-description'
                         style={{
-                            textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f7fcf5'}`,
+                            textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f1faee80'}`,
                             fontWeight: 'lighter',
-                            // fontSize: '0.9em', 
-                            marginTop: '-2vh', wordWrap: 'break-word'
+                            fontSize: '0.9em', 
+                            marginTop: '-1vh', wordWrap: 'break-word'
                         }}>{user.description}</p>
 
 

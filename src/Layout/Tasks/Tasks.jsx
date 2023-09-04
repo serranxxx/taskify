@@ -1,11 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { TaskCard } from './TaskCard'
-import { Button, Form, Input, Modal, Row } from 'antd'
+import { Button, Drawer, Form, Input, Modal, Row } from 'antd'
 import { appContext_ } from '../../context_/appContext_'
 import { AiTwotoneEdit, AiFillSave } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
+import { SelectAvatar, SelectImage, images_ } from '../../helpers/images';
 
-export const Tasks = () => {
+export const Tasks = (props) => {
 
+    const { avatar } = props
 
     const { setTasks, tasks, taskFinished, setFinishedTask, setTotalTask, theme } = useContext(appContext_)
     const [form] = Form.useForm();
@@ -213,32 +216,24 @@ export const Tasks = () => {
         <>
             <div
                 style={{
-                    width: '95%', height: '7vh', borderRadius: '2vh', backgroundColor: `${theme ? '#a8dadc' : '#27282c'}`,
-                    display: 'flex', alignItems: 'center', marginTop: '3vh', flexDirection: 'row',
+                    width: '95%', height: '6vh', borderRadius: '1.5vh', backgroundColor: `${theme ? '#cad6c590' : '#27282c'}`,
+                    display: 'flex', alignItems: 'center', flexDirection: 'row',
                     justifyContent: 'space-between',
                 }}>
                 <p className='My-something'
                     style={{
-                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : '#a8dadc'}`,
-                        fontWeight: 600,  cursor: 'default'
+                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#f1faee' : '#f1faee80'}`,
+                        fontWeight: 600, cursor: 'default'
                     }}>
                     My tasks</p>
                 <Button
                     className='add-something'
                     onClick={() => setVisible(true)}
+                    icon={<AiOutlinePlus style={{ color: `${theme ? '#457b9d' : '#27282c'}` }} />}
                     style={{
-                        height: '4vh', 
-                        // aspectRatio: '5/1', 
-                        borderRadius: '1vh',
-                        marginRight: '2vh', lineHeight: '0em', backgroundColor: `${theme ? '#f7fcf5' : '#8cb8ba'}`,
-                        marginLeft: '2vh', fontFamily: 'Segoe UI',
-                        color: `${theme ? '#1d3557' : '#333437'}`,
-                        fontWeight: 500, border: '0px solid #000',
-                        width:'auto'
-                        // fontSize: '1.2em', 
-                    }}>
-                    + Task
-                </Button>
+                        marginRight: '1vh', lineHeight: '0em', backgroundColor: `${theme ? '#f1faee' : '#f1faee80'}`,
+                        border: '0px solid #000', borderRadius: '1vh'
+                    }} />
 
 
             </div>
@@ -246,7 +241,9 @@ export const Tasks = () => {
             <div
                 className={`${theme ? 'scrollable-div' : 'scrollable-div-dark'}`}
                 style={{
-                    width: '95%', marginTop: '1vh', display: 'flex', alignItems: 'left', justifyContent: 'flex-start',
+                    // overflowY: 'scroll',
+                    // height: '70vh', // Ajusta estos valores según el header y footer
+                    width: '95%', marginTop: '1vh', display: 'flex', alignItems: 'left', justifyContent: 'center',
                     flexDirection: 'row', flexWrap: 'wrap',
                 }}>
 
@@ -258,8 +255,101 @@ export const Tasks = () => {
 
             </div>
 
-            <Modal
-                visible={visible}
+            <Drawer
+                title={`Add task`}
+                placement="left"
+                onClose={handleCancel}
+                width='20%'
+                open={visible}
+                style={{
+                    backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+
+                <div
+                    style={{
+                        width: '100%',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
+                    }}>
+
+                    <div style={{
+                        height: '25vh'
+                    }}>
+                        <img src={images_.img_1} style={{ height: '100%', marginRight: '0' }} />
+                    </div>
+
+
+
+                    <Form
+                        // form={form1}
+                        name="myForm_1"
+                        form={form}
+                        style={{ height: '100%', width: '100%', marginTop: "3vh" }}
+                        onFinish={CreateNewTask}>
+
+                        <div className="" style={{
+                            height: '100%', width: '100%',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            flexDirection: 'column'
+                        }}>
+
+
+                            <Form.Item
+                                name="name"
+                                style={{ marginTop: '1vh' }}
+                                rules={[{
+                                    required: true, message: 'Your task must have a name'
+                                }]}
+                            >
+                                <Input placeholder="Task name"
+                                    className='project-inputs'
+                                    style={{
+                                        backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 500,
+                                        fontWeight: '1em', color: `${theme ? '' : '#f1faee80'}`, border: `${theme ? '' : '0px solid #000'}`
+                                    }} />
+
+                            </Form.Item>
+
+                            <Form.Item
+                                name="description"
+                                style={{ marginTop: '-2vh', marginBottom: '1vh' }}
+                            >
+                                <Input.TextArea
+                                    placeholder="Description"
+                                    className='project-inputs'
+                                    style={{
+                                        height: '18vh', resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
+                                        overflow: 'auto', overflowY: 'auto', overflowX: 'hidden', color: `${theme ? '' : '#f1faee80'}`,
+                                        border: `${theme ? '' : '0px solid #000'}`
+                                    }}
+                                    autoSize={{ minRows: 5, maxRows: 10 }}  // Ajusta automáticamente la altura según el contenido
+                                    wrap="soft"  // Permite el wrap automático del texto
+                                />
+
+                            </Form.Item>
+
+                            <Form.Item
+                                className='project-inputs'
+                                style={{
+                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                    marginTop: '3vh'
+                                }}>
+                                <Button htmlType="submit"
+                                    style={{
+                                        backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 500,
+                                        border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`, width: '15vh',
+                                        borderRadius: '3vh'
+                                    }}>Add</Button>
+                            </Form.Item>
+
+                        </div>
+
+                    </Form>
+                </div>
+            </Drawer>
+
+            {/* <Modal
+                visible={false}
                 onOk={handleOk}
                 onCancel={handleCancel}
                 className={`${theme ? 'add-task-modal' : 'add-task-modal-dark'}`}
@@ -267,17 +357,17 @@ export const Tasks = () => {
                 maskStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
                 footer={<></>}
             >
-                <div 
-                className='add-project-modal project-inputs'
-                style={{
-                     marginTop: '0vh', marginBottom: '-2vh',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
-                }}>
+                <div
+                    className='add-project-modal project-inputs'
+                    style={{
+                        marginTop: '0vh', marginBottom: '-2vh',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
+                    }}>
                     <div
-                    className='block-shadow'
+                        className='block-shadow'
                         style={{
                             height: '50%', width: '99%', backgroundColor: '#a8dadb',
-                            borderRadius: '1vh',  flexDirection: 'row',
+                            borderRadius: '1vh', flexDirection: 'row',
                             alignItems: 'center', justifyContent: 'center'
 
                         }}>
@@ -285,17 +375,6 @@ export const Tasks = () => {
                             style={{
                                 height: '100%', aspectRatio: '3/2',
                             }} />
-
-                        {/* <div className={`image-${12}`}
-                            style={{
-                                height: '100%', aspectRatio: '3/2',
-                            }} />
-
-                        <div className={`image-${4}`}
-                            style={{
-                                height: '100%', aspectRatio: '3/2',
-                            }} /> */}
-
 
                     </div>
                     <Form
@@ -316,9 +395,9 @@ export const Tasks = () => {
                                 }]}
                             >
                                 <Input placeholder="Type task name"
-                                className='project-inputs'
+                                    className='project-inputs'
                                     style={{
-                                         backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                        backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
                                         fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                     }} />
 
@@ -342,9 +421,9 @@ export const Tasks = () => {
 
                             </Form.Item>
 
-                            <Form.Item 
-                            className='project-inputs'
-                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Form.Item
+                                className='project-inputs'
+                                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 <Button htmlType="submit" className='add-task-button-2 project-inputs'
                                     style={{
                                         borderRadius: '1vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
@@ -359,10 +438,66 @@ export const Tasks = () => {
 
 
 
-            </Modal>
+            </Modal> */}
 
-            <Modal
-                visible={currentTask}
+            <Drawer
+                title={<p style={{ color: '#333' }}>{currentTitle}</p>}
+                placement="left"
+                onClose={handleCancel}
+                width='20%'
+                open={currentTask}
+                style={{
+                    backgroundColor: `${theme ? currentBackground : '#333437'}`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}>
+
+                <img src={SelectImage(currentImage)} />
+
+                <hr style={{
+                    width:'90%', border:'1.6px solid #33333340'
+                }}/>
+
+                <p style={{
+                    width: '100%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
+                    color: '#333', textAlign: 'justify', marginTop: '5vh',
+                    fontSize:'1.1em'
+                }}
+                >{currentDescription}</p>
+
+                
+
+                <Row style={{
+                    marginTop: '5vh', marginBottom: '0vh', display: 'flex',
+                    alignItems:'center', justifyContent:'center', flexDirection:'row'
+                }}>
+                    <Button
+                        disabled={edit}
+                        onClick={() => CompleteTask(currentKey)}
+                        className={`${edit ? '' : 'element'}`}
+                        type='primary'
+                        style={{
+                            marginRight: '2vh', fontWeight: 500, backgroundColor: `#E5EFE1`,
+                            color: `${theme ? '#333' : '#27282c'}`,
+                            transition: 'all 0.25s ease-in-out', display: `${!edit ? currentStatus ? 'none' : '' : 'none'}`
+                        }}>Complete task</Button>
+                    <Button
+                        onClick={() => deleteTask(currentKey)}
+                        disabled={edit}
+                        className={`${edit ? '' : 'element'}`}
+                        style={{
+                            fontWeight: 500,  backgroundColor: `#E5EFE1`,
+                            color: `${theme ? '#333' : '#27282c'}`, transition: 'all 0.25s ease-in-out',
+                            display: `${!edit ? !currentStatus ? 'none' : '' : 'none'}`
+                        }}
+                    >Delete task</Button>
+
+                </Row>
+
+
+            </Drawer>
+
+            {/* <Modal
+                visible={false}
                 onOk={handleOk}
                 onCancel={handleCancel}
                 className={`${theme ? 'task-content' : 'task-content-dark'}`}
@@ -374,7 +509,7 @@ export const Tasks = () => {
                 <div
                     className='current-task'
                     style={{
-                        height: '25vh', 
+                        height: '25vh',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
                     }}>
 
@@ -384,6 +519,7 @@ export const Tasks = () => {
                             height: '24vh', aspectRatio: '1/1', backgroundColor: `${currentBackground}`,
                             borderRadius: '2vh',
                         }}>
+
 
 
                     </div>
@@ -417,16 +553,16 @@ export const Tasks = () => {
                                             className='input-task-name'
                                             style={{
                                                 fontFamily: 'Segoe UI', color: `${currentBackground}`,
-                                                fontWeight: 600, fontSize:'auto',
+                                                fontWeight: 600, fontSize: 'auto',
                                                 marginBottom: '0vh', marginTop: '-1vh', lineHeight: '0.9em'
                                             }}>{currentTitle}</p>
                                         <hr style={{ border: `1.5px solid ${currentBackground}`, width: '34vh' }} />
                                     </div>
                                     : <Input placeholder={`${currentTitle}`}
-                                    className='input-task-name'    
-                                    style={{
+                                        className='input-task-name'
+                                        style={{
                                             width: '35vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 400,
-                                            height: '4vh', marginLeft: '-3vh', fontSize:'auto',
+                                            height: '4vh', marginLeft: '-3vh', fontSize: 'auto',
                                             color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                         }}>
 
@@ -446,7 +582,7 @@ export const Tasks = () => {
                                 !edit
                                     ? <p style={{
                                         width: '36vh', height: '8vh', wordWrap: 'break-word', marginTop: '0vh',
-                                        color: '#AAA', fontSize:'auto', lineHeight: '0.9em'
+                                        color: '#AAA', fontSize: 'auto', lineHeight: '0.9em'
                                     }}
                                     >{currentDescription}</p>
                                     : <Input.TextArea
@@ -514,7 +650,7 @@ export const Tasks = () => {
 
                 </div>
 
-            </Modal>
+            </Modal> */}
 
         </>
     )

@@ -52,21 +52,17 @@
 }
 
 .scrollable-div::-webkit-scrollbar-track {
-  background-color: #f7fcf5;
+  background-color: #cad6c550;
   /* Color del track */
 }
 
 .scrollable-div::-webkit-scrollbar-thumb {
-  background-color: #a8dadb;
+  background-color: #f1faee;
   /* Color del thumb */
   border-radius: 4px;
   /* Radio de borde del thumb */
 }
 
-.scrollable-div::-webkit-scrollbar-thumb:hover {
-  background-color: #cbe6e6;
-  /* Color del thumb al pasar el cursor por encima */
-}
 
 
 
@@ -172,12 +168,12 @@
 }
 
 .scrollable-div-2::-webkit-scrollbar-track {
-  background-color: #f7fcf5;
+  background-color: #f7fcf530;
   /* Color del track */
 }
 
 .scrollable-div-2::-webkit-scrollbar-thumb {
-  background-color: #e2e9df;
+  background-color: #e2e9df30;
   /* Color del thumb */
   border-radius: 4px;
   /* Radio de borde del thumb */
@@ -204,18 +200,14 @@
 }
 
 .scrollable-div-dark::-webkit-scrollbar-track {
-  background-color: #27282c;
+  background-color: #333437;
   /* Color del track */
 }
 
 .scrollable-div-dark::-webkit-scrollbar-thumb {
-  background-color: #a8dadb;
+  background-color: #27282c80;
   /* Color del thumb */
   border-radius: 4px;
   /* Radio de borde del thumb */
 }
 
-.scrollable-div-dark::-webkit-scrollbar-thumb:hover {
-  background-color: #cbe6e6;
-  /* Color del thumb al pasar el cursor por encima */
-}

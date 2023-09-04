@@ -1,18 +1,45 @@
 import { Col, Row, } from 'antd'
 import { HeaderApp, HeaderQuote, Projects, Tasks } from './'
-import { Footer } from 'antd/es/layout/layout'
-import { useContext } from 'react'
+// import { Footer } from 'antd/es/layout/layout'
+import { useContext, useEffect, useState } from 'react'
 import { appContext_ } from '../context_/appContext_'
+import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import { Layout, Menu, theme } from 'antd';
+import { SiderApp } from '../components/web/SiderApp';
+import { HeaderApp_ } from '../components/web/HeaderApp_';
+import { ContentApp } from '../components/web/ContentApp';
+const { Header, Content, Footer, Sider } = Layout;
 
 export const PrincipalLayout = () => {
 
-  // const theme = JSON.parse(localStorage.getItem('theme'))
+  const avatar = JSON.parse(localStorage.getItem('avatar'))
   const { theme } = useContext(appContext_)
+  const [collapsed, setCollapsed] = useState(false);
+  // const {
+  //   token: { colorBgContainer },
+  // } 
+
+  useEffect(() => {
+    const changeBody = () => {
+      document.body.style.backgroundColor = `${theme? '#E5EFE1' : '#333437'}`;
+    }
+  
+   changeBody() 
+  }, [])
 
   return (
     <>
 
-      <div
+      <Layout>
+        <SiderApp collapsed={collapsed} setCollapsed={setCollapsed} theme={theme} avatar={avatar}/>
+        <Layout style={{backgroundColor:`${theme? '#E5EFE1' : '#333437'}`}}>
+          <HeaderApp_ setCollapsed={setCollapsed} collapsed={collapsed} theme={theme}/>
+          <ContentApp theme={theme} avatar={avatar} />
+
+        </Layout>
+      </Layout>
+
+      {/* <div
 
         style={{
           flexDirection: 'column', flexWrap: 'wrap', backgroundColor: `${theme ? '#e4efe1' : '#333437'}`,
@@ -91,7 +118,7 @@ export const PrincipalLayout = () => {
       </div >
       <Footer style={{
         marginTop: '2vh', backgroundColor: `${theme ? '#e4efe1' : '#333437'}`
-      }}></Footer>
+      }}></Footer> */}
     </>
   )
 }

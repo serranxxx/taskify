@@ -121,7 +121,7 @@ export const ProjectCard = (props) => {
                                 style={{ width: '90%', }}
                                 percent={parseInt(user.completed * 100 / (user.total))}
                                 format={customTasks}
-                                strokeColor={`${theme ? '#f1faee' : '#f7fcf5'}`}
+                                strokeColor={`${theme ? '#f1faee' : '#f1faee80'}`}
                                 strokeWidth={6}
                                 trailColor={colorLightSelector(user.color)}
                             />
@@ -136,22 +136,22 @@ export const ProjectCard = (props) => {
                         display: 'flex', alignItems: 'center', flexDirection: 'column'
                     }}>
                         <p
-                            className='project-title'
+                            // className='project-title'
                             style={{
-                                textAlign: 'left', width: '85%', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : `${colorSelector(user.color)}`}`,
+                                textAlign: 'left', width: '85%', fontFamily: 'Segoe UI', color: `${theme ? '#1d3557' : '#f1faee80'}`,
                                 fontWeight: 600,
-                                // fontSize: '2.5em',
+                                fontSize: '1.8em',
                                 marginTop: '2vh', wordWrap: 'break-word',
                                 lineHeight: '0.8em'
                             }}>{user.name}</p>
 
                         <p
-                            className='project-description'
+                            // className='project-description'
                             style={{
-                                textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f7fcf5'}`,
+                                textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f1faee80'}`,
                                 fontWeight: 'lighter',
                                 // fontSize: '1.1em', 
-                                marginTop: '-3vh', wordWrap: 'break-word'
+                                marginTop: '0vh', wordWrap: 'break-word'
                             }}>{user.description}</p>
                     </Col>
 
