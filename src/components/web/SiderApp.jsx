@@ -51,7 +51,7 @@ export const SiderApp = (props) => {
             collapsedWidth={100}
             width={200}
             style={{
-                height: 'auto', width: '100%',
+                height: '100vh', width: '100%',
                 backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`, transition: 'all 0.25s ease-in-out',
                 boxShadow: '8px 0px 15px #00000010',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',

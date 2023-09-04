@@ -435,12 +435,12 @@ export const Projects = () => {
                     display: 'flex', alignItems: 'center', flexDirection: 'row',
                     justifyContent: 'space-between',
                 }}>
-                <p 
-                // className='My-something'
+                <p
+                    // className='My-something'
                     style={{
-                        marginLeft: '2vh',  color: `${theme ? '#f1faee' : '#f1faee80'}`,
+                        marginLeft: '2vh', color: `${theme ? '#f1faee' : '#f1faee80'}`,
                         fontWeight: 600, cursor: 'default',
-                        fontSize:'1.5em'
+                        fontSize: '1.5em'
                     }}>
                     My projects</p>
                 <Button
@@ -468,7 +468,7 @@ export const Projects = () => {
 
             </div>
             <Drawer
-                title={`Add project`}
+                title={<p style={{ color:  `${theme? '#457b9d' : '#f1faee80' }`, fontWeight: 700, }}>Add project</p>}
                 placement="right"
                 onClose={handleCancel}
                 width='35%'
@@ -478,41 +478,45 @@ export const Projects = () => {
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
                 }}>
 
-                <Col style={{
+                <div style={{
                     width: '100%', display: 'flex', flexDirection: 'column', marginTop: '-1vh',
-                    alignItems: 'center', justifyContent: 'center', height: 'auto'
+                    alignItems: 'center', justifyContent: 'center', height: 'auto',
                 }}>
-                    <div style={{
-                        height: '25vh'
+                    <Row style={{
+                        width: '90%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+                        flexDirection: 'row'
                     }}>
-                        <img src={images_.img_2} style={{ height: '100%', marginRight: '0' }} />
-                    </div>
+
+                        <div style={{
+                            height: '13vw',
+                        }}>
+                            <img src={images_.img_2} style={{ height: '100%', marginRight: '0' }} />
+                        </div>
 
 
-                    <Form
-                        // form={form1}
-                        name="myForm_3"
-                        form={form}
-                        onFinish={CreateNewProject}
-                        style={{ width: '100%', height: '100%', display:'flex', alignItems:'center', justifyContent:'center' }}>
-
-                        <Col
-                            // className='project-f'
+                        <Form
+                            // form={form1}
+                            name="myForm_3"
+                            form={form}
+                            onFinish={CreateNewProject}
                             style={{
-                                width: '100%', height: '100%',
+                                width: '50%', height: '100%',
+                                margin: '1vh 0 0 0',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                flexDirection: 'column', marginTop: '3vh',
+                                flexDirection: 'column'
                             }}>
+
+
                             <Form.Item
                                 name="name"
-                                style={{ marginTop: '0vh', width:'100%',   }}
+                                style={{ margin: 0, width: '100%', }}
 
                             >
                                 <Input placeholder="Project name"
                                     className='project-inputs'
                                     style={{
-                                        width:'90%',
-                                        backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                        width: '100%',
+                                        backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 500,
                                         fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                     }} />
 
@@ -520,26 +524,30 @@ export const Projects = () => {
 
                             <Form.Item
                                 name="description"
-                                style={{ marginTop: '-2vh', marginBottom: '1vh', width:'100%' }}
+                                style={{ margin: '1vh 0 0 0', width: '100%' }}
                             >
                                 <Input.TextArea
                                     placeholder="Description"
                                     className='project-inputs'
                                     style={{
-                                        resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`,
+                                        resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
                                         overflow: 'auto', overflowY: 'auto', overflowX: 'hidden',
                                         color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`,
-                                        width:'90%'
+                                        width: '100%'
                                     }}
-                                    autoSize={{ minRows: 5, maxRows: 8 }}  // Ajusta automáticamente la altura según el contenido
+                                    autoSize={{ minRows: 7, maxRows: 8 }}  // Ajusta automáticamente la altura según el contenido
                                     wrap="soft"  // Permite el wrap automático del texto
                                 />
 
                             </Form.Item>
 
 
-                        </Col>
-                    </Form>
+                        </Form>
+
+                    </Row>
+
+
+
 
                     <Form
                         // form={form1}
@@ -547,75 +555,74 @@ export const Projects = () => {
                         form={form2}
                         onFinish={AgregateSubtasks}
                         className='project-form'
-                        style={{ width: '100%', height: '100%', }}>
-
-                        <Col style={{
+                        style={{
                             width: '100%', height: '100%',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             flexDirection: 'column'
                         }}>
-                            <Button type='primary'
-                                onClick={AddSubTask}
-                                style={{
-                                    borderRadius: '3vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
-                                    border: '0px solid #000', color: `${theme ? '#457b9d' : '#f1faee80'}`,
-                                    marginBottom: '1vh'
 
-                                }}>Add sub-task</Button>
 
-                            <div
-                                className='scrollable-div'
-                                style={{
-                                    width: '90%', height: '20vh', display: 'flex', marginTop: '1vh',
-                                    flexDirection: 'column',
-                                }}>
+                        <Button type='primary'
+                            onClick={AddSubTask}
+                            style={{
+                                borderRadius: '3vh', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 500,
+                                border: '0px solid #000', color: `${theme ? '#457b9d' : '#f1faee80'}`,
+                                margin: '1vh 0 1vh 0'
 
-                                {
-                                    subTasks.map((task) => (
-                                        <Row style={{
-                                            display: 'flex', alignItems: 'flex-start', justifyContent: 'left',
-                                            marginTop: '0.5vh', marginRight: '0vh', width: '100%'
-                                        }}>
-                                            <Form.Item
-                                                key={task}
-                                                name={`${task}`}
+                            }}>+ sub-tasks</Button>
+
+                        <div
+                            // className='scrollable-div'
+                            style={{
+                                width: '100%', height: 'auto', display: 'flex', marginTop: '1vh',
+                                flexDirection: 'column',
+                            }}>
+
+                            {
+                                subTasks.map((task) => (
+                                    <Row style={{
+                                        display: 'flex', alignItems: 'flex-start', justifyContent: 'left',
+                                        marginTop: '0.5vh', marginRight: '0vh', width: '100%',
+                                    }}>
+                                        <Form.Item
+                                            key={task}
+                                            name={`${task}`}
+                                            style={{
+                                                width: '100%', marginBottom: '0vh', marginTop: '1vh',
+                                            }}
+
+                                        >
+                                            <Input placeholder="Type sub-task name"
+                                                className='project-inputs_'
                                                 style={{
-                                                    width: '100%', marginBottom: '0vh', marginTop: '1vh',
-                                                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
-                                                }}
+                                                    backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 400,
+                                                    fontSize: '1em', height: 'auto', marginLeft: '0vh', width: '30vw',
+                                                    color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
+                                                }} />
+                                        </Form.Item>
 
-                                            >
-                                                <Input placeholder="Type sub-task name"
-                                                    className='project-inputs_'
-                                                    style={{
-                                                        backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 400,
-                                                        fontSize: '1em', height: '4vh', marginLeft: '0vh', width: '50vh',
-                                                        color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
-                                                    }} />
-                                            </Form.Item>
-
-                                        </Row>
+                                    </Row>
 
 
-                                    ))
-                                }
+                                ))
+                            }
 
-                            </div>
+                        </div>
 
-                            <Button
-                                onClick={handleForms}
-                                style={{
-                                    backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 500,
-                                    border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`, width: '15vh',
-                                    borderRadius: '3vh', marginTop: '5vh'
-                                }}>Add</Button>
+                        <Button
+                            onClick={handleForms}
+                            style={{
+                                backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 500,
+                                border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`, width: '15vh',
+                                borderRadius: '3vh', marginTop: '5vh'
+                            }}>Add</Button>
 
 
 
-                        </Col>
+
 
                     </Form>
-                </Col>
+                </div>
 
             </Drawer>
 
@@ -861,161 +868,178 @@ export const Projects = () => {
             </Modal>
 
             <Drawer
-                title={<p style={{ color: '#333' }}>{currentName}</p>}
+                title={<p style={{ color:  `${theme? '#457b9d' : '#f1faee80' }`}}>{currentName}</p>}
                 placement="right"
                 onClose={handleCancel}
                 width='30%'
                 open={currentProject}
                 style={{
-                    backgroundColor: `${theme ? currentBackground : '#333437'}`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`,
                 }}>
 
-                <img src={SelectImage(currentImage)} />
-
-                <Progress
-                    style={{ width: '90%', }}
-                    percent={parseInt(CurrentCompleted() * 100 / CurrentTotal())}
-                    format={customTasks}
-                    strokeColor={'#f1faee'}
-                    strokeWidth={6}
-                    trailColor={`${currentStatus ? '#91e5d1' : currentLightColor}`}
-                />
-
-
-                <p style={{
-                    width: '100%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
-                    color: '#333', textAlign: 'justify', marginTop: '3vh',
-                    fontSize: '1.1em'
-                }}
-                >{currentDescription}</p>
-
-                {/* <hr style={{
-                    width: '90%', border: '1.6px solid #33333340'
-                }} /> */}
-
-
-                <div style={{
-                    width: '100%',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    flexDirection: 'column', marginTop: '2vh'
+                <div 
+                className='scrollable-div-'
+                style={{
+                    width: '100%', height: '100%',
+                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                    flexDirection: 'column'
                 }}>
-                    <div
-                        className='add-sub-task'
-                        style={{
-                            width: '100%', borderRadius: '1vh',
-                            backgroundColor: `${currentBackground}80`,
-                            // boxShadow:'0px 10px 20px #00000020',
-                            // backgroundColor:'#a8dadb',
-                            display: 'flex', alignItems: 'center', marginTop: '0vh', flexDirection: 'row',
-                            justifyContent: 'space-between'
-                        }}>
-                        <p className='block-shadow'
+
+                    <div style={{
+                        display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+                        width: '80%', height: '40vh',
+                        padding: '2%', borderRadius: '2vh', backgroundColor: currentBackground,
+                        position: 'relative'
+                        // border: `3px solid #AAAAAA40`
+                    }}>
+                        <img src={SelectImage(currentImage)} style={{ width: '100%', margin: '0 0 2vh 0' }} />
+                        <Progress
+                            style={{ width: '80%', position: 'absolute' }}
+                            percent={parseInt(CurrentCompleted() * 100 / CurrentTotal())}
+                            format={customTasks}
+                            strokeColor={`${theme? '#f7fcf5' :'#f1faee80'}`}
+                            strokeWidth={6}
+                            trailColor={`${currentStatus ? '#91e5d1' : currentLightColor}`}
+                        />
+                    </div>
+
+
+                    <p style={{
+                        width: '80%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
+                        color: `${theme? '#333' :'#f1faee80'}`, textAlign: 'justify', marginTop: '3vh',
+                        fontSize: '1.1em'
+                    }}
+                    >{currentDescription}</p>
+
+
+
+                    <div style={{
+                        width: '80%',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        flexDirection: 'column', marginTop: '2vh'
+                    }}>
+                        <div
+                            // className='add-sub-task'
                             style={{
-                                width: '100%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
-                                color: '#333', textAlign: 'justify', marginTop: '3vh',
-                                fontSize: '1.1em'
+                                width: '100%', borderRadius: '1vh',
+                                backgroundColor: `${currentBackground}`,
+                                height: 'auto',
+                                display: 'flex', alignItems: 'center', marginTop: '0vh', flexDirection: 'row',
+                                justifyContent: 'space-between', padding: '1% 2% 1% 2%'
                             }}>
-                            Sub-tasks</p>
-
-                        <Button
-                            className='add-something'
-                            onClick={() => setSubtaskName(true)}
-                            icon={<AiOutlinePlus style={{ color: `${theme ? '#457b9d' : '#27282c'}` }} />}
-                            style={{
-                                marginRight: '1vh', lineHeight: '0em', backgroundColor: `${theme ? '#f1faee' : '#f1faee80'}`,
-                                border: '0px solid #000', borderRadius: '1vh', aspectRatio:'1/1'
-                            }} />
-
-                    </div>
-
-                    <div
-                        className='scrollable-div-2'
-                        style={{
-                            width: '100%', height: '25vh',
-                            display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',
-                            flexDirection: 'column', marginTop: '2vh'
-                        }}>
-                        {
-                            tasks.map((elemento) => (
-                                <div style={{
-                                    width: '90%', height: '5vh', borderRadius: '1vh', marginBottom: '1.5vh',
-                                    backgroundColor: '#f7fcf5',
-                                    backgroundColor: `${elemento.finished ? '#6edfc730' : `#E5EFE130`}`,
-                                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row',
-                                    // border:`1.2px solid #dcdddc`
+                            <p
+                                // className='block-shadow'
+                                style={{
+                                    height: 'auto', wordWrap: 'break-word', margin: '0 0 0 0',
+                                    fontSize: '1.1em', fontWeight: 600, color: `${theme? '#f7fcf5' :'#f1faee80'}`
                                 }}>
+                                Sub-tasks</p>
 
-                                    <p
-                                        className='add-something'
-                                        style={{
-                                            fontWeight: 400, color: `${theme ? '#1d3557' : '#e3e3e3'}`, marginLeft: '1vh',
-                                            lineHeight: '0.9em',
-                                            width: '65%', height: '4vh', textDecoration: `${elemento.finished ? 'line-through' : ''}`
-                                        }} key={elemento.key}>
-                                        {elemento.name}
-                                    </p>
-                                    {
-                                        currentStatus
-                                            ? <></>
-                                            :
-                                            <>
-                                                <Button
+                            <Button
+                                // className='add-something'
+                                onClick={() => setSubtaskName(true)}
+                                icon={<AiOutlinePlus size={15} style={{ color: `${theme ? currentBackground : '#27282c'}` }} />}
+                                style={{
+                                    backgroundColor: `${theme ? '#f1faee' : '#f1faee80'}`,
+                                    border: '0px solid #000', borderRadius: '1vh', aspectRatio: '1/1', height: 'auto'
+                                }} />
 
-                                                    icon={<BsCheckLg style={{ color: `${theme ? '#f7fcf5' : '#333437'}`, }} />}
-                                                    onClick={() => FinishedSubtask(elemento.key)}
-                                                    style={{
-                                                        marginLeft: '1vh', border: '0px solid #000',
-                                                        backgroundColor: `${elemento.finished ? 'transparent' : currentBackground}`,
-                                                        cursor: `${elemento.finished ? 'auto' : 'pointer'}`,
-                                                        aspectRatio: '1/1',
-                                                    }} />
-                                                <Button
-                                                    onClick={() => DeleteSubTask(elemento.key)}
+                        </div>
 
-                                                    icon={<FaTrashAlt style={{ color: `${theme ? '#f7fcf5' : '#333437'}`, }} />}
-                                                    style={{
-                                                        marginLeft: '1vh', marginRight: '1vh', aspectRatio: '1/1',
-                                                        backgroundColor: `${elemento.finished ? '#6edfc7' : currentBackground}`, border: '0px solid #000',
-                                                    }} />
-                                            </>
-                                    }
+                        <div
+                            // className='scrollable-div-2'
+                            style={{
+                                width: '100%',
+                                display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                                flexDirection: 'column', marginTop: '2vh'
+                            }}>
+                            {
+                                tasks.map((elemento) => (
+                                    <div style={{
+                                        width: '99%', height: 'auto', borderRadius: '1vh', marginBottom: '1.5vh',
+                                        backgroundColor: `${!elemento.finished ? `${currentBackground}60` : `#E5EFE130`}`,
+                                        display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row',
+                                        padding: '1% 2% 1% 2%'
+                                        // border:`1.2px solid #dcdddc`
+                                    }}>
 
-                                </div>
+                                        <p
+                                            // className='add-something'
+                                            style={{
+                                                fontWeight: 500, color: `${theme ? '#1d3557' : '#e3e3e3'}`, marginLeft: '1vh',
+                                                margin: 0, fontSize:'1em', color: `${theme? '#f7fcf5' :'#f1faee80'}`,
+                                                textDecoration: `${elemento.finished ? 'line-through' : ''}`
+                                            }} key={elemento.key}>
+                                            {elemento.name}
+                                        </p>
+                                        {
+                                            currentStatus
+                                                ? <></>
+                                                :
+                                                <>
+                                                    <Row>
+                                                        <Button
 
-                            ))
-                        }
+                                                            icon={<BsCheckLg style={{ color: `${theme? '#f7fcf5' :'#f1faee80'}`, }} />}
+                                                            onClick={() => FinishedSubtask(elemento.key)}
+                                                            style={{
+                                                                margin:'0 1vh 0 0', border: '0px solid #000',
+                                                                backgroundColor: `${elemento.finished ? 'transparent' : currentBackground}`,
+                                                                cursor: `${elemento.finished ? 'auto' : 'pointer'}`,
+                                                                aspectRatio: '1/1',
+                                                            }} />
+                                                        <Button
+                                                            onClick={() => DeleteSubTask(elemento.key)}
+
+                                                            icon={<FaTrashAlt style={{ color: `${theme? '#f7fcf5' :'#f1faee80'}`, }} />}
+                                                            style={{
+                                                                 aspectRatio: '1/1',
+                                                                backgroundColor: `${elemento.finished ? '#6edfc7' : currentBackground}`, border: '0px solid #000',
+                                                            }} />
+                                                    </Row>
+
+                                                </>
+                                        }
+
+                                    </div>
+
+                                ))
+                            }
+
+                        </div>
 
                     </div>
+
+
+
+                    <Row style={{
+                        marginTop: '2vh', marginBottom: '0vh', display: 'flex',
+                        alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
+                    }}>
+                        <Button
+                            onClick={() => CompleteProject(currentKey)}
+                            className='element'
+                            type='primary'
+                            style={{
+                                fontWeight: 500, backgroundColor: currentBackground,
+                                color: `${theme ? '#E5EFE1' : '#27282c'}`, borderRadius:'2vh',
+                                transition: 'all 0.25s ease-in-out', display: `${currentStatus ? 'none' : ''}`
+                            }}>Finish</Button>
+                        <Button
+                            onClick={() => DeleteProject(currentKey)}
+                            className='element'
+                            style={{
+                                fontWeight: 500, backgroundColor: currentBackground, borderRadius:'2vh',
+                                color: `${theme ? '#E5EFE1' : '#27282c'}`, transition: 'all 0.25s ease-in-out',
+                                display: `${!currentStatus ? 'none' : ''}`
+                            }}
+                        >Delete</Button>
+
+                    </Row>
 
                 </div>
 
 
-
-                <Row style={{
-                    marginTop: '2vh', marginBottom: '0vh', display: 'flex',
-                    alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
-                }}>
-                    <Button
-                        onClick={() => CompleteProject(currentKey)}
-                        className='element'
-                        type='primary'
-                        style={{
-                            marginRight: '2vh', fontWeight: 500, backgroundColor: `#E5EFE1`,
-                            color: `${theme ? '#333' : '#27282c'}`,
-                            transition: 'all 0.25s ease-in-out', display: `${currentStatus ? 'none' : ''}`
-                        }}>Finish project</Button>
-                    <Button
-                        onClick={() => DeleteProject(currentKey)}
-                        className='element'
-                        style={{
-                            fontWeight: 500, backgroundColor: `#E5EFE1`,
-                            color: `${theme ? '#333' : '#27282c'}`, transition: 'all 0.25s ease-in-out',
-                            display: `${!currentStatus ? 'none' : ''}`
-                        }}
-                    >Delete project</Button>
-
-                </Row>
 
 
             </Drawer>

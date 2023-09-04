@@ -75,13 +75,12 @@ export const LoginPage = () => {
                 diaplay: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
             }}>
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', height: '30%', }}>
-                <h1 
-                className='Taskify'
+                <p 
                 style={{
-                    fontSize: '350%', fontFamily: 'Segoe UI', fontWeight: 'normal', lineHeight: '0em',
-                    fontWeight:600,
+                    fontSize: '4em', fontWeight: 'normal', lineHeight: '0em',
+                    fontWeight:700,fontFamily: 'Segoe UI',
                     color: `${theme ? '#1d3447' : '#f1faee'}`
-                }}>Who's here?</h1>
+                }}>Who's here?</p>
             </div>
 
             <div style={{
@@ -100,9 +99,9 @@ export const LoginPage = () => {
                 display: 'flex', alignItems: 'flex-start', justifyContent: 'center', height: '30%',
                 fontFamily: 'Segoe UI', fontWeight: 'normal', marginTop: '2%', fontWeight:600
             }}>
-                <p className='description-login' style={{  color: `${theme ? '#1d3447' : '#f1faee'}`, wordWrap: 'break-word' }}
+                <p  style={{  color: `${theme ? '#1d3447' : '#f1faee'}`, wordWrap: 'break-word' }}
                 >Do you want another avatar?
-                    <a className='description-login' style={{ color: `${theme ? '#a8dadc' : '#f0c145'}`, cursor: 'pointer' }} onClick={showDrawer}
+                    <a  style={{ color: `${theme ? '#a8dadc' : '#f0c145'}`, cursor: 'pointer' }} onClick={showDrawer}
                     > Add avatar</a></p>
             </div>
 
@@ -112,7 +111,7 @@ export const LoginPage = () => {
                 placement="right" onClose={onClose} open={open}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '35%', }}>
-                        <h1 className='Quote' style={{fontFamily: 'Segoe UI', fontWeight: 600, color: `${theme ? '#1d3447' : '#f1faee'}`, lineHeight: '0.9em'}}>Select avatar</h1>
+                        <h1 className='Quote' style={{ fontWeight: 600, color: `${theme ? '#1d3447' : '#f1faee'}`, lineHeight: '0.9em'}}>Select avatar</h1>
                     </div>
 
                     <Col style={{ width: '100%', }}>

@@ -61,6 +61,33 @@ export function SelectImage(index)  {
     }
 }
 
+export const colorSelector = (index) => {
+    switch (index) {
+        case 1:
+            return '#3e92c4'
+        case 2:
+            return '#8ed4fd'
+        case 3:
+            return '#f0c145'
+        case 4:
+            return '#55a6d9'
+        case 5:
+            return '#204b98'
+        case 6:
+            return '#ed9cab'
+        case 7:
+            return '#d5ecfa'
+        case 8:
+            return '#89e8e0'
+        case 9:
+            return '#956888'
+        case 10:
+            return '#6edfc7'
+        default:
+            return '#f0c145';
+    }
+}
+
 export const images_ = {
     img_1: image_1,
     img_2: image_2

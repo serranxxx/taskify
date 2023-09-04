@@ -179,9 +179,34 @@
   /* Radio de borde del thumb */
 }
 
+.scrollable-div-::-webkit-scrollbar {
+  width: 5px;
+  /* Ancho del scroll */
+}
+
+.scrollable-div-::-webkit-scrollbar-track {
+  background-color: #f7fcf530;
+  /* Color del track */
+}
+
+.scrollable-div-::-webkit-scrollbar-thumb {
+  background-color: #e2e9df30;
+  /* Color del thumb */
+  border-radius: 4px;
+  /* Radio de borde del thumb */
+}
+
+
 
 .scrollable-div-2 {
   max-height: 70vh;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scrollable-div- {
+  max-height: 100vh;
   overflow: auto;
   overflow-y: auto;
   overflow-x: hidden;

@@ -9,7 +9,7 @@ export const AppRouter = () => {
   const { theme } = useContext(appContext_)
   useEffect(() => {
     const changeBody = () => {
-      document.body.style.backgroundColor = `${theme ? '#e4efe1' : '#333437'}`;
+      document.body.style.backgroundColor = `${theme ? '#E5EFE1' : '#333437'}`;
     }
     changeBody()
   }, [theme])

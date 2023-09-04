@@ -94,13 +94,13 @@ export const ProjectCard = (props) => {
                         width: '100%', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
                         borderRadius: '1.5vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         flexDirection: 'row', marginTop: '3vh', marginRight: '3vh', marginLeft: '1vh',
-                        transition: 'all 0.35s ease-in-out', cursor: 'pointer'
+                        transition: 'all 0.35s ease-in-out', cursor: 'pointer', height:'18vh'
                     }}>
 
                     <div
 
                         style={{
-                            height: '90%', aspectRatio: '3/2', backgroundColor: `${colorSelector(user.color)}`,
+                            height: '15vh', width:'25vh', backgroundColor: `${colorSelector(user.color)}`,
                             borderRadius: '1vh', marginLeft: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
                             flexDirection: 'column',
                         }} >

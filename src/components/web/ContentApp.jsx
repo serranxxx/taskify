@@ -22,7 +22,8 @@ export const ContentApp = (props) => {
         >
             <Row style={{
                 flexWrap: 'wrap', display: 'flex', flexDirection: 'row',
-                alignItems: 'flex-start', justifyContent: 'center'
+                alignItems: 'flex-start', justifyContent: 'center',
+                width:'100%'
             }} >
                 <div
                     // className='wrap-app'
