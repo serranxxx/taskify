@@ -32,15 +32,7 @@ export const ContentMobile = (props) => {
 
                 <TaskCardMobile data={tasks} theme={theme} />
 
-                <Button 
-                onClick={() => setVisible(true)}
-                icon={<TbTextPlus size={25} style={{ color: '#f7fcf5' }} />}
-                    style={{
-                        height: '60px', width: '60px', opacity: '0.5', backgroundColor: '#457B9D',
-                        position: 'absolute', bottom: '70px', right: '30px',
-                        borderRadius: '50%'
-                    }} />
-
+                
 
 
             </Content>
