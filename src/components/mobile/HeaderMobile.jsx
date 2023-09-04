@@ -56,7 +56,7 @@ export const HeaderMobile = (props) => {
 
                 <div style={{
                     width:'5vh', height:'8%', backgroundColor: `${theme ? '#E5EFE1' : '#27282c'}`,
-                    position:'absolute', left:`${Tasks? '-1%' : '85%'}`,
+                    position:'absolute', left:`${Tasks? '-1%' : '80%'}`,
                     bottom:'-10px', transition: 'all 0.55s ease-in-out',
                     borderRadius:'2vh'
                 }}/>

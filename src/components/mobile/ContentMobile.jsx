@@ -37,7 +37,7 @@ export const ContentMobile = (props) => {
                 icon={<TbTextPlus size={25} style={{ color: '#f7fcf5' }} />}
                     style={{
                         height: '60px', width: '60px', opacity: '0.5', backgroundColor: '#457B9D',
-                        position: 'absolute', bottom: '10px', right: '30px',
+                        position: 'absolute', bottom: '70px', right: '30px',
                         borderRadius: '50%'
                     }} />
 
