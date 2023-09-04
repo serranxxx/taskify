@@ -220,10 +220,11 @@ export const Tasks = (props) => {
                     display: 'flex', alignItems: 'center', flexDirection: 'row',
                     justifyContent: 'space-between',
                 }}>
-                <p className='My-something'
+                <p 
+                // className='My-something'
                     style={{
-                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#f1faee' : '#f1faee80'}`,
-                        fontWeight: 600, cursor: 'default'
+                        marginLeft: '2vh', color: `${theme ? '#f1faee' : '#f1faee80'}`,
+                        fontWeight: 600, cursor: 'default', fontSize:'1.5em'
                     }}>
                     My tasks</p>
                 <Button
@@ -259,7 +260,7 @@ export const Tasks = (props) => {
                 title={`Add task`}
                 placement="left"
                 onClose={handleCancel}
-                width='20%'
+                width='25%'
                 open={visible}
                 style={{
                     backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`,
@@ -284,7 +285,10 @@ export const Tasks = (props) => {
                         // form={form1}
                         name="myForm_1"
                         form={form}
-                        style={{ height: '100%', width: '100%', marginTop: "3vh" }}
+                        style={{
+                            height: '100%', width: '100%', marginTop: "3vh",
+                            display: 'flex', alignItems: 'center', justifyContent: 'center'
+                        }}
                         onFinish={CreateNewTask}>
 
                         <div className="" style={{
@@ -296,7 +300,7 @@ export const Tasks = (props) => {
 
                             <Form.Item
                                 name="name"
-                                style={{ marginTop: '1vh' }}
+                                style={{ marginTop: '1vh', width: '100%' }}
                                 rules={[{
                                     required: true, message: 'Your task must have a name'
                                 }]}
@@ -304,6 +308,7 @@ export const Tasks = (props) => {
                                 <Input placeholder="Task name"
                                     className='project-inputs'
                                     style={{
+                                        width: '90%',
                                         backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 500,
                                         fontWeight: '1em', color: `${theme ? '' : '#f1faee80'}`, border: `${theme ? '' : '0px solid #000'}`
                                     }} />
@@ -312,13 +317,13 @@ export const Tasks = (props) => {
 
                             <Form.Item
                                 name="description"
-                                style={{ marginTop: '-2vh', marginBottom: '1vh' }}
+                                style={{ marginTop: '-2vh', marginBottom: '1vh', width:'100%' }}
                             >
                                 <Input.TextArea
                                     placeholder="Description"
                                     className='project-inputs'
                                     style={{
-                                        height: '18vh', resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
+                                        width:'90%', resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
                                         overflow: 'auto', overflowY: 'auto', overflowX: 'hidden', color: `${theme ? '' : '#f1faee80'}`,
                                         border: `${theme ? '' : '0px solid #000'}`
                                     }}
@@ -444,7 +449,7 @@ export const Tasks = (props) => {
                 title={<p style={{ color: '#333' }}>{currentTitle}</p>}
                 placement="left"
                 onClose={handleCancel}
-                width='20%'
+                width='25%'
                 open={currentTask}
                 style={{
                     backgroundColor: `${theme ? currentBackground : '#333437'}`,
@@ -454,21 +459,21 @@ export const Tasks = (props) => {
                 <img src={SelectImage(currentImage)} />
 
                 <hr style={{
-                    width:'90%', border:'1.6px solid #33333340'
-                }}/>
+                    width: '90%', border: '1.6px solid #33333340'
+                }} />
 
                 <p style={{
                     width: '100%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
                     color: '#333', textAlign: 'justify', marginTop: '5vh',
-                    fontSize:'1.1em'
+                    fontSize: '1.1em'
                 }}
                 >{currentDescription}</p>
 
-                
+
 
                 <Row style={{
                     marginTop: '5vh', marginBottom: '0vh', display: 'flex',
-                    alignItems:'center', justifyContent:'center', flexDirection:'row'
+                    alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
                 }}>
                     <Button
                         disabled={edit}
@@ -485,7 +490,7 @@ export const Tasks = (props) => {
                         disabled={edit}
                         className={`${edit ? '' : 'element'}`}
                         style={{
-                            fontWeight: 500,  backgroundColor: `#E5EFE1`,
+                            fontWeight: 500, backgroundColor: `#E5EFE1`,
                             color: `${theme ? '#333' : '#27282c'}`, transition: 'all 0.25s ease-in-out',
                             display: `${!edit ? !currentStatus ? 'none' : '' : 'none'}`
                         }}

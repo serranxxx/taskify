@@ -172,7 +172,7 @@ export const SiderApp = (props) => {
 
                             <p
                                 style={{
-                                    fontFamily: 'Segoe UI', fontWeight: 500, textAlign: 'center',
+                                    fontWeight: 500, textAlign: 'center',
                                     color: `${theme ? '#457b9d' : '#f1faee80'}`, marginBottom: '0vh', marginTop: '0vh'
                                 }}>Tasks completed</p>
 
@@ -196,9 +196,9 @@ export const SiderApp = (props) => {
 
                             <p
                                 style={{
-                                    fontFamily: 'Segoe UI', fontWeight: 500, textAlign: 'center',
+                                    fontWeight: 500, textAlign: 'center',
                                     color: `${theme ? '#457b9d' : '#f1faee80'}`, marginBottom: '0vh', marginTop: '0vh'
-                                }}>Tasks completed</p>
+                                }}>Projects completed</p>
 
                             <Progress
                                 style={{ width: '80%', }}

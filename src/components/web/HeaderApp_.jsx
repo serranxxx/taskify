@@ -22,7 +22,9 @@ export const HeaderApp_ = (props) => {
             }}
         >
             <p style={{
-                fontSize:'4em', color: `${theme? '#E5EFE1': '#457B9D'}`, fontFamily: 'Berlin Sans FB'
+                fontSize:'4em', color: `${theme? '#E5EFE1': '#457B9D'}`, 
+                fontWeight:700
+                // fontFamily: 'Berlin Sans FB'
             }}>Taskify</p>
         </Header>
     )

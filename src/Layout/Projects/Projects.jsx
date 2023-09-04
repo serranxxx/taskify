@@ -435,10 +435,12 @@ export const Projects = () => {
                     display: 'flex', alignItems: 'center', flexDirection: 'row',
                     justifyContent: 'space-between',
                 }}>
-                <p className='My-something'
+                <p 
+                // className='My-something'
                     style={{
-                        marginLeft: '2vh', fontFamily: 'Segoe UI', color: `${theme ? '#f1faee' : '#f1faee80'}`,
-                        fontWeight: 600, cursor: 'default'
+                        marginLeft: '2vh',  color: `${theme ? '#f1faee' : '#f1faee80'}`,
+                        fontWeight: 600, cursor: 'default',
+                        fontSize:'1.5em'
                     }}>
                     My projects</p>
                 <Button
@@ -469,7 +471,7 @@ export const Projects = () => {
                 title={`Add project`}
                 placement="right"
                 onClose={handleCancel}
-                width='20%'
+                width='35%'
                 open={newProjectVisible}
                 style={{
                     backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`,
@@ -492,23 +494,24 @@ export const Projects = () => {
                         name="myForm_3"
                         form={form}
                         onFinish={CreateNewProject}
-                        style={{ width: '50%', height: '100%', marginLeft: '-1v' }}>
+                        style={{ width: '100%', height: '100%', display:'flex', alignItems:'center', justifyContent:'center' }}>
 
                         <Col
-                            className='project-f'
+                            // className='project-f'
                             style={{
                                 width: '100%', height: '100%',
-                                display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                                display: 'flex', alignItems: 'center', justifyContent: 'center',
                                 flexDirection: 'column', marginTop: '3vh',
                             }}>
                             <Form.Item
                                 name="name"
-                                style={{ marginTop: '0vh' }}
+                                style={{ marginTop: '0vh', width:'100%',   }}
 
                             >
                                 <Input placeholder="Project name"
                                     className='project-inputs'
                                     style={{
+                                        width:'90%',
                                         backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
                                         fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                     }} />
@@ -517,7 +520,7 @@ export const Projects = () => {
 
                             <Form.Item
                                 name="description"
-                                style={{ marginTop: '-2vh', marginBottom: '1vh' }}
+                                style={{ marginTop: '-2vh', marginBottom: '1vh', width:'100%' }}
                             >
                                 <Input.TextArea
                                     placeholder="Description"
@@ -525,9 +528,10 @@ export const Projects = () => {
                                     style={{
                                         resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`,
                                         overflow: 'auto', overflowY: 'auto', overflowX: 'hidden',
-                                        color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
+                                        color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`,
+                                        width:'90%'
                                     }}
-                                    autoSize={{ minRows: 3, maxRows: 6 }}  // Ajusta automáticamente la altura según el contenido
+                                    autoSize={{ minRows: 5, maxRows: 8 }}  // Ajusta automáticamente la altura según el contenido
                                     wrap="soft"  // Permite el wrap automático del texto
                                 />
 
@@ -562,7 +566,7 @@ export const Projects = () => {
                             <div
                                 className='scrollable-div'
                                 style={{
-                                    width: '100%', height: '20vh', display: 'flex', marginTop: '1vh',
+                                    width: '90%', height: '20vh', display: 'flex', marginTop: '1vh',
                                     flexDirection: 'column',
                                 }}>
 
@@ -576,8 +580,8 @@ export const Projects = () => {
                                                 key={task}
                                                 name={`${task}`}
                                                 style={{
-                                                    width: '100%', marginBottom: '0vh', marginTop: '0vh',
-                                                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                                                    width: '100%', marginBottom: '0vh', marginTop: '1vh',
+                                                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start'
                                                 }}
 
                                             >
@@ -585,7 +589,7 @@ export const Projects = () => {
                                                     className='project-inputs_'
                                                     style={{
                                                         backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 400,
-                                                        fontSize: '1em', height: '4vh', marginLeft: '0vh', width: '30vh',
+                                                        fontSize: '1em', height: '4vh', marginLeft: '0vh', width: '50vh',
                                                         color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                                     }} />
                                             </Form.Item>
@@ -860,7 +864,7 @@ export const Projects = () => {
                 title={<p style={{ color: '#333' }}>{currentName}</p>}
                 placement="right"
                 onClose={handleCancel}
-                width='20%'
+                width='30%'
                 open={currentProject}
                 style={{
                     backgroundColor: `${theme ? currentBackground : '#333437'}`,
