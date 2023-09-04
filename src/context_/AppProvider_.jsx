@@ -10,19 +10,6 @@ const init = () => {
 
     let avatar
 
-    // try {
-    //      avatar = JSON.parse(localStorage.getItem('avatars'))
-    // } catch {
-    //      avatar = Math.floor(Math.random() * 9) + 1
-    // }
-    // if (LocalAvatar) {
-    //     setAvatar_([LocalAvatar])
-    // } else setAvatar_([Math.floor(Math.random() * 9) + 1])
-
-
-    // let selectedAvatar = JSON.parse(localStorage.getItem('avatar'))
-
-
     let Tasks = JSON.parse(localStorage.getItem('tasks'))
     if (!Tasks) {
         Tasks = [{

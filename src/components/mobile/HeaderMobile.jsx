@@ -1,15 +1,9 @@
 import React, { useState } from 'react'
-import { Button, Col, Layout, Row, Select } from 'antd';
-import { HiOutlineTranslate } from 'react-icons/hi';
-import { useNavigate } from 'react-router-dom';
-import { MdDownload } from "react-icons/md";
-import { IoHammer } from "react-icons/io5";
-import { BiSolidHomeAlt2 } from "react-icons/bi";
+import { Layout, Row } from 'antd';
 import { SelectAvatar } from '../../helpers/images';
 
 
 const { Header } = Layout;
-const { Option } = Select
 export const HeaderMobile = (props) => {
 
     const { avatar , theme} = props
@@ -18,14 +12,11 @@ export const HeaderMobile = (props) => {
     return (
         <Header style={{
             position: 'fixed', zIndex: 1, width: '100%',
-            // backgroundColor: `${theme ? '#457B9D' : '#27282c'}`, 
-            // background: `radial-gradient(at 50% 100%, rgba(255, 255, 255, 10%), ${theme ? '#457B9D' : '#27282c'})`,
-            // background: `radial-gradient(at 100% 10%, rgba(255, 255, 255, 20%), red)`,
             background: `linear-gradient(to bottom, ${theme ? '#457B9D' : '#27282c'} , #457B9D80)`,
-            boxShadow: '10px 0px 10px #00000040',
             height: '15vh',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            flexDirection:'column'
+            flexDirection:'column',
+
         }}>
 
             <Row style={{
@@ -64,9 +55,10 @@ export const HeaderMobile = (props) => {
                 }}>Projects</p>
 
                 <div style={{
-                    width:'4vh', height:'8%', backgroundColor: `${theme ? '#E5EFE1' : '#27282c'}`,
-                    position:'absolute', left:`${Tasks? '0px' : '85%'}`,
-                    bottom:'-10px', transition: 'all 0.55s ease-in-out'
+                    width:'5vh', height:'8%', backgroundColor: `${theme ? '#E5EFE1' : '#27282c'}`,
+                    position:'absolute', left:`${Tasks? '-1%' : '85%'}`,
+                    bottom:'-10px', transition: 'all 0.55s ease-in-out',
+                    borderRadius:'2vh'
                 }}/>
 
             </Row>

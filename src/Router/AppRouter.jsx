@@ -1,19 +1,11 @@
-import React, { useContext, useEffect } from 'react'
+
 import { Route, Routes } from 'react-router-dom'
 import { LoginPage } from '../Login/LoginPage'
 import { PrincipalLayout } from '../Layout/PrincipalLayout'
-import { appContext_ } from '../context_/appContext_'
 
 export const AppRouter = () => {
 
-  const { theme } = useContext(appContext_)
-  useEffect(() => {
-    const changeBody = () => {
-      document.body.style.backgroundColor = `${theme ? '#E5EFE1' : '#333437'}`;
-    }
-    changeBody()
-  }, [theme])
-
+  
 
   return (
     <Routes>

@@ -11,7 +11,7 @@ export const TaskCardMobile = (props) => {
             {
                 data.map((card) => (
                     <div style={{
-                        width: '80%', height: '20vh',
+                        width: '90%', height: '20vh',
                         borderRadius: '2vh', marginBottom: '3vh', backgroundColor: '#f7fcf5',
                         display: 'flex', alignItems: 'flex-start', justifyContent: 'center', flexDirection: 'column',
                         padding: '0 0 0 5%'
