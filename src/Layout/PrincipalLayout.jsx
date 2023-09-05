@@ -17,7 +17,6 @@ export const PrincipalLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [onWrite, setOnWrite] = useState(false)
   const [position, setPosition] = useState(true)
-  const [zoom, setZoom] = useState(1)
 
 
   useEffect(() => {
@@ -28,10 +27,6 @@ export const PrincipalLayout = () => {
   }, [theme])
 
 
-  useEffect(() => {
-    setZoom(1)
-  }, [])
-  
 
 
   return (
@@ -50,7 +45,7 @@ export const PrincipalLayout = () => {
         className='small'
         style={{
           minHeight: '100vh', backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`,
-          transform: `scale(${zoom})`
+          // transform: `scale(${zoom})`
         }}>
         <HeaderMobile setPosition={setPosition} position={position} theme={theme} avatar={avatar} />
         <ContentMobile theme={theme} onWrite={onWrite} setOnWrite={setOnWrite} position={position} />
