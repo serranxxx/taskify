@@ -15,6 +15,8 @@ export const PrincipalLayout = () => {
   const avatar = JSON.parse(localStorage.getItem('avatar'))
   const { theme } = useContext(appContext_)
   const [collapsed, setCollapsed] = useState(false);
+  const [onWrite, setOnWrite] = useState(false)
+  const [position, setPosition] = useState(true)
 
 
   useEffect(() => {
@@ -40,9 +42,9 @@ export const PrincipalLayout = () => {
       <Layout
         className='small'
         style={{  minHeight: '100vh', backgroundColor: `${theme ? '#E5EFE1' : '#333437'}` }}>
-        <HeaderMobile setCollapsed={setCollapsed} collapsed={collapsed} theme={theme} avatar={avatar} />
-        <ContentMobile theme={theme} avatar={avatar} />
-        <FooterMobile />
+        <HeaderMobile setPosition={setPosition} position={position} theme={theme} avatar={avatar} />
+        <ContentMobile theme={theme} onWrite={onWrite} setOnWrite={setOnWrite} position={position}/>
+        <FooterMobile setOnWrite={setOnWrite} theme={theme}/>
       </Layout>
 
       

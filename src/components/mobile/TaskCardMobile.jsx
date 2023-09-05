@@ -5,14 +5,14 @@ import { Button, Row } from 'antd'
 
 export const TaskCardMobile = (props) => {
 
-    const { data, theme } = props
+    const { data, theme, CompleteTask, deleteTask} = props
     return (
         <>
             {
                 data.map((card) => (
                     <div style={{
                         width: '90%', height: '20vh',
-                        borderRadius: '2vh', marginBottom: '3vh', backgroundColor: '#f7fcf5',
+                        borderRadius: '2vh', marginBottom: '3vh', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
                         display: 'flex', alignItems: 'flex-start', justifyContent: 'center', flexDirection: 'column',
                         padding: '0 0 0 5%'
 
@@ -34,14 +34,19 @@ export const TaskCardMobile = (props) => {
                         >{card.description}</p>
 
                         <Row style={{
-                            width:'90%', display:'flex', alignItems:'center', justifyContent:'space-between'
+                            width:'90%', display:'flex', alignItems:'center', justifyContent:`${card.finished ? 'flex-end' : 'space-between'}`
                         }}>
-                            <Button style={{
+                            <Button 
+                            onClick={() => CompleteTask(card.key)}
+                            style={{
                                 border:'0px solid #000', backgroundColor:`${colorSelector(card.color)}`,
-                                borderRadius:'1.5vh', fontWeight:600, color:'#f7fcf5'
+                                borderRadius:'1.5vh', fontWeight:600, color:`${theme ? '#f7fcf5' : '#27282c'}`,
+                                display:`${card.finished ? 'none': ''}`
                             }}>Complete</Button>
 
-                            <Button type='ghost' style={{
+                            <Button 
+                            onClick={() => deleteTask(card.key)}
+                            type='ghost' style={{
                                 color:`${colorSelector(card.color)}`,
                                 borderRadius:'1.5vh', fontWeight:600,
                             }}>Delete</Button>

@@ -5,6 +5,8 @@ import { TbTextPlus } from 'react-icons/tb';
 const { Footer } = Layout;
 export const FooterMobile = (props) => {
 
+    const {setOnWrite, theme} = props
+
 
 
     return (
@@ -17,13 +19,14 @@ export const FooterMobile = (props) => {
         }}>
 
             <Button
-                // onClick={() => setVisible(true)}
-                icon={<TbTextPlus size={25} style={{ color: '#f7fcf5' }} />}
+                onClick={() => setOnWrite(true)}
+                icon={<TbTextPlus size={25} style={{ color: '#f7fcf5'}} />}
                 style={{
-                    height: '60px', width: '60px', opacity: '0.5', backgroundColor: '#457B9D',
+                    height: '60px', width: '60px', opacity: '0.9', backgroundColor: '#457B9D',
                     // position: 'absolute', bottom: '70px', right: '30px',
                     boxShadow: '0px 0px 10px #00000030',
-                    borderRadius: '50%'
+                    borderRadius: '50%',
+                    border:'0px solid #000'
                 }} />
 
 
