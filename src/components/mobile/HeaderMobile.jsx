@@ -98,7 +98,7 @@ export const HeaderMobile = (props) => {
 
                 <Col style={{
                     height: '100%', flexDirection: 'column',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                     gap: '1.5vh',
                 }}>
 
@@ -109,7 +109,7 @@ export const HeaderMobile = (props) => {
                         <img
                             className='button-catalog'
                             src={SelectAvatar(avatar)} style={{
-                                height: 130, borderRadius: '50%', transition: 'all 0.25s ease-in-out',
+                                height: 110, borderRadius: '50%', transition: 'all 0.25s ease-in-out',
                                 margin: '0 0 1vh 0'
                             }} />
 
@@ -122,7 +122,7 @@ export const HeaderMobile = (props) => {
 
                     <div
                         style={{
-                            alignItems: 'center', height: 'auto', width: 250, display: 'flex', padding: '5% 0 2% 0',
+                            alignItems: 'center', height: 'auto', width: 220, display: 'flex', padding: '3% 0 1% 0',
                             justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
                             borderRadius: '1vh'
                         }}>
@@ -146,7 +146,7 @@ export const HeaderMobile = (props) => {
 
                     <div
                         style={{
-                            alignItems: 'center', height: 'auto', width: 250, display: 'flex', padding: '5% 0 2% 0',
+                            alignItems: 'center', height: 'auto', width: 220, display: 'flex', padding: '3% 0 1% 0',
                             justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
                             borderRadius: '1vh'
                         }}>
@@ -177,14 +177,14 @@ export const HeaderMobile = (props) => {
 
                     <Row style={{
                         display: 'flex', alignContent: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                        width: 250, marginTop: '2vh'
+                        width: 220, marginTop: '1vh'
                     }}>
                         <Button
                             onClick={() => toggleTheme(!theme)}
                             className='button-catalog'
                             style={{ transition: 'all 0.25s ease-in-out' }}
                             type='ghost'
-                            icon={theme ? <BsSun size={30} style={{ color: '#457b9d' }} /> : <BsMoonFill size={25} style={{ color: '#f1faee80' }} />}
+                            icon={theme ? <BsSun size={25} style={{ color: '#457b9d' }} /> : <BsMoonFill size={20} style={{ color: '#f1faee80' }} />}
                         />
 
                         <Button
@@ -193,7 +193,7 @@ export const HeaderMobile = (props) => {
                             })}
                             className='button-catalog'
                             style={{ transition: 'all 0.25s ease-in-out' }}
-                            icon={<FiLogOut size={30} style={{ color: `${theme ? '#457b9d' : '#f1faee80'}` }} />} type='ghost' />
+                            icon={<FiLogOut size={25} style={{ color: `${theme ? '#457b9d' : '#f1faee80'}` }} />} type='ghost' />
 
                     </Row>
 

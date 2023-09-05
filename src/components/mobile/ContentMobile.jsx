@@ -5,6 +5,7 @@ import { appContext_ } from '../../context_/appContext_';
 import { TbTextPlus } from "react-icons/tb";
 import { images_ } from '../../helpers/images';
 import { TasksMobile } from './TasksMobile';
+import { ProjectsMobile } from './ProjectsMobile';
 
 const { Content } = Layout;
 
@@ -36,6 +37,7 @@ export const ContentMobile = (props) => {
 
     }, [onWrite])
 
+    
 
     return (
         <>
@@ -55,7 +57,7 @@ export const ContentMobile = (props) => {
 
                 {
                     position ? <TasksMobile setOnWrite={setOnWrite} onWrite={addTask} />
-                        : <></>
+                        : <ProjectsMobile setOnWrite={setOnWrite} onWrite={addProject} /> 
                 }
 
             </Content>

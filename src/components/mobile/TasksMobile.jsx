@@ -6,8 +6,7 @@ import { images_ } from '../../helpers/images'
 
 export const TasksMobile = (props) => {
 
-    // const { tasks, theme } = useContext(appContext_)
-    // const [form] = Form.useForm()
+
     const { onWrite, setOnWrite } = props
 
     const { setTasks, tasks, taskFinished, setFinishedTask, setTotalTask, theme } = useContext(appContext_)
@@ -16,14 +15,6 @@ export const TasksMobile = (props) => {
     const colors = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
-
-    const [visible, setVisible] = useState(false)
-    const [currentBackground, setCurrentBackground] = useState(8)
-    const [currentImage, setCurrentImage] = useState(3)
-    const [currentTitle, setcurrentTitle] = useState('')
-    const [currentDescription, setcurrentDescription] = useState('')
-    const [currentStatus, setCurrentStatus] = useState(false)
-    const [currentKey, setCurrentKey] = useState('')
     const [currentTask, setCurrentTask] = useState(false)
 
     const [tasksFinished, setTasksFinished] = useState(taskFinished)
@@ -36,17 +27,6 @@ export const TasksMobile = (props) => {
 
     const [data, setData] = useState(tasks)
 
-
-    // const OnCurrentTask = (taskName, taskDescription, taskImage, taskBackground, taskStatus, taskKey) => {
-    //     setCurrentTask(true) // Modal
-    //     setcurrentTitle(taskName)
-    //     setcurrentDescription(taskDescription)
-    //     setCurrentImage(taskImage)
-    //     setCurrentBackground(taskBackground)
-    //     setCurrentStatus(taskStatus)
-    //     setCurrentKey(taskKey)
-
-    // }
 
     const handleOk = () => {
         setOnWrite(false)
@@ -150,9 +130,9 @@ export const TasksMobile = (props) => {
         setData(prevTasks => {
             const updatedTasks = prevTasks.map(task => {
                 if (task.key === key) {
-                    setcurrentDescription('Finished')
-                    setCurrentBackground('#6edfc7')
-                    setCurrentStatus(true)
+                    // setcurrentDescription('Finished')
+                    // setCurrentBackground('#6edfc7')
+                    // setCurrentStatus(true)
                     setTasksFinished(tasksFinished + 1)
                     return { ...task, finished: true, color: 10, description: 'Finished' };
                 }
@@ -179,6 +159,11 @@ export const TasksMobile = (props) => {
         }
 
     };
+
+    const handleForms = () => {
+        form.submit()
+
+    }
 
     useEffect(() => {
         setTasks(data)
@@ -209,7 +194,13 @@ export const TasksMobile = (props) => {
                 placement="left"
                 onClose={handleOk}
                 width='100%'
-                // height='100%'
+                extra={<Button
+                    onClick={handleForms}
+                    style={{
+                        backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 500,
+                        border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`, width: '15vh',
+                        borderRadius: '3vh',
+                    }}>Add</Button>}
                 open={onWrite}
                 style={{
                     backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`,
@@ -275,7 +266,7 @@ export const TasksMobile = (props) => {
 
                             </Form.Item>
 
-                            <Form.Item
+                            {/* <Form.Item
                                 className='project-inputs'
                                 style={{
                                     display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -287,7 +278,7 @@ export const TasksMobile = (props) => {
                                         border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`, width: '15vh',
                                         borderRadius: '3vh',
                                     }}>Add</Button>
-                            </Form.Item>
+                            </Form.Item> */}
 
 
 
