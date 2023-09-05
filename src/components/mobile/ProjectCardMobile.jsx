@@ -70,7 +70,7 @@ export const ProjectCardMobile = (props) => {
 
     const customTasks = (percent) => (
 
-        <span style={{ fontWeight: 500, color: `${theme ? '#f1faee' : '#f7fcf5'}` }}>
+        <span style={{ fontWeight: 500, color: `${theme ? '#a6b8c9' : '#f1faee80'}` }}>
             {`${percent}%`}
         </span>
     )
@@ -93,52 +93,20 @@ export const ProjectCardMobile = (props) => {
                     style={{
                         width: '90%', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
                         borderRadius: '1.5vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                        flexDirection: 'row', marginTop: '3vh', marginRight: '3vh', marginLeft: '1vh',
-                        transition: 'all 0.35s ease-in-out', cursor: 'pointer', height:'18vh'
+                        flexDirection: 'row', marginTop: '3vh', 
+                        transition: 'all 0.35s ease-in-out', cursor: 'pointer', height: '18vh'
                     }}>
 
-                    <div
 
-                        style={{
-                            height: '15vh', width:'25vh', backgroundColor: `${colorSelector(user.color)}`,
-                            borderRadius: '1vh', marginLeft: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            flexDirection: 'column',
-                        }} >
-
-                        <div className={`image-${user.image ? user.image : (Math.floor(Math.random() * 12) + 1)}`}
-                            style={{
-                                height: '85%', width: '100%',
-                            }}>
-
-                        </div>
-
-                        <div style={{
-                            display: 'flex', alignItems: 'center', height: '20%', width: '100%',
-                            justifyContent: 'center', flexDirection: 'column',
-                        }}>
-
-                            <Progress
-                                style={{ width: '90%', }}
-                                percent={parseInt(user.completed * 100 / (user.total))}
-                                format={customTasks}
-                                strokeColor={`${theme ? '#f1faee' : '#f1faee80'}`}
-                                strokeWidth={6}
-                                trailColor={colorLightSelector(user.color)}
-                            />
-
-                        </div>
-
-
-                    </div>
 
                     <Col style={{
-                        width: '60%', height: '90%', marginLeft: '1vh',
+                        width: '100%', height: '90%', marginLeft: '0',
                         display: 'flex', alignItems: 'center', flexDirection: 'column'
                     }}>
                         <p
                             // className='project-title'
                             style={{
-                                textAlign: 'left', width: '85%',  color: `${theme ? '#1d3557' : '#f1faee80'}`,
+                                textAlign: 'left', width: '85%', color: colorSelector(user.color),
                                 fontWeight: 600,
                                 fontSize: '1.8em',
                                 marginTop: '2vh', wordWrap: 'break-word',
@@ -151,8 +119,17 @@ export const ProjectCardMobile = (props) => {
                                 textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f1faee80'}`,
                                 fontWeight: 'lighter',
                                 // fontSize: '1.1em', 
-                                marginTop: '0vh', wordWrap: 'break-word'
+                                marginTop: '-1vh', wordWrap: 'break-word'
                             }}>{user.description}</p>
+
+                        <Progress
+                            style={{ width: '80%', }}
+                            percent={parseInt(user.completed * 100 / (user.total))}
+                            format={customTasks}
+                            strokeColor={colorLightSelector(user.color)}
+                            strokeWidth={6}
+                            trailColor={`${colorLightSelector(user.color)}80`}
+                        />
                     </Col>
 
 

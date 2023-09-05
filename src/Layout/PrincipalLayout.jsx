@@ -1,7 +1,7 @@
 
 import { useContext, useEffect, useState } from 'react'
 import { appContext_ } from '../context_/appContext_'
-import { Layout} from 'antd'
+import { Layout } from 'antd'
 import { SiderApp } from '../components/web/SiderApp';
 import { HeaderApp_ } from '../components/web/HeaderApp_';
 import { ContentApp } from '../components/web/ContentApp';
@@ -17,6 +17,7 @@ export const PrincipalLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [onWrite, setOnWrite] = useState(false)
   const [position, setPosition] = useState(true)
+  const [zoom, setZoom] = useState(1)
 
 
   useEffect(() => {
@@ -25,6 +26,12 @@ export const PrincipalLayout = () => {
     }
     changeBody()
   }, [theme])
+
+
+  useEffect(() => {
+    setZoom(1)
+  }, [])
+  
 
 
   return (
@@ -41,13 +48,16 @@ export const PrincipalLayout = () => {
 
       <Layout
         className='small'
-        style={{  minHeight: '100vh', backgroundColor: `${theme ? '#E5EFE1' : '#333437'}` }}>
+        style={{
+          minHeight: '100vh', backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`,
+          transform: `scale(${zoom})`
+        }}>
         <HeaderMobile setPosition={setPosition} position={position} theme={theme} avatar={avatar} />
-        <ContentMobile theme={theme} onWrite={onWrite} setOnWrite={setOnWrite} position={position}/>
-        <FooterMobile setOnWrite={setOnWrite} theme={theme}/>
+        <ContentMobile theme={theme} onWrite={onWrite} setOnWrite={setOnWrite} position={position} />
+        <FooterMobile setOnWrite={setOnWrite} theme={theme} />
       </Layout>
 
-      
+
     </>
   )
 }

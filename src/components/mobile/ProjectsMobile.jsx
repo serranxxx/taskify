@@ -606,7 +606,7 @@ export const ProjectsMobile = (props) => {
                 footer={<></>}>
                 <div
                     style={{
-                        height: '10vh', width: '60vh',
+                        height: '10vh', width: '40vh',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
                     }}>
                     <Form
@@ -631,7 +631,7 @@ export const ProjectsMobile = (props) => {
                             >
                                 <Input placeholder="Type sub-task name"
                                     style={{
-                                        width: '48.5vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
+                                        width: '30vh', backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`, fontWeight: 500,
                                         fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
                                     }} />
 
@@ -670,7 +670,7 @@ export const ProjectsMobile = (props) => {
                             fontWeight: 500, backgroundColor: currentBackground,
                             color: `${theme ? '#E5EFE1' : '#27282c'}`, borderRadius: '2vh',
                             transition: 'all 0.25s ease-in-out', display: `${currentStatus ? 'none' : ''}`,
-                            margin:0
+                            margin:0, border:'0px solid red'
                         }}>Finish</Button>
                     <Button
                         onClick={() => DeleteProject(currentKey)}
@@ -678,7 +678,7 @@ export const ProjectsMobile = (props) => {
                         style={{
                             fontWeight: 500, backgroundColor: currentBackground, borderRadius: '2vh',
                             color: `${theme ? '#E5EFE1' : '#27282c'}`, transition: 'all 0.25s ease-in-out',
-                            display: `${!currentStatus ? 'none' : ''}`, margin:0
+                            display: `${!currentStatus ? 'none' : ''}`, margin:0, border:'0px solid red'
                         }}
                     >Delete</Button>
 
@@ -697,7 +697,7 @@ export const ProjectsMobile = (props) => {
 
                     <div style={{
                         display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
-                        width: '70%', height: '40vh',
+                        width: '80%', height: '40vh',
                         padding: '2%', borderRadius: '2vh', backgroundColor: currentBackground,
                         position: 'relative'
                         // border: `3px solid #AAAAAA40`
@@ -715,7 +715,7 @@ export const ProjectsMobile = (props) => {
 
 
                     <p style={{
-                        width: '70%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
+                        width: '80%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
                         color: `${theme ? '#333' : '#f1faee80'}`, textAlign: 'justify', marginTop: '3vh',
                         fontSize: '1.1em'
                     }}
@@ -724,7 +724,7 @@ export const ProjectsMobile = (props) => {
 
 
                     <div style={{
-                        width: '70%',
+                        width: '80%',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                         flexDirection: 'column', marginTop: '2vh'
                     }}>

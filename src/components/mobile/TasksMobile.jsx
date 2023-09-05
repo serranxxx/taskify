@@ -217,11 +217,11 @@ export const TasksMobile = (props) => {
                         display: 'flex', alignItems: 'center', justifyContent: 'center', width: "80%",
                         flexDirection: 'column'
                     }}>
-                        <div style={{
+                        {/* <div style={{
                             height: '40vh'
                         }}>
                             <img src={images_.img_1} style={{ height: '100%', marginTop: '5vh' }} />
-                        </div>
+                        </div> */}
 
                         <Form
                             name="myForm_1"
@@ -233,7 +233,7 @@ export const TasksMobile = (props) => {
                         >
                             <Form.Item
                                 name="name"
-                                style={{ marginTop: '10vh', width: '100%' }}
+                                style={{ marginTop: '0', width: '100%' }}
                                 rules={[{
                                     required: true, message: 'Your task must have a name'
                                 }]}
