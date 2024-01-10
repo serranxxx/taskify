@@ -24,6 +24,8 @@ import im_12 from '../assets/tasks-images/task-image-12.svg'
 
 import image_1 from '../assets/SVG/SVG/image-1.svg'
 import image_2 from '../assets/SVG/SVG/image-2.svg'
+import textlight from '../assets/SVG/text-light.svg'
+import text from '../assets/SVG/text.svg'
 
 
 
@@ -60,7 +62,6 @@ export function SelectImage(index)  {
             break;
     }
 }
-
 export const colorSelector = (index) => {
     switch (index) {
         case 1:
@@ -90,5 +91,10 @@ export const colorSelector = (index) => {
 
 export const images_ = {
     img_1: image_1,
-    img_2: image_2
+    img_2: image_2,
+}
+
+export const texts = {
+    textlight,
+    text
 }

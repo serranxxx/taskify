@@ -55,7 +55,7 @@ export const TaskCard = (props) => {
                     onClick={() => handleClick(user.name, user.description, user.image, user.color, user.finished, user.key)}
                     style={{
                         height: 'auto', width: '20vh', backgroundColor: `${theme ? '#f1faee' : '#27282c'}`,
-                        borderRadius: '1.5vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                        borderRadius: '3vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         flexDirection: 'column', marginTop: '3vh', marginRight: '3vh', marginLeft: '1vh',
                         transition: 'all 0.35s ease-in-out', cursor: 'pointer'
                     }}>
@@ -64,7 +64,7 @@ export const TaskCard = (props) => {
                         className={`image-${user.image ? user.image : (Math.floor(Math.random() * 12) + 1)}`}
                         style={{
                             height: '10vh', width: '18vh', backgroundColor: `${colorSelector(user.color)}`,
-                            borderRadius: '1vh', marginTop: '1vh'
+                            borderRadius: '2.5vh', marginTop: '0.5vh'
                         }} />
 
                     <p
@@ -72,6 +72,7 @@ export const TaskCard = (props) => {
                         style={{
                             textAlign: 'left', width: '85%', color: `${theme ? '#1d3557' : '#f1faee80'}`,
                             fontWeight: 500, lineHeight: '0.9em',
+                            margin:'1vh 0 -1vh 0',
                             // fontSize: '1.5em', 
                             marginTop: '1vh', wordWrap: 'break-word'
                         }}>{user.name}</p>
@@ -81,8 +82,7 @@ export const TaskCard = (props) => {
                         style={{
                             textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f1faee80'}`,
                             fontWeight: 'lighter',
-                            fontSize: '0.9em', 
-                            marginTop: '-1vh', wordWrap: 'break-word'
+                            fontSize: '0.9em', wordWrap: 'break-word'
                         }}>{user.description}</p>
 
 

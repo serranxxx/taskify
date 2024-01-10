@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Layout, } from 'antd';
 import { TbTextPlus } from 'react-icons/tb';
+import { IoMdAdd } from "react-icons/io";
 
 const { Footer } = Layout;
 export const FooterMobile = (props) => {
@@ -12,21 +13,25 @@ export const FooterMobile = (props) => {
     return (
         <Footer style={{
             position: 'fixed', zIndex: 1, width: '100%', bottom: 0,
-            display: 'flex', alignItems: 'center', justifyContent: 'flex-end',
-            height: '15vh', 
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            height: '12vh',
+            // position:'relative', 
             // boxShadow: '-10px 0px 10px #00000030',
             backgroundColor: `transparent`
         }}>
 
             <Button
                 onClick={() => setOnWrite(true)}
-                icon={<TbTextPlus size={25} style={{ color: '#f7fcf5'}} />}
+                icon={<IoMdAdd size={25} style={{ color: theme ? '#f7fcf5' : ' #457B9D'}} />}
                 style={{
-                    height: '60px', width: '60px', opacity: '0.9', backgroundColor: '#457B9D',
+                    height: '60px', width: '60px', opacity: '0.9', 
+                    backgroundColor: theme ?  '#457B9D' : '#878B96',
                     // position: 'absolute', bottom: '70px', right: '30px',
                     boxShadow: '0px 0px 10px #00000030',
                     borderRadius: '50%',
-                    border:'0px solid #000'
+                    position:'absolute', right:'30px',
+                    border:'0px solid #000',
+                    display:'flex', alignItems:'center', justifyContent:'center'
                 }} />
 
 

@@ -1,7 +1,7 @@
 import { Button, Col, Drawer, Form, Input, Modal, Progress, Row } from 'antd'
 import React, { useContext, useEffect, useState } from 'react'
 
-import { FaTrashAlt } from "react-icons/fa";
+import { FaRegTrashAlt, FaTrashAlt } from "react-icons/fa";
 import { appContext_ } from '../../context_/appContext_';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { SelectImage, images_ } from '../../helpers/images';
@@ -433,19 +433,14 @@ export const ProjectsMobile = (props) => {
         <>
             <ProjectCardMobile data={projects} OnCurrentProject={OnCurrentProject} />
 
+            
+
             <Drawer
-                title={<p style={{ color: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 700, }}>Add project</p>}
+                title={<p style={{ color: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 700, }}>Create new project</p>}
                 placement="right"
                 onClose={handleCancel}
                 width='100%'
                 open={onWrite}
-                extra={<Button
-                    onClick={handleForms}
-                    style={{
-                        backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 500,
-                        border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`, width: '15vh',
-                        borderRadius: '3vh', margin: 0
-                    }}>Add</Button>}
                 style={{
                     backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center'
@@ -456,15 +451,15 @@ export const ProjectsMobile = (props) => {
                     alignItems: 'center', justifyContent: 'center', height: 'auto',
                 }}>
                     <Row style={{
-                        width: '90%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+                        width: '90%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                         flexDirection: 'row'
                     }}>
 
-                        {/* <div style={{
-                            height: '13vw',
+                        <div style={{
+                            width: '30%'
                         }}>
                             <img src={images_.img_2} style={{ height: '100%', marginRight: '0' }} />
-                        </div> */}
+                        </div>
 
 
                         <Form
@@ -473,7 +468,7 @@ export const ProjectsMobile = (props) => {
                             form={form}
                             onFinish={CreateNewProject}
                             style={{
-                                width: '100%', height: '100%',
+                                width: '65%', height: '100%',
                                 margin: '1vh 0 0 0',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                                 flexDirection: 'column'
@@ -489,8 +484,8 @@ export const ProjectsMobile = (props) => {
                                     className='project-inputs'
                                     style={{
                                         width: '100%',
-                                        backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 500,
-                                        fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
+                                        backgroundColor: `${theme ? '#f7fcf550' : '#27282c20'}`, fontWeight: 500,
+                                        fontWeight: '1em', color: `${theme ? '' : '#e3e3e3'}`, border: '0px solid #000'
                                     }} />
 
                             </Form.Item>
@@ -503,9 +498,9 @@ export const ProjectsMobile = (props) => {
                                     placeholder="Description"
                                     className='project-inputs'
                                     style={{
-                                        resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
+                                        resize: 'none', backgroundColor: `${theme ? '#f7fcf550' : '#27282c20'}`,
                                         overflow: 'auto', overflowY: 'auto', overflowX: 'hidden',
-                                        color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`,
+                                        color: `${theme ? '' : '#e3e3e3'}`, border: '0px solid #000',
                                         width: '100%'
                                     }}
                                     autoSize={{ minRows: 7, maxRows: 8 }}  // Ajusta automáticamente la altura según el contenido
@@ -534,20 +529,39 @@ export const ProjectsMobile = (props) => {
                             flexDirection: 'column'
                         }}>
 
+                        <Row style={{
+                            width: '100%', display: 'flex', alignItems: 'center',
+                            justifyContent: 'center', flexDirection: 'row',
+                            marginTop:'3vh'
+                        }}>
 
-                        <Button type='primary'
-                            onClick={AddSubTask}
-                            style={{
-                                borderRadius: '3vh', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 500,
-                                border: '0px solid #000', color: `${theme ? '#457b9d' : '#f1faee80'}`,
-                                margin: '3vh 0 1vh 0'
+                            <Button
+                                onClick={handleForms}
+                                style={{
+                                    backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 500,
+                                    border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`,
+                                    // width: '15vh',
+                                    borderRadius: '3vh 0 0 3vh',
+                                    // marginTop: '5vh'
+                                }}>Save project</Button>
 
-                            }}>+ sub-tasks</Button>
+                            <Button
+                                onClick={AddSubTask}
+                                style={{
+                                    borderRadius: '0 3vh 3vh 0', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 500,
+                                    border: theme ? '0px solid #000' : '0px solid #27282C', color: `${theme ? '#457b9d' : '#f1faee80'}`,
+                                    // margin: '1vh 0 1vh 0'
+
+                                }}>Add sub-tasks</Button>
+                        </Row>
+
+
+
 
                         <div
                             // className='scrollable-div'
                             style={{
-                                width: '90%', height: 'auto', display: 'flex', marginTop: '1vh',
+                                width: '100%', height: 'auto', display: 'flex', marginTop: '1vh',
                                 flexDirection: 'column',
                             }}>
 
@@ -568,9 +582,10 @@ export const ProjectsMobile = (props) => {
                                             <Input placeholder="Type sub-task name"
                                                 className='project-inputs_'
                                                 style={{
-                                                    backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 400,
-                                                    fontSize: '1em', height: 'auto', marginLeft: '0vh', width: '80vw',
-                                                    color: `${theme ? '' : '#e3e3e3'}`, border: `${theme ? '' : '0px solid #000'}`
+                                                    backgroundColor: `${theme ? '#f7fcf550' : '#27282c20'}`, fontWeight: 400,
+                                                    fontSize: '1em', height: 'auto', marginLeft: '0vh', width: '100%',
+                                                    borderRadius: '3vh',
+                                                    color: `${theme ? '' : '#e3e3e3'}`, border: '0px solid #000'
                                                 }} />
                                         </Form.Item>
 
@@ -581,11 +596,6 @@ export const ProjectsMobile = (props) => {
                             }
 
                         </div>
-
-
-
-
-
 
 
                     </Form>
@@ -653,39 +663,46 @@ export const ProjectsMobile = (props) => {
             </Modal>
 
             <Drawer
-                title={<p style={{ color: `${theme ? '#457b9d' : '#f1faee80'}` }}>{currentName}</p>}
+                title={<p style={{ color: !theme ? '#27282C' : '#F1FAEE', }}>{currentName}</p>}
                 placement="right"
                 onClose={handleCancel}
                 width='100%'
                 open={currentProject}
-                extra={<Row style={{
-                    marginTop: '2vh', marginBottom: '0vh', display: 'flex',
-                    alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
-                }}>
-                    <Button
-                        onClick={() => CompleteProject(currentKey)}
-                        className='element'
-                        type='primary'
-                        style={{
-                            fontWeight: 500, backgroundColor: currentBackground,
-                            color: `${theme ? '#E5EFE1' : '#27282c'}`, borderRadius: '2vh',
-                            transition: 'all 0.25s ease-in-out', display: `${currentStatus ? 'none' : ''}`,
-                            margin:0, border:'0px solid red'
-                        }}>Finish</Button>
-                    <Button
-                        onClick={() => DeleteProject(currentKey)}
-                        className='element'
-                        style={{
-                            fontWeight: 500, backgroundColor: currentBackground, borderRadius: '2vh',
-                            color: `${theme ? '#E5EFE1' : '#27282c'}`, transition: 'all 0.25s ease-in-out',
-                            display: `${!currentStatus ? 'none' : ''}`, margin:0, border:'0px solid red'
-                        }}
-                    >Delete</Button>
+                extra={
+                    <Row style={{
+                        marginTop: '2vh', marginBottom: '0vh', display: 'flex',
+                        alignItems: 'center', justifyContent: 'center', flexDirection: 'row'
+                    }}>
+                        <Button
+                            onClick={() => CompleteProject(currentKey)}
+                            className='element'
+                            type='primary'
+                            style={{
+                                fontWeight: 700,
+                                backgroundColor: !theme ? '#27282C' : '#F1FAEE',
+                                // backgroundColor: currentBackground,
+                                color: currentBackground, borderRadius: '2vh',
+                                transition: 'all 0.25s ease-in-out', display: `${currentStatus ? 'none' : ''}`
+                            }}>Finish</Button>
+                        <Button
+                            onClick={() => DeleteProject(currentKey)}
+                            className='element'
+                            style={{
+                                fontWeight: 700,
+                                backgroundColor: !theme ? '#27282C' : '#F1FAEE',
+                                //  backgroundColor: currentBackground, 
+                                borderRadius: '2vh',
+                                color: currentBackground, transition: 'all 0.25s ease-in-out',
+                                display: `${!currentStatus ? 'none' : ''}`
+                            }}
+                        >Delete</Button>
 
-                </Row>}
+                    </Row>
+                }
                 style={{
-                    backgroundColor: `${theme ? '#f7fcf5' : '#333437'}`,
+                    backgroundColor: currentBackground,
                 }}>
+
 
                 <div
                     className='scrollable-div-'
@@ -695,28 +712,13 @@ export const ProjectsMobile = (props) => {
                         flexDirection: 'column'
                     }}>
 
-                    <div style={{
-                        display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
-                        width: '80%', height: '40vh',
-                        padding: '2%', borderRadius: '2vh', backgroundColor: currentBackground,
-                        position: 'relative'
-                        // border: `3px solid #AAAAAA40`
-                    }}>
-                        <img src={SelectImage(currentImage)} style={{ width: '100%', margin: '0 0 2vh 0' }} />
-                        <Progress
-                            style={{ width: '80%', position: 'absolute' }}
-                            percent={parseInt(CurrentCompleted() * 100 / CurrentTotal())}
-                            format={customTasks}
-                            strokeColor={`${theme ? '#f7fcf5' : '#f1faee80'}`}
-                            strokeWidth={6}
-                            trailColor={`${currentStatus ? '#91e5d1' : currentLightColor}`}
-                        />
-                    </div>
+
 
 
                     <p style={{
-                        width: '80%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
-                        color: `${theme ? '#333' : '#f1faee80'}`, textAlign: 'justify', marginTop: '3vh',
+                        width: '95%', height: 'auto', wordWrap: 'break-word', marginTop: '0vh',
+                        color: !theme ? '#27282C' : '#F1FAEE', textAlign: 'justify',
+                        // marginTop: '3vh',
                         fontSize: '1.1em'
                     }}
                     >{currentDescription}</p>
@@ -724,34 +726,37 @@ export const ProjectsMobile = (props) => {
 
 
                     <div style={{
-                        width: '80%',
+                        width: '100%',
                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        flexDirection: 'column', marginTop: '2vh'
+                        flexDirection: 'column',
+                        // marginTop: '2vh'
                     }}>
                         <div
                             // className='add-sub-task'
                             style={{
-                                width: '100%', borderRadius: '1vh',
-                                backgroundColor: `${currentBackground}`,
-                                height: 'auto',
-                                display: 'flex', alignItems: 'center', marginTop: '0vh', flexDirection: 'row',
-                                justifyContent: 'space-between', padding: '1% 2% 1% 2%'
+                                width: '100%', borderRadius: '3vh',
+                                backgroundColor: !theme ? '#27282C30' : '#F1FAEE30',
+                                height: '5vh',
+                                display: 'flex', alignItems: 'center', flexDirection: 'row',
+                                justifyContent: 'flex-start', position: 'relative'
                             }}>
                             <p
                                 // className='block-shadow'
                                 style={{
-                                    height: 'auto', wordWrap: 'break-word', margin: '0 0 0 0',
-                                    fontSize: '1.1em', fontWeight: 600, color: `${theme ? '#f7fcf5' : '#f1faee80'}`
+                                    height: 'auto', wordWrap: 'break-word', margin: '0 0 0 10px',
+                                    fontSize: '1em', fontWeight: 700, color: !theme ? '#27282C' : '#F1FAEE',
                                 }}>
-                                Sub-tasks</p>
+                                My sub-tasks</p>
 
                             <Button
                                 // className='add-something'
                                 onClick={() => setSubtaskName(true)}
-                                icon={<AiOutlinePlus size={15} style={{ color: `${theme ? currentBackground : '#27282c'}` }} />}
+                                icon={<AiOutlinePlus size={18} style={{ color: !theme ? '#27282C' : '#F1FAEE', }} />}
                                 style={{
-                                    backgroundColor: `${theme ? '#f1faee' : '#f1faee80'}`,
-                                    border: '0px solid #000', borderRadius: '1vh', aspectRatio: '1/1', height: 'auto'
+                                    backgroundColor: currentBackground,
+                                    border: '0px solid #000', borderRadius: '50%',
+                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                    position: 'absolute', right: '3px'
                                 }} />
 
                         </div>
@@ -766,19 +771,21 @@ export const ProjectsMobile = (props) => {
                             {
                                 tasks.map((elemento) => (
                                     <div style={{
-                                        width: '99%', height: 'auto', borderRadius: '1vh', marginBottom: '1.5vh',
-                                        backgroundColor: `${!elemento.finished ? `${currentBackground}60` : `#E5EFE130`}`,
-                                        display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                                        padding: '1% 2% 1% 2%'
-                                        // border:`1.2px solid #dcdddc`
+                                        width: '100%', height: 'auto', borderRadius: '3vh', marginBottom: '1.5vh',
+                                        backgroundColor: !theme ? '#27282C30' : '#F1FAEE30',
+                                        height: '5vh',
+                                        // backgroundColor: `${!elemento.finished ? `${currentBackground}60` : `#E5EFE130`}`,
+                                        display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row',
+
                                     }}>
 
                                         <p
                                             // className='add-something'
                                             style={{
-                                                fontWeight: 500, color: `${theme ? '#1d3557' : '#e3e3e3'}`, marginLeft: '1vh',
-                                                margin: 0, fontSize: '1em', color: `${theme ? '#f7fcf5' : '#f1faee80'}`,
-                                                textDecoration: `${elemento.finished ? 'line-through' : ''}`
+                                                fontWeight: 500,
+                                                fontSize: '1em', color: !theme ? '#27282C' : '#F1FAEE',
+                                                textDecoration: `${elemento.finished ? 'line-through' : ''}`,
+                                                margin: '0 0 0 10px'
                                             }} key={elemento.key}>
                                             {elemento.name}
                                         </p>
@@ -787,24 +794,27 @@ export const ProjectsMobile = (props) => {
                                                 ? <></>
                                                 :
                                                 <>
-                                                    <Row>
+                                                    <Row style={{
+                                                        position: 'absolute', right: '28px'
+                                                    }}>
                                                         <Button
-
-                                                            icon={<BsCheckLg style={{ color: `${theme ? '#f7fcf5' : '#f1faee80'}`, }} />}
+                                                            icon={<BsCheckLg style={{ color: !theme ? '#27282C' : '#F1FAEE', }} />}
                                                             onClick={() => FinishedSubtask(elemento.key)}
                                                             style={{
-                                                                margin: '0 1vh 0 0', border: '0px solid #000',
-                                                                backgroundColor: `${elemento.finished ? 'transparent' : currentBackground}`,
+                                                                border: '0px solid #000',
+                                                                backgroundColor: currentBackground,
                                                                 cursor: `${elemento.finished ? 'auto' : 'pointer'}`,
-                                                                aspectRatio: '1/1',
+                                                                borderRadius: '50%', marginRight: '3px',
+                                                                display: 'flex', alignItems: 'center', justifyContent: 'center'
                                                             }} />
                                                         <Button
                                                             onClick={() => DeleteSubTask(elemento.key)}
 
-                                                            icon={<FaTrashAlt style={{ color: `${theme ? '#f7fcf5' : '#f1faee80'}`, }} />}
+                                                            icon={<FaRegTrashAlt size={13} style={{ color: !theme ? '#27282C' : '#F1FAEE', }} />}
                                                             style={{
-                                                                aspectRatio: '1/1',
-                                                                backgroundColor: `${elemento.finished ? '#6edfc7' : currentBackground}`, border: '0px solid #000',
+                                                                backgroundColor: currentBackground, border: '0px solid #000',
+                                                                borderRadius: '50%',
+                                                                display: 'flex', alignItems: 'center', justifyContent: 'center'
                                                             }} />
                                                     </Row>
 
@@ -821,12 +831,16 @@ export const ProjectsMobile = (props) => {
                     </div>
 
 
+
+
+
                 </div>
 
 
 
 
             </Drawer>
+
 
         </>
     )

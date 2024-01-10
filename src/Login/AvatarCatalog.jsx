@@ -6,27 +6,41 @@ export const AvatarCatalog = (props) => {
     return (
         <>
             {props.data.map((dato) => (
-                <Button
+                <>
+                    <Button
 
-                    onClick={() => props.finish(dato)}
-                    className={`avatar-${dato} button-catalog login-card`}
-                    style={{
-                        aspectRatio: '1/1',
-                        cursor: 'pointer',
-                        marginLeft: '4%',
-                        marginTop: '4%',
-                        transition: 'transform 0.45s ease-out',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'flex-end',
-                        borderRadius: '0.5vw',
-                        flexWrap: 'wrap',
-                        border: '0px solid #000'
-                    }}
-                >
+                        onClick={() => props.finish(dato)}
+                        className={`avatar-${dato} button-catalog login-card large`}
+                        style={{
+                            aspectRatio: '1/1',
+                            cursor: 'pointer',
+                            marginLeft: '2%',
+                            marginTop: '2%',
+                            transition: 'transform 0.45s ease-out',
+                            border: '0px solid #000',
+                            borderRadius: '2vh'
+                        }}
+                    >
 
-                </Button>
+                    </Button>
+
+                    <Button
+
+                        onClick={() => props.finish(dato)}
+                        className={`avatar-${dato} button-catalog login-card small`}
+                        style={{
+                            aspectRatio: '1/1',
+                            cursor: 'pointer',
+                            marginLeft: '5%',
+                            marginTop: '5%',
+                            transition: 'transform 0.45s ease-out',
+                            border: '0px solid #000',
+                            borderRadius: '2vh'
+                        }}
+                    >
+
+                    </Button>
+                </>
 
             ))
 

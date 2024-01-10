@@ -136,6 +136,7 @@
 /* Modificar el color del botón de cierre del modal */
 .task-content .ant-modal-close-x {
   color: #a8dadb;
+  border-radius: 6vh !important;
 }
 
 .task-content-dark .ant-modal-content {

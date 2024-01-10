@@ -1,13 +1,11 @@
 import React, { useContext } from 'react'
 import { Button, Col, Layout, Progress, Row } from 'antd';
-import { BsFillPeopleFill } from 'react-icons/bs';
-import { IoPieChart } from 'react-icons/io5';
-import { BiSolidContact } from 'react-icons/bi';
-import { CiLogout } from 'react-icons/ci';
 import { UserOutlined, EditFilled, DoubleRightOutlined, DoubleLeftOutlined } from '@ant-design/icons';
 import { BsSun, BsMoonFill } from "react-icons/bs";
+import { IoMoonOutline } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
 import { FiFeather } from "react-icons/fi";
+import { CiLogout } from "react-icons/ci";
 import { SelectAvatar, avatars } from '../../helpers/images';
 import { HeaderQuote } from '../../Layout';
 import { appContext_ } from '../../context_/appContext_';
@@ -53,7 +51,8 @@ export const SiderApp = (props) => {
             style={{
                 height: '100vh', width: '100%',
                 backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`, transition: 'all 0.25s ease-in-out',
-                boxShadow: '8px 0px 15px #00000010',
+                // boxShadow: '8px 0px 15px #00000010',
+                borderRight: theme ?  '1px solid #CAD6C580' : '1px solid #27282C',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
 
             }}
@@ -69,11 +68,11 @@ export const SiderApp = (props) => {
                         <img
                             className='button-catalog'
                             src={SelectAvatar(avatar)} style={{
-                                height: 70, borderRadius: '50%', transition: 'all 0.25s ease-in-out'
+                                width:'70%', borderRadius: '50%', transition: 'all 0.25s ease-in-out',
                             }} />
 
                         <hr style={{
-                            width: '90%', border: `2px solid ${theme ? '#CAD6C5' : '#27282c'}`
+                            width: '70%', border: `1px solid ${theme ? '#CAD6C580' : '#27282c99'}`
                         }} />
 
                         <Progress
@@ -98,28 +97,29 @@ export const SiderApp = (props) => {
                             onClick={() => setCollapsed(false)}
                             className='button-catalog'
                             style={{
-                                height: 65, borderRadius: '50%', backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, width: 65,
+                                height: 60, borderRadius: '50%', backgroundColor: `${theme ? '#457b9d' : '#f1faee60'}`, 
+                                width: 60,
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                                 transition: 'all 0.25s ease-in-out', border: '0px solid #000'
                             }}>
                             <div style={{
-                                height: 50, borderRadius: '50%', backgroundColor: `${theme ? '#e5efe1' : '#333437'}`, aspectRatio: '1/1',
+                                height: 55, borderRadius: '50%', backgroundColor: `${theme ? '#e5efe1' : '#333437'}`, aspectRatio: '1/1',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center'
                             }}>
-                                <FiFeather size={25} style={{ color: `${theme ? '#457b9d' : '#f1faee80'}` }} />
+                                <FiFeather size={25} style={{ color: `${theme ? '#457b9d' : '#f1faee60'}` }} />
                             </div>
 
                         </Button>
 
                         <hr style={{
-                            width: '90%', border: `2px solid ${theme ? '#CAD6C5' : '#27282c'}`
+                            width: '70%', border: `1px solid ${theme ? '#CAD6C580' : '#27282c99'}`
                         }} />
 
                         <Button
                             onClick={() => toggleTheme(!theme)}
                             className='button-catalog'
                             style={{ transition: 'all 0.25s ease-in-out' }}
-                            icon={theme ? <BsSun size={35} style={{ color: '#457b9d' }} /> : <BsMoonFill size={25} style={{ color: '#f1faee80' }} />}
+                            icon={theme ? <BsSun size={35} style={{ color: '#457b9d' }} /> : <IoMoonOutline size={25} style={{ color: '#f1faee80' }} />}
                             type='ghost' />
 
 
@@ -129,7 +129,7 @@ export const SiderApp = (props) => {
                             })}
                             className='button-catalog'
                             style={{ transition: 'all 0.25s ease-in-out' }}
-                            icon={<FiLogOut size={30} style={{ color: `${theme ? '#457b9d' : '#f1faee80'}` }} />} type='ghost' />
+                            icon={<CiLogout size={30} style={{ color: `${theme ? '#457b9d' : '#f1faee80'}` }} />} type='ghost' />
 
 
 
@@ -137,97 +137,115 @@ export const SiderApp = (props) => {
 
                     : <Col style={{
                         height: '100%', flexDirection: 'column',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        gap: '3vh',
+                        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                        gap: '3vh', padding: '12% 0 12% 0'
                     }}>
 
                         <Col style={{
                             display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center',
-                            margin: '0 0 0 0'
+                            margin: '0 0 0 0', width: '100%'
                         }}>
-                            <img
-                                className='button-catalog'
-                                src={SelectAvatar(avatar)} style={{
-                                    height: 110, borderRadius: '50%', transition: 'all 0.25s ease-in-out',
-                                    margin: '0 0 1vh 0'
-                                }} />
+                            <div style={{
+                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                width: '90%',
+                                borderRadius: '3vh',
+                                backgroundColor: theme ? '#CAD6C5' : '#27282C'
+                            }}>
+                                <img
+                                    className='button-catalog'
+                                    src={SelectAvatar(avatar)} style={{
+                                        width: '90%', borderRadius: '2vh', transition: 'all 0.25s ease-in-out',
+                                        margin: '1vh 0 1vh 0',
+                                    }} />
+                            </div>
 
-                            {/* <p style={{
-                                fontSize: '2em', fontWeight: 400, fontFamily: 'Berlin Sans FB',
-                                margin: 0, color: `${theme ? '#457b9d' : '#f1faee80'}`
-                            }}>Nickname</p> */}
                         </Col>
 
 
                         <hr style={{
-                            width: '90%', border: `2px solid ${theme ? '#CAD6C5' : '#27282c'}`
+                            width: '70%', border: `1px solid ${theme ? '#CAD6C580' : '#27282c99'}`,
+                            borderRadius: '3vh'
                         }} />
 
-                        <div
-                            style={{
-                                alignItems: 'center', height: 'auto', width: 170, display: 'flex', padding: '5% 0 2% 0',
-                                justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
-                                borderRadius: '1vh'
-                            }}>
-
-                            <p
+                        <Col style={{
+                            display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
+                            width: '100%'
+                        }}>
+                            <div
                                 style={{
-                                    fontWeight: 500, textAlign: 'center',
-                                    color: `${theme ? '#457b9d' : '#f1faee80'}`, marginBottom: '0vh', marginTop: '0vh'
-                                }}>Tasks completed</p>
+                                    alignItems: 'center', height: 'auto', width: '100%', display: 'flex',
+                                    padding: '10% 10% 2% 10%',
+                                    justifyContent: 'center', flexDirection: 'column',
+                                    backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
+                                    borderRadius: '1vh', marginBottom:'1vh'
+                                }}>
 
-                            <Progress
-                                style={{ width: '80%', }}
-                                percent={parseInt(taskFinished * 100 / (taskTotal))}
-                                format={customTasks}
-                                strokeColor={`${theme ? '#457b9d' : '#f1faee80'}`}
-                                strokeWidth={6}
-                                trailColor={`${theme ? '#cad6c5' : '#27282c'}`}
-                            />
+                                <p
+                                    style={{
+                                        fontWeight: 500, textAlign: 'center',
+                                        color: `${theme ? '#457b9d' : '#f1faee80'}`,
+                                        marginBottom: '0vh', marginTop: '0vh'
+                                    }}>Tasks completed</p>
 
-                        </div>
+                                <Progress
+                                    style={{ width: '100%', }}
+                                    percent={parseInt(taskFinished * 100 / (taskTotal))}
+                                    format={customTasks}
+                                    strokeColor={`${theme ? '#457b9d' : '#f1faee80'}`}
+                                    strokeWidth={6}
+                                    trailColor={`${theme ? '#cad6c5' : '#333437'}`}
+                                />
 
-                        <div
-                            style={{
-                                alignItems: 'center', height: 'auto', width: 170, display: 'flex', padding: '5% 0 2% 0',
-                                justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
-                                borderRadius: '1vh'
-                            }}>
+                            </div>
 
-                            <p
+                            <div
                                 style={{
-                                    fontWeight: 500, textAlign: 'center',
-                                    color: `${theme ? '#457b9d' : '#f1faee80'}`, marginBottom: '0vh', marginTop: '0vh'
-                                }}>Projects completed</p>
+                                    alignItems: 'center', height: 'auto', width: 170, display: 'flex',
+                                    padding: '10% 10% 2% 10%',
+                                    justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
+                                    borderRadius: '1vh', marginBottom:'1vh'
+                                }}>
 
-                            <Progress
-                                style={{ width: '80%', }}
-                                percent={parseInt(subtasksFinished * 100 / (subtasksTotal))}
-                                format={customTasks}
-                                strokeColor={`${theme ? '#457b9d' : '#f1faee80'}`}
-                                strokeWidth={6}
-                                trailColor={`${theme ? '#cad6c5' : '#27282c'}`}
-                            />
+                                <p
+                                    style={{
+                                        fontWeight: 500, textAlign: 'center',
+                                        color: `${theme ? '#457b9d' : '#f1faee80'}`, marginBottom: '0vh', marginTop: '0vh'
+                                    }}>Projects completed</p>
 
-                        </div>
+                                <Progress
+                                    style={{ width: '100%', }}
+                                    percent={parseInt(subtasksFinished * 100 / (subtasksTotal))}
+                                    format={customTasks}
+                                    strokeColor={`${theme ? '#457b9d' : '#f1faee80'}`}
+                                    strokeWidth={6}
+                                    trailColor={`${theme ? '#cad6c5' : '#333437'}`}
+                                />
+
+                            </div>
+                            <HeaderQuote />
+                        </Col>
 
 
-                        <HeaderQuote />
+
+
+                       
 
                         <hr style={{
-                            width: '90%', border: `2px solid ${theme ? '#CAD6C5' : '#27282c'}`
+                            width: '70%', border: `1px solid ${theme ? '#CAD6C580' : '#27282c99'}`,
+                            borderRadius:'3vh'
                         }} />
 
                         <Row style={{
                             display: 'flex', alignContent: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                            width: 150, marginTop: '5vh'
+                            width: '90%', 
+                            // marginTop: '5vh'
                         }}>
                             <Button
                                 onClick={() => toggleTheme(!theme)}
                                 className='button-catalog'
                                 style={{ transition: 'all 0.25s ease-in-out' }}
                                 type='ghost'
-                                icon={theme ? <BsSun size={25} style={{ color: '#457b9d' }} /> : <BsMoonFill size={20} style={{ color: '#f1faee80' }} />}
+                                icon={theme ? <BsSun size={20} style={{ color: '#457b9d' }} /> : <IoMoonOutline size={20} style={{ color: '#f1faee80' }} />}
                             />
 
                             <Button
@@ -236,7 +254,7 @@ export const SiderApp = (props) => {
                                 })}
                                 className='button-catalog'
                                 style={{ transition: 'all 0.25s ease-in-out' }}
-                                icon={<FiLogOut size={20} style={{ color: `${theme ? '#457b9d' : '#f1faee80'}` }} />} type='ghost' />
+                                icon={<CiLogout size={20} style={{ color: `${theme ? '#457b9d' : '#f1faee80'}` }} />} type='ghost' />
 
                         </Row>
 

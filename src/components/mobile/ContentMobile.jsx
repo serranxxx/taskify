@@ -44,7 +44,7 @@ export const ContentMobile = (props) => {
             <Content
                 className='scrollable-div-x'
                 style={{
-                    marginTop: '18vh', // Ajusta este valor para que el contenido no quede detrás del header
+                    marginTop: position ? '14vh': '12vh', // Ajusta este valor para que el contenido no quede detrás del header
                     marginBottom: '2vh', // Ajusta este valor para que el contenido no quede detrás del footer
                     overflowY: 'scroll',
                     height: 'auto', // Ajusta estos valores según el header y footer

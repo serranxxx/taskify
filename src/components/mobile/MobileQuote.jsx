@@ -50,9 +50,9 @@ export const MobileQuote = () => {
 
         <div
             style={{
-                alignItems: 'center', height: 'auto', width: 200, display: 'flex', padding: '5% 3% 2% 3%',
+                alignItems: 'center', height: 'auto', width: '83%', display: 'flex', padding: '5% 3% 2% 3%',
                 justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme?'#F1FAEE ':'#27282c'}`,
-                borderRadius: '1vh'
+                borderRadius: '3vh'
             }}>
 
             {

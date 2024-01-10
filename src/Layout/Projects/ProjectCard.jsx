@@ -91,17 +91,17 @@ export const ProjectCard = (props) => {
                     className='element login-card'
                     onClick={() => handleClick(user.name, user.description, user.image, user.color, user.finished, user.key, user.total, user.completed)}
                     style={{
-                        width: '100%', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
-                        borderRadius: '1.5vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                        width: '98%', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
+                        borderRadius: '3vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         flexDirection: 'row', marginTop: '3vh', marginRight: '3vh', marginLeft: '1vh',
-                        transition: 'all 0.35s ease-in-out', cursor: 'pointer', height:'18vh'
+                        transition: 'all 0.35s ease-in-out', cursor: 'pointer', height:'17vh'
                     }}>
 
                     <div
 
                         style={{
-                            height: '15vh', width:'25vh', backgroundColor: `${colorSelector(user.color)}`,
-                            borderRadius: '1vh', marginLeft: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                            height: '90%', width:'30%', backgroundColor: `${colorSelector(user.color)}`,
+                            borderRadius: '2.5vh', marginLeft: '1vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
                             flexDirection: 'column',
                         }} >
 
@@ -115,6 +115,7 @@ export const ProjectCard = (props) => {
                         <div style={{
                             display: 'flex', alignItems: 'center', height: '20%', width: '100%',
                             justifyContent: 'center', flexDirection: 'column',
+                            padding:'3%'
                         }}>
 
                             <Progress
@@ -132,26 +133,30 @@ export const ProjectCard = (props) => {
                     </div>
 
                     <Col style={{
-                        width: '60%', height: '90%', marginLeft: '1vh',
-                        display: 'flex', alignItems: 'center', flexDirection: 'column'
+                        width: '70%', 
+                        height: '90%', 
+                        // marginLeft: '1vh',
+                        display: 'flex', alignItems: 'center', flexDirection: 'column',
+                        justifyContent:'flex-start'
                     }}>
                         <p
                             // className='project-title'
                             style={{
-                                textAlign: 'left', width: '85%',  color: `${theme ? '#1d3557' : '#f1faee80'}`,
+                                textAlign: 'left', width: '95%',  color: `${theme ? '#1d3557' : '#f1faee80'}`,
                                 fontWeight: 600,
-                                fontSize: '1.8em',
-                                marginTop: '2vh', wordWrap: 'break-word',
-                                lineHeight: '0.8em'
+                                fontSize: '1.4em',
+                                marginTop: '1.5vh', wordWrap: 'break-word',
+                                margin:0
+                                // lineHeight: '0.8em'
                             }}>{user.name}</p>
 
                         <p
                             // className='project-description'
                             style={{
-                                textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f1faee80'}`,
+                                textAlign: 'left', width: '95%', color: `${theme ? '#a6b8c9' : '#f1faee80'}`,
                                 fontWeight: 'lighter',
-                                // fontSize: '1.1em', 
-                                marginTop: '0vh', wordWrap: 'break-word'
+                                fontSize: '1em', 
+                                marginTop: '1vh', wordWrap: 'break-word'
                             }}>{user.description}</p>
                     </Col>
 

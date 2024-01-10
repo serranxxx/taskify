@@ -92,35 +92,42 @@ export const ProjectCardMobile = (props) => {
                     onClick={() => handleClick(user.name, user.description, user.image, user.color, user.finished, user.key, user.total, user.completed)}
                     style={{
                         width: '90%', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
-                        borderRadius: '1.5vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                        flexDirection: 'row', marginTop: '3vh', 
-                        transition: 'all 0.35s ease-in-out', cursor: 'pointer', height: '18vh'
+                        borderRadius: '3vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                        flexDirection: 'row', marginTop: '2vh',
+                        transition: 'all 0.35s ease-in-out', cursor: 'pointer', height: '15vh'
                     }}>
 
 
 
                     <Col style={{
                         width: '100%', height: '90%', marginLeft: '0',
-                        display: 'flex', alignItems: 'center', flexDirection: 'column'
+                        display: 'flex', alignItems: 'center', flexDirection: 'column',
+                        justifyContent: 'space-between'
                     }}>
-                        <p
-                            // className='project-title'
-                            style={{
-                                textAlign: 'left', width: '85%', color: colorSelector(user.color),
-                                fontWeight: 600,
-                                fontSize: '1.8em',
-                                marginTop: '2vh', wordWrap: 'break-word',
-                                lineHeight: '0.8em'
-                            }}>{user.name}</p>
 
-                        <p
-                            // className='project-description'
-                            style={{
-                                textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f1faee80'}`,
-                                fontWeight: 'lighter',
-                                // fontSize: '1.1em', 
-                                marginTop: '-1vh', wordWrap: 'break-word'
-                            }}>{user.description}</p>
+                        <Col style={{
+                            width:'100%', display:'flex', alignItems:'center', justifyContent:'flex-start',
+                            flexDirection:'column'
+                        }}>
+                            <p
+                                // className='project-title'
+                                style={{
+                                    textAlign: 'left', width: '85%', color: colorSelector(user.color),
+                                    fontWeight: 600,
+                                    fontSize: '1.2em', wordWrap: 'break-word',
+                                    lineHeight: '0.8em'
+                                }}>{user.name}</p>
+
+                            <p
+                                // className='project-description'
+                                style={{
+                                    textAlign: 'left', width: '85%', color: `${theme ? '#a6b8c9' : '#f1faee80'}`,
+                                    fontWeight: 'lighter',
+                                    fontSize: '1em',
+                                    marginTop: '-1vh', wordWrap: 'break-word'
+                                }}>{user.description}</p>
+                        </Col>
+
 
                         <Progress
                             style={{ width: '80%', }}

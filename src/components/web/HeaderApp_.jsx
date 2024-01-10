@@ -6,6 +6,7 @@ import {
     MenuUnfoldOutlined,
   
   } from '@ant-design/icons';
+import { texts } from '../../helpers/images';
 const { Header } = Layout;
 
 export const HeaderApp_ = (props) => {
@@ -21,11 +22,9 @@ export const HeaderApp_ = (props) => {
                 display: 'flex', alignItems: 'center', justifyContent: 'center'
             }}
         >
-            <p style={{
-                fontSize:'4em', color: `${theme? '#E5EFE1': '#457B9D'}`, 
-                fontWeight:700
-                // fontFamily: 'Berlin Sans FB'
-            }}>Taskify</p>
+            <img src={texts.textlight} style={{
+                height:'40%'
+            }}/>
         </Header>
     )
 }

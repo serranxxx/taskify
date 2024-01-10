@@ -12,7 +12,7 @@ export const LoginPage = () => {
     const [open, setOpen] = useState(false);
     const Avatars = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    const { setAvatar, selectAvavatar, theme,  } = useContext(appContext_)
+    const { setAvatar, selectAvavatar, theme, } = useContext(appContext_)
     const [newAvatar, setNewAvatar] = useState([])
     const navigate = useNavigate()
 
@@ -62,7 +62,7 @@ export const LoginPage = () => {
             localStorage.setItem('avatars', JSON.stringify(initAvatar))
             setNewAvatar(initAvatar)
             console.log(initAvatar)
-            
+
         }
         // 
     }, [])
@@ -75,12 +75,13 @@ export const LoginPage = () => {
                 diaplay: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'
             }}>
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', height: '30%', }}>
-                <p 
-                style={{
-                    fontSize: '4em', fontWeight: 'normal', lineHeight: '0em',
-                    fontWeight:700,fontFamily: 'Segoe UI',
-                    color: `${theme ? '#1d3447' : '#f1faee'}`
-                }}>Who's here?</p>
+                <p
+                    style={{
+                        fontSize: '3em', fontWeight: 'normal', lineHeight: '0em',
+                        fontWeight: 'bolder',
+                        // fontFamily: 'Segoe UI',
+                        color: `${theme ? '#1d344799' : '#f1faee99'}`
+                    }}>Who's here?</p>
             </div>
 
             <div style={{
@@ -88,52 +89,81 @@ export const LoginPage = () => {
                 flexDirection: 'row', flexWrap: 'wrap'
             }}>
                 {
-                    newAvatar 
-                    ? <ProfileButton users={newAvatar} handleClick={handleClick} onLogin={handleLogin} />
-                    : <></>
+                    newAvatar
+                        ? <ProfileButton users={newAvatar} handleClick={handleClick} onLogin={handleLogin} />
+                        : <></>
                 }
-                
+
             </div>
 
             <div style={{
                 display: 'flex', alignItems: 'flex-start', justifyContent: 'center', height: '30%',
-                fontFamily: 'Segoe UI', fontWeight: 'normal', marginTop: '2%', fontWeight:600
+                fontWeight: 'normal', marginTop: '2%',
+                // fontWeight:400
             }}>
-                <p  style={{  color: `${theme ? '#1d3447' : '#f1faee'}`, wordWrap: 'break-word' }}
+                <p style={{
+                    color: `${theme ? '#1d344780' : '#f1faee80'}`, wordWrap: 'break-word',
+                }}
                 >Do you want another avatar?
-                    <a  style={{ color: `${theme ? '#a8dadc' : '#f0c145'}`, cursor: 'pointer' }} onClick={showDrawer}
+                    <a style={{
+                        color: `${theme ? '#a8dadc' : '#f0c145'}`, cursor: 'pointer',
+                        fontWeight: 600
+                    }} onClick={showDrawer}
                     > Add avatar</a></p>
             </div>
 
             <Drawer
-                width={'45%'}
+                width={'65%'}
+                className='large'
                 style={{ backgroundColor: `${theme ? '#f1faee' : '#333437'}`, transition: 'transform 0.99s ease-out' }}
                 placement="right" onClose={onClose} open={open}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '35%', }}>
-                        <h1 className='Quote' style={{ fontWeight: 600, color: `${theme ? '#1d3447' : '#f1faee'}`, lineHeight: '0.9em'}}>Select avatar</h1>
-                    </div>
+                <div style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
+                    width:'100%'
+                }}>
+                    <p className='Quote'
+                        style={{
+                            fontWeight: 400, color: `${theme ? '#1d344799' : '#f1faee99'}`,
+                            margin:'0 0 3vh 0'
+                        }}>
+                        Select a new avatar</p>
+                    
+                    <Row style={{
+                        width:'100%', display:'flex', alignItems:'center',
+                        flexDirection:'row', justifyContent:'center'
+                    }}>
+                      <AvatarCatalog data={Avatars} finish={handleFinish} />  
+                    </Row>
 
-                    <Col style={{ width: '100%', }}>
+                    
 
-                        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '0%' }}>
-                            <Col style={{ width: '92%', fontSize: '1.2em', color: `${theme ? '#1d3447' : '#f1faee'}`, fontFamily: 'Segoe UI', fontWeight: 600, }}>
+                </div>
+            </Drawer >
 
-                                <div
-                                    className={`${theme ? 'scrollable-div' : 'scrollable-div-dark'}`}
-                                    style={{
-                                        width: '95%', display: 'flex', alignItems: 'center',
-                                        justifyContent: 'center', flexWrap: 'wrap'
-                                    }}>
+            <Drawer
+                width={'100%'}
+                className='small'
+                style={{ backgroundColor: `${theme ? '#f1faee' : '#333437'}`, transition: 'transform 0.99s ease-out' }}
+                placement="right" onClose={onClose} open={open}>
+                <div style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
+                    width:'100%'
+                }}>
+                    <p className='Quote'
+                        style={{
+                            fontWeight: 400, color: `${theme ? '#1d344799' : '#f1faee99'}`,
+                            margin:'0 0 3vh 0'
+                        }}>
+                        Select a new avatar</p>
+                    
+                    <Row style={{
+                        width:'100%', display:'flex', alignItems:'center',
+                        flexDirection:'row', justifyContent:'center'
+                    }}>
+                      <AvatarCatalog data={Avatars} finish={handleFinish} />  
+                    </Row>
 
-                                    <AvatarCatalog data={Avatars} finish={handleFinish} />
-
-                                </div>
-
-                            </Col>
-                        </div>
-
-                    </Col>
+                    
 
                 </div>
             </Drawer >

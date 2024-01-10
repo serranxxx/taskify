@@ -16,20 +16,20 @@ export const ContentApp = (props) => {
                 backgroundColor: `${theme? '#E5EFE1' : '#333437'}`,
                 overflowY: 'scroll',
                 height: 'auto', // Ajusta estos valores según el header y footer
-                display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                flexDirection: 'column',
+                display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
+                flexDirection: 'row',
             }}
         >
             <Row style={{
                 flexWrap: 'wrap', display: 'flex', flexDirection: 'row',
-                alignItems: 'flex-start', justifyContent: 'center',
+                alignItems: 'flex-start', justifyContent: 'space-bewteen',
                 width:'100%'
             }} >
                 <div
                     // className='wrap-app'
                     style={{
-                        height: 'auto', width:'50%',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        width:'48%',
+                        display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-start',
                         flexDirection: 'row', flexWrap: 'wrap', marginBottom: '1vh'
                     }}>
 
@@ -40,7 +40,7 @@ export const ContentApp = (props) => {
                 <div
                     // className='wrap-app'
                     style={{
-                        height: 'auto', width:'50%',
+                        height: 'auto', width:'48%',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
                         flexDirection: 'column', flexWrap: 'wrap'
                     }}>
