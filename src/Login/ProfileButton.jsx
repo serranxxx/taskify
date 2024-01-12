@@ -29,7 +29,7 @@ export const ProfileButton = (props) => {
                         borderRadius:'2vh', zIndex:0
                     }}
                 >
-                    <Button
+                    {/* <Button
                         type='ghost'
                         icon={<MdOutlineCancel size={20} style={{color:'#00000030'}}/>}
                         // className='delete-button' 
@@ -37,9 +37,9 @@ export const ProfileButton = (props) => {
                         onMouseEnter={handleState} onMouseLeave={handleState}
                         style={{
                             position: 'absolute', top: '2px',
-                            right: '5px', width: '2px', aspectRatio: '1/1',
+                            right: '25px', width: '2px', aspectRatio: '1/1',
                             zIndex:1
-                        }} />
+                        }} /> */}
                 </Button>
             ))}
         </>

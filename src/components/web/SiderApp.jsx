@@ -173,10 +173,9 @@ export const SiderApp = (props) => {
                         }}>
                             <div
                                 style={{
-                                    alignItems: 'center', height: 'auto', width: '100%', display: 'flex',
+                                    alignItems: 'center', height: 'auto', width: 170, display: 'flex',
                                     padding: '10% 10% 2% 10%',
-                                    justifyContent: 'center', flexDirection: 'column',
-                                    backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
+                                    justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
                                     borderRadius: '1vh', marginBottom:'1vh'
                                 }}>
 

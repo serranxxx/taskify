@@ -56,7 +56,7 @@ export const TaskCard = (props) => {
                     style={{
                         height: 'auto', width: '20vh', backgroundColor: `${theme ? '#f1faee' : '#27282c'}`,
                         borderRadius: '3vh', display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                        flexDirection: 'column', marginTop: '3vh', marginRight: '3vh', marginLeft: '1vh',
+                        flexDirection: 'column', marginTop: '2vh', marginRight: '1vh', marginLeft: '1vh',
                         transition: 'all 0.35s ease-in-out', cursor: 'pointer'
                     }}>
 

@@ -10,6 +10,7 @@ export const LoginPage = () => {
 
 
     const [open, setOpen] = useState(false);
+    const [openSmall, setOpenSmall] = useState(false)
     const Avatars = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     const { setAvatar, selectAvavatar, theme, } = useContext(appContext_)
@@ -112,6 +113,22 @@ export const LoginPage = () => {
                     > Add avatar</a></p>
             </div>
 
+            {/* <div style={{
+                display: 'flex', alignItems: 'flex-start', justifyContent: 'center', height: '30%',
+                fontWeight: 'normal', marginTop: '2%',
+                // fontWeight:400
+            }}>
+                <p style={{
+                    color: `${theme ? '#1d344780' : '#f1faee80'}`, wordWrap: 'break-word',
+                }}
+                >Do you want another avatar?
+                    <a style={{
+                        color: `${theme ? '#a8dadc' : '#f0c145'}`, cursor: 'pointer',
+                        fontWeight: 600
+                    }} onClick={() => setOpenSmall(true)}
+                    > Add avatar</a></p>
+            </div> */}
+
             <Drawer
                 width={'65%'}
                 className='large'
@@ -119,23 +136,23 @@ export const LoginPage = () => {
                 placement="right" onClose={onClose} open={open}>
                 <div style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
-                    width:'100%'
+                    width: '100%'
                 }}>
                     <p className='Quote'
                         style={{
                             fontWeight: 400, color: `${theme ? '#1d344799' : '#f1faee99'}`,
-                            margin:'0 0 3vh 0'
+                            margin: '0 0 3vh 0'
                         }}>
                         Select a new avatar</p>
-                    
+
                     <Row style={{
-                        width:'100%', display:'flex', alignItems:'center',
-                        flexDirection:'row', justifyContent:'center'
+                        width: '100%', display: 'flex', alignItems: 'center',
+                        flexDirection: 'row', justifyContent: 'center'
                     }}>
-                      <AvatarCatalog data={Avatars} finish={handleFinish} />  
+                        <AvatarCatalog data={Avatars} finish={handleFinish} />
                     </Row>
 
-                    
+
 
                 </div>
             </Drawer >
@@ -144,26 +161,26 @@ export const LoginPage = () => {
                 width={'100%'}
                 className='small'
                 style={{ backgroundColor: `${theme ? '#f1faee' : '#333437'}`, transition: 'transform 0.99s ease-out' }}
-                placement="right" onClose={onClose} open={open}>
+                placement="right" onClose={() => setOpenSmall(false)} open={openSmall}>
                 <div style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
-                    width:'100%'
+                    width: '100%'
                 }}>
                     <p className='Quote'
                         style={{
                             fontWeight: 400, color: `${theme ? '#1d344799' : '#f1faee99'}`,
-                            margin:'0 0 3vh 0'
+                            margin: '0 0 3vh 0'
                         }}>
                         Select a new avatar</p>
-                    
+
                     <Row style={{
-                        width:'100%', display:'flex', alignItems:'center',
-                        flexDirection:'row', justifyContent:'center'
+                        width: '100%', display: 'flex', alignItems: 'center',
+                        flexDirection: 'row', justifyContent: 'center'
                     }}>
-                      <AvatarCatalog data={Avatars} finish={handleFinish} />  
+                        <AvatarCatalog data={Avatars} finish={handleFinish} />
                     </Row>
 
-                    
+
 
                 </div>
             </Drawer >
