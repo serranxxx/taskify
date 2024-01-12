@@ -190,17 +190,11 @@ export const TasksMobile = (props) => {
             <TaskCardMobile data={tasks} theme={theme} CompleteTask={CompleteTask} deleteTask={deleteTask} />
 
             <Drawer
-                title={<p style={{ color: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 700, }}>Add task</p>}
+                title={<p style={{ color: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 700, }}>Create new task</p>}
                 placement="left"
                 onClose={handleOk}
                 width='100%'
-                extra={<Button
-                    onClick={handleForms}
-                    style={{
-                        backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 500,
-                        border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`, width: '15vh',
-                        borderRadius: '3vh',
-                    }}>Add</Button>}
+                // extra={}
                 open={onWrite}
                 style={{
                     backgroundColor: `${theme ? '#E5EFE1' : '#333437'}`,
@@ -228,6 +222,8 @@ export const TasksMobile = (props) => {
                             form={form}
                             style={{
                                 height: '100%', width: '100%',
+                                display:'flex', alignItems:'center', justifyContent:'center',
+                                flexDirection:'column'
                             }}
                             onFinish={CreateNewTask}
                         >
@@ -242,8 +238,9 @@ export const TasksMobile = (props) => {
                                     // className='project-inputs'
                                     style={{
                                         width: '100%',
-                                        backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`, fontWeight: 500,
-                                        fontWeight: '1em', color: `${theme ? '' : '#f1faee80'}`, border: `${theme ? '' : '0px solid #000'}`
+                                        backgroundColor: `${theme ? '#f7fcf550' : '#27282c20'}`, fontWeight: 500,
+                                        fontWeight: '1em', color: `${theme ? '' : '#f1faee80'}`,
+                                         border: '0px solid #000'
                                     }} />
 
                             </Form.Item>
@@ -256,15 +253,23 @@ export const TasksMobile = (props) => {
                                     placeholder="Description"
                                     // className='project-inputs'
                                     style={{
-                                        width: '100%', resize: 'none', backgroundColor: `${theme ? '#f7fcf5' : '#27282c'}`,
+                                        width: '100%', resize: 'none', backgroundColor: `${theme ? '#f7fcf550' : '#27282c20'}`,
                                         overflow: 'auto', overflowY: 'auto', overflowX: 'hidden', color: `${theme ? '' : '#f1faee80'}`,
-                                        border: `${theme ? '' : '0px solid #000'}`
+                                        border: '0px solid #000'
                                     }}
                                     autoSize={{ minRows: 5, maxRows: 10 }}  // Ajusta automáticamente la altura según el contenido
                                     wrap="soft"  // Permite el wrap automático del texto
                                 />
 
                             </Form.Item>
+
+                            <Button
+                                onClick={handleForms}
+                                style={{
+                                    backgroundColor: `${theme ? '#457b9d' : '#f1faee80'}`, fontWeight: 500,
+                                    border: '0px solid #a8dadb', color: `${theme ? '#E5EFE1' : '#333437'}`, width: '15vh',
+                                    borderRadius: '3vh', marginTop:'5vh'
+                                }}>Add</Button>
 
                             {/* <Form.Item
                                 className='project-inputs'

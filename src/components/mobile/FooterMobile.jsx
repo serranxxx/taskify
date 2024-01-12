@@ -22,10 +22,10 @@ export const FooterMobile = (props) => {
 
             <Button
                 onClick={() => setOnWrite(true)}
-                icon={<IoMdAdd size={25} style={{ color: theme ? '#f7fcf5' : ' #457B9D'}} />}
+                icon={<IoMdAdd size={25} style={{ color: theme ? '#f7fcf5' : ' #aaa'}} />}
                 style={{
                     height: '60px', width: '60px', opacity: '0.9', 
-                    backgroundColor: theme ?  '#457B9D' : '#878B96',
+                    backgroundColor: theme ?  '#457B9D' : '#457B9D',
                     // position: 'absolute', bottom: '70px', right: '30px',
                     boxShadow: '0px 0px 10px #00000030',
                     borderRadius: '50%',

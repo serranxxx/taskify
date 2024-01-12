@@ -97,11 +97,13 @@ export const LoginPage = () => {
 
             </div>
 
-            <div style={{
-                display: 'flex', alignItems: 'flex-start', justifyContent: 'center', height: '30%',
-                fontWeight: 'normal', marginTop: '2%',
-                // fontWeight:400
-            }}>
+            <div
+                className='large'
+                style={{
+                    alignItems: 'flex-start', justifyContent: 'center', height: '30%',
+                    fontWeight: 'normal', marginTop: '2%',
+                    // fontWeight:400
+                }}>
                 <p style={{
                     color: `${theme ? '#1d344780' : '#f1faee80'}`, wordWrap: 'break-word',
                 }}
@@ -113,11 +115,13 @@ export const LoginPage = () => {
                     > Add avatar</a></p>
             </div>
 
-            {/* <div style={{
-                display: 'flex', alignItems: 'flex-start', justifyContent: 'center', height: '30%',
-                fontWeight: 'normal', marginTop: '2%',
-                // fontWeight:400
-            }}>
+            <div
+                className='small'
+                style={{
+                    alignItems: 'flex-start', justifyContent: 'center', height: '30%',
+                    fontWeight: 'normal', marginTop: '2%',
+                    // fontWeight:400
+                }}>
                 <p style={{
                     color: `${theme ? '#1d344780' : '#f1faee80'}`, wordWrap: 'break-word',
                 }}
@@ -127,7 +131,7 @@ export const LoginPage = () => {
                         fontWeight: 600
                     }} onClick={() => setOpenSmall(true)}
                     > Add avatar</a></p>
-            </div> */}
+            </div>
 
             <Drawer
                 width={'65%'}

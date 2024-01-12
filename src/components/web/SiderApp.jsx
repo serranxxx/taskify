@@ -147,15 +147,15 @@ export const SiderApp = (props) => {
                         }}>
                             <div style={{
                                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                width: '90%',
+                                width: '85%',
                                 borderRadius: '3vh',
                                 backgroundColor: theme ? '#CAD6C5' : '#27282C'
                             }}>
                                 <img
                                     className='button-catalog'
                                     src={SelectAvatar(avatar)} style={{
-                                        width: '90%', borderRadius: '2vh', transition: 'all 0.25s ease-in-out',
-                                        margin: '1vh 0 1vh 0',
+                                        width: '95%', borderRadius: '2.5vh', transition: 'all 0.25s ease-in-out',
+                                        margin: '0.5vh 0 0.5vh 0',
                                     }} />
                             </div>
 

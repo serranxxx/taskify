@@ -45,7 +45,7 @@ export const HeaderMobile = (props) => {
                     onClick={() => setInfo(true)}
                     src={SelectAvatar(avatar)} style={{
                         height: 40, borderRadius: '70%', transition: 'all 0.25s ease-in-out',
-                        cursor: 'pointer', position: 'absolute', left: '20px', top: '20px'
+                        cursor: 'pointer', position: 'absolute', left: '25px', top: '12px'
                     }} />
 
                 <img src={texts.textlight} style={{
@@ -119,9 +119,9 @@ export const HeaderMobile = (props) => {
 
                     <div
                         style={{
-                            alignItems: 'center', height: 'auto', width: '90%', display: 'flex', padding: '3% 0 1% 0',
+                            alignItems: 'center', height: 'auto', width: '70%', display: 'flex', padding: '3% 0 1% 0',
                             justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
-                            borderRadius: '3vh'
+                            borderRadius: '2vh'
                         }}>
 
                         <p
@@ -136,16 +136,16 @@ export const HeaderMobile = (props) => {
                             format={customTasks}
                             strokeColor={`${theme ? '#457b9d' : '#f1faee80'}`}
                             strokeWidth={6}
-                            trailColor={`${theme ? '#cad6c5' : '#27282c'}`}
+                            trailColor={`${theme ? '#cad6c5' : '#333437'}`}
                         />
 
                     </div>
 
                     <div
                         style={{
-                            alignItems: 'center', height: 'auto', width: '90%', display: 'flex', padding: '3% 0 1% 0',
+                            alignItems: 'center', height: 'auto', width: '70%', display: 'flex', padding: '3% 0 1% 0',
                             justifyContent: 'center', flexDirection: 'column', backgroundColor: `${theme ? '#F1FAEE ' : '#27282c'}`,
-                            borderRadius: '3vh'
+                            borderRadius: '2vh'
                         }}>
 
                         <p
@@ -160,7 +160,7 @@ export const HeaderMobile = (props) => {
                             format={customTasks}
                             strokeColor={`${theme ? '#457b9d' : '#f1faee80'}`}
                             strokeWidth={6}
-                            trailColor={`${theme ? '#cad6c5' : '#27282c'}`}
+                            trailColor={`${theme ? '#cad6c5' : '#333437'}`}
                         />
 
                     </div>
@@ -174,7 +174,7 @@ export const HeaderMobile = (props) => {
 
                     <Row style={{
                         display: 'flex', alignContent: 'center', justifyContent: 'space-between', flexDirection: 'row',
-                        width: '85%', marginTop: '1vh'
+                        width: '70%', marginTop: '1vh'
                     }}>
                         <Button
                             onClick={() => toggleTheme(!theme)}
